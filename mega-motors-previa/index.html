@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0e0e0e">
 <meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="imagens/icone.png">
+<link rel="apple-touch-icon" href="imagens/icone.png">
 <title>Mega Motors - Mobilidade Elétrica (prévia)</title>
 <meta name="description" content="Mega Motors - Mobilidade Elétrica. A forma inteligente de se locomover. Campinas - SP.">
 <style>
@@ -44,7 +46,9 @@ h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;backg
 /* barra do topo */
 .barra{position:sticky;top:0;z-index:50;background:rgba(14,14,14,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
 .barra .wrap{display:flex;align-items:center;justify-content:space-between;min-height:58px}
-.marca{font-weight:800;letter-spacing:.2px;text-decoration:none}
+.marca{font-weight:800;letter-spacing:.2px;text-decoration:none;display:flex;align-items:center}
+.marca img{height:46px;width:auto;display:block}
+.logo-rodape{height:84px;width:auto;margin-bottom:14px}
 .marca b{color:var(--amarelo)}
 .menu-btn{min-height:44px;min-width:44px;padding:0 16px;border-radius:12px;border:1px solid var(--linha);
   background:var(--card);color:var(--texto);font-weight:600;font-size:.95rem;font-family:inherit;cursor:pointer}
@@ -449,8 +453,17 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   /* ---- barra e menu ---- */
   var marca = $("marca");
   var pn = L.nome.split(" ");
-  marca.appendChild(document.createTextNode(pn.slice(0, -1).join(" ") + " "));
-  marca.appendChild(h("b", { text: pn[pn.length - 1] }));
+  function marcaTexto() {
+    marca.textContent = "";
+    marca.appendChild(document.createTextNode(pn.slice(0, -1).join(" ") + " "));
+    marca.appendChild(h("b", { text: pn[pn.length - 1] }));
+  }
+  if (L.logo) {
+    var logoImg = h("img", { alt: L.nome + " - " + L.segmento });
+    logoImg.addEventListener("error", marcaTexto);   // sem logo na pasta: mostra o nome em texto
+    logoImg.src = "imagens/" + L.logo;
+    marca.appendChild(logoImg);
+  } else marcaTexto();
   var secoes = [
     ["catalogo", "Loja"], ["testdrive", "Test drive"], ["assistencia", "Assistência técnica"],
     ["videos", "Vídeos de manutenção"], ["seminovos", "Seminovos e consignados"], ["sobre", "Sobre nós"],
@@ -671,6 +684,11 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
 
   /* ---- 13. rodapé ---- */
   $("rodapeNome").textContent = L.nome + " - " + L.segmento;
+  if (L.logo) {
+    var lr = h("img", { class: "logo-rodape", alt: "", src: "imagens/" + L.logo });
+    lr.addEventListener("error", function () { lr.remove(); });
+    $("rodapeNome").parentNode.insertBefore(lr, $("rodapeNome"));
+  }
   var c = $("rodapeContatos");
   c.appendChild(h("a", { href: wa(DADOS.mensagens.geral), target: "_blank", rel: "noopener" },
     h("small", { text: "WhatsApp" }), L.whatsappExibicao));

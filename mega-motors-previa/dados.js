@@ -31,6 +31,7 @@ const DADOS = {
     mapsUrl: "https://maps.app.goo.gl/PyJKYSdRAHc4Tt3g7",   // perfil da loja no Google Maps (botão "Como chegar")
     // Botão "Avalie no Google": abre direto a tela de avaliação da loja.
     googleAvaliacaoUrl: "https://search.google.com/local/writereview?placeid=ChIJ1Zq91evPyJQRTAlzcfRIwjw",
+    logo: "logo.png",                    // logo com fundo transparente (pasta imagens)
     fotoFachada: "fachada.jpg"
   },
 
