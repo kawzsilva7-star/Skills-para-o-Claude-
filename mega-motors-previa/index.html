@@ -106,7 +106,10 @@ h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;backg
 .selo.ex{background:transparent;color:var(--suave);border-color:#666}
 .preco{font-size:1.4rem;font-weight:800;color:var(--amarelo)}
 td small{display:block;color:var(--suave);font-size:.8rem;font-weight:400}
-.video video{width:100%;max-height:540px;display:block;background:#000}
+.video video{width:100%;max-height:560px;display:block;background:#000;object-fit:contain}
+.carrossel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;padding:2px 18px 14px;margin:0 -18px 14px;scrollbar-width:thin}
+.carrossel .video{flex:0 0 72%;max-width:300px;scroll-snap-align:start}
+.carrossel:empty{display:none}
 
 /* faixa de ação (test drive) */
 .faixa{background:var(--amarelo);color:#111;border-radius:var(--raio);padding:26px 20px;text-align:center}
@@ -322,7 +325,8 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
 <section id="feedbacks">
   <div class="wrap">
     <h2>Feedbacks</h2>
-    <p class="lead">Clientes que já rodam com a Mega Motors.</p>
+    <p class="lead" id="feedbacksTexto"></p>
+    <div class="carrossel" id="videosClientes"></div>
     <div class="galeria" id="galeriaClientes"></div>
     <button class="btn" id="btnGoogle" type="button">★ Avalie no Google</button>
   </div>
@@ -576,11 +580,17 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
     if (!/^https:\/\/www\.instagram\.com\/(reel|p|tv)\/[\w-]+/.test(link || "")) return "";
     return link.split("?")[0].replace(/\/?$/, "/") + "embed";
   }
-  DADOS.videos.forEach(function (v) {
+  function cardVideo(v) {
     var src = embedInsta(v.link);
     var caixa = h("div", { class: "video" });
-    if (v.arquivo) caixa.appendChild(h("video", { src: "videos/" + v.arquivo, controls: "", preload: "metadata", playsinline: "", title: v.titulo }));
-    else if (src) caixa.appendChild(h("iframe", { src: src, title: v.titulo, loading: "lazy", allowfullscreen: "" }));
+    if (v.arquivo) {
+      var vid = h("video", { src: "videos/" + v.arquivo, poster: v.capa ? "videos/" + v.capa : null, controls: "", preload: "metadata", playsinline: "", title: v.titulo });
+      // só um vídeo toca por vez
+      vid.addEventListener("play", function () {
+        Array.prototype.forEach.call(document.querySelectorAll("video"), function (o) { if (o !== vid) o.pause(); });
+      });
+      caixa.appendChild(vid);
+    } else if (src) caixa.appendChild(h("iframe", { src: src, title: v.titulo, loading: "lazy", allowfullscreen: "" }));
     else {
       var ph = foto("", v.titulo);
       ph.firstChild.textContent = "[VÍDEO]";
@@ -588,8 +598,9 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
       caixa.appendChild(ph);
     }
     caixa.appendChild(h("p", { text: v.titulo }));
-    $("listaVideos").appendChild(caixa);
-  });
+    return caixa;
+  }
+  DADOS.videos.forEach(function (v) { $("listaVideos").appendChild(cardVideo(v)); });
   var vi = $("videosInsta");
   vi.href = L.instagramUrl;
   vi.textContent = "Ver mais no Instagram " + L.instagram;
@@ -611,6 +622,8 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   });
 
   /* ---- 9. feedbacks ---- */
+  $("feedbacksTexto").textContent = DADOS.feedbacks.texto;
+  (DADOS.feedbacks.videos || []).forEach(function (v) { $("videosClientes").appendChild(cardVideo(v)); });
   DADOS.feedbacks.fotos.forEach(function (f, i) {
     $("galeriaClientes").appendChild(foto(f, "Foto de cliente " + (i + 1)));
   });

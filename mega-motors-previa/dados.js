@@ -128,7 +128,16 @@ const DADOS = {
 
   /* ---------- FEEDBACKS DE CLIENTES ---------- */
   feedbacks: {
-    fotos: ["cliente-1.jpg", "cliente-2.jpg", "cliente-3.jpg", "cliente-4.jpg", "cliente-5.jpg", "cliente-6.jpg"]
+    texto: "Prezamos pela sua felicidade e pela sua satisfação com o nosso produto. Veja alguns clientes que já rodam com a Mega Motors.",
+    // Vídeos de clientes: "arquivo" fica na pasta "videos"; "capa" é a imagem que aparece antes de dar play (opcional).
+    videos: [
+      { titulo: "Cliente 1", arquivo: "cliente-1.mp4", capa: "cliente-1-capa.jpg" },
+      { titulo: "Cliente 2", arquivo: "cliente-2.mp4", capa: "cliente-2-capa.jpg" },
+      { titulo: "Cliente 3", arquivo: "cliente-3.mp4", capa: "cliente-3-capa.jpg" },
+      { titulo: "Cliente 4", arquivo: "cliente-4.mp4", capa: "cliente-4-capa.jpg" }
+    ],
+    // Fotos de clientes (pasta "imagens"). Os nomes sem foto aparecem como espaço reservado.
+    fotos: ["cliente-1.jpg", "cliente-2.jpg", "cliente-3.jpg", "cliente-4.jpg"]
   },
 
   /* ---------- PERGUNTAS FREQUENTES (botões de ajuda, sem IA) ---------- */
