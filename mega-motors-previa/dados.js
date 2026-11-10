@@ -21,7 +21,7 @@ const DADOS = {
     ],
     whatsapp: "5519999499216",          // só números, com 55 + DDD
     whatsappExibicao: "(19) 99949-9216",
-    email: "[EMAIL]",                    // troque pelo e-mail real
+    email: "redemegamotors@gmail.com",   // e-mail que aparece no perfil do WhatsApp da loja
     instagram: "@megamotors.eletrica",
     instagramUrl: "https://www.instagram.com/megamotors.eletrica/",
     googleAvaliacaoUrl: "",              // [LINK DE AVALIAÇÃO DO GOOGLE] cole aqui o link
@@ -34,8 +34,7 @@ const DADOS = {
     interesse: "Olá! Tenho interesse no modelo {NOME}. Como posso fazer?",   // {NOME} vira o nome do produto
     testDrive: "Olá! Gostaria de agendar um test drive. Quais modelos e horários estão disponíveis?",
     avaliacao: "Olá! Gostaria de agendar uma avaliação na assistência técnica. Como posso fazer?",
-    trabalhe: "Olá! Tenho interesse em trabalhar na Mega Motors. Como posso enviar meu currículo?",
-    parceria: "Olá! Gostaria de falar sobre uma parceria com a Mega Motors."
+    trabalhe: "Olá! Tenho interesse em trabalhar na Mega Motors. Como posso enviar meu currículo?"
   },
 
   /* ---------- CATEGORIAS DO CATÁLOGO ---------- */
@@ -50,45 +49,55 @@ const DADOS = {
   ],
 
   /* ---------- PRODUTOS NOVOS ---------- */
+  // ATENÇÃO: modelos e preços abaixo são EXEMPLOS só para a prévia ("exemplo: true" mostra o selo "Exemplo").
+  // Quando colocar o produto real, apague "exemplo: true" e ajuste o preço.
   // Para adicionar um produto, copie uma linha { ... } e cole abaixo dela.
   // Campos vazios ("") não aparecem no card (ex.: capacete não tem autonomia).
   produtos: [
-    { categoria: "scooters",  nome: "[MODELO 1]", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-1.jpg" },
-    { categoria: "bikes",     nome: "[MODELO 2]", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "bike-1.jpg" },
-    { categoria: "patinetes", nome: "[MODELO 3]", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "patinete-1.jpg" },
-    { categoria: "triciclos", nome: "[MODELO 4]", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "triciclo-1.jpg" },
-    { categoria: "infantis",  nome: "[MODELO 5]", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "infantil-1.jpg" },
-    { categoria: "capacetes", nome: "[MODELO 6]", potencia: "", autonomia: "", foto: "capacete-1.jpg" }
+    { categoria: "scooters",  nome: "Bolin E40",       preco: "R$ 8.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-1.jpg", exemplo: true },
+    { categoria: "scooters",  nome: "ZUB L70",         preco: "R$ 6.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-2.jpg", exemplo: true },
+    { categoria: "scooters",  nome: "Bolin e60",       preco: "R$ 7.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-3.jpg", exemplo: true },
+    { categoria: "bikes",     nome: "[MODELO BIKE]",      preco: "R$ 4.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "bike-1.jpg", exemplo: true },
+    { categoria: "patinetes", nome: "[MODELO PATINETE]",  preco: "R$ 2.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "patinete-1.jpg", exemplo: true },
+    { categoria: "triciclos", nome: "[MODELO TRICICLO]",  preco: "R$ 9.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "triciclo-1.jpg", exemplo: true },
+    { categoria: "infantis",  nome: "[MODELO INFANTIL]",  preco: "R$ 1.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "infantil-1.jpg", exemplo: true },
+    { categoria: "capacetes", nome: "[MODELO CAPACETE]",  preco: "R$ 250",   potencia: "", autonomia: "", foto: "capacete-1.jpg", exemplo: true }
   ],
 
   /* ---------- SEMINOVOS E CONSIGNADOS ---------- */
-  // "condicao": escreva "Seminovo" ou "Consignado" (aparece como selo no card).
+  // "condicao": escreva "Seminovo" ou "Consignado" (aparece como selo no card). Preços de exemplo.
   seminovos: [
-    { condicao: "Seminovo",   nome: "[MODELO SEMINOVO 1]",   potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "seminovo-1.jpg" },
-    { condicao: "Consignado", nome: "[MODELO CONSIGNADO 1]", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "seminovo-2.jpg" },
-    { condicao: "Seminovo",   nome: "[MODELO SEMINOVO 2]",   potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "seminovo-3.jpg" }
+    { condicao: "Seminovo",   nome: "[MODELO SEMINOVO 1]",   preco: "R$ 5.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "seminovo-1.jpg", exemplo: true },
+    { condicao: "Consignado", nome: "[MODELO CONSIGNADO 1]", preco: "R$ 4.200", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "seminovo-2.jpg", exemplo: true },
+    { condicao: "Seminovo",   nome: "[MODELO SEMINOVO 2]",   preco: "R$ 3.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "seminovo-3.jpg", exemplo: true }
   ],
 
   /* ---------- ASSISTÊNCIA TÉCNICA ---------- */
   assistencia: {
     texto: "Atendemos também outras marcas.",
+    titulo: "Serviços (exemplo)",      // aparece acima da tabela; tire o "(exemplo)" quando os preços forem reais
+    // "nota" é opcional e aparece em letra pequena embaixo do serviço.
     servicos: [
-      { servico: "[SERVIÇO 1]", preco: "[PREÇO]" },
-      { servico: "[SERVIÇO 2]", preco: "[PREÇO]" },
-      { servico: "[SERVIÇO 3]", preco: "[PREÇO]" },
-      { servico: "[SERVIÇO 4]", preco: "[PREÇO]" },
-      { servico: "[SERVIÇO 5]", preco: "[PREÇO]" }
+      { servico: "Avaliação técnica",         preco: "R$ 80" },
+      { servico: "Troca de acelerador",       preco: "R$ 150", nota: "dependendo da peça" },
+      { servico: "Troca de pastilha de freio", preco: "R$ 120", nota: "dependendo da peça" },
+      { servico: "Troca de disco de freio",   preco: "R$ 200", nota: "dependendo da peça" },
+      { servico: "Troca de pneu ou câmara",   preco: "R$ 100", nota: "dependendo da peça" },
+      { servico: "Revisão geral",             preco: "R$ 180" },
+      { servico: "Reparo no carregador",      preco: "R$ 90",  nota: "dependendo da peça" }
     ],
-    observacao: "[OBSERVAÇÃO SOBRE OS PREÇOS, ex.: valores a partir de, mão de obra, peças à parte]"
+    observacao: "Valores de exemplo, apenas para a prévia. O preço final depende do modelo e das peças."
   },
 
-  /* ---------- VÍDEOS DE MANUTENÇÃO (INSTAGRAM) ---------- */
-  // Em "link" cole o endereço do post ou reel, ex.: "https://www.instagram.com/reel/XXXXXXXX/"
-  // Enquanto o link estiver vazio, aparece um espaço reservado.
+  /* ---------- VÍDEOS DE MANUTENÇÃO ---------- */
+  // Duas formas (use uma por vídeo):
+  //  - "link": endereço de um post/reel do Instagram, ex.: "https://www.instagram.com/reel/XXXXXXXX/"
+  //  - "arquivo": nome de um vídeo .mp4 colocado na pasta "videos", ex.: "avaliacao-1.mp4"
+  // Enquanto os dois estiverem vazios, aparece um espaço reservado.
   videos: [
-    { titulo: "[VÍDEO 1]", link: "" },
-    { titulo: "[VÍDEO 2]", link: "" },
-    { titulo: "[VÍDEO 3]", link: "" }
+    { titulo: "[VÍDEO 1]", link: "", arquivo: "" },
+    { titulo: "[VÍDEO 2]", link: "", arquivo: "" },
+    { titulo: "[VÍDEO 3]", link: "", arquivo: "" }
   ],
 
   /* ---------- SOBRE NÓS ---------- */
@@ -117,25 +126,31 @@ const DADOS = {
     fotos: ["cliente-1.jpg", "cliente-2.jpg", "cliente-3.jpg", "cliente-4.jpg", "cliente-5.jpg", "cliente-6.jpg"]
   },
 
-  /* ---------- PERGUNTAS FREQUENTES (chat sem IA) ---------- */
-  // Troque cada "[RESPOSTA]" pelo texto real. Para tirar uma pergunta, apague a linha.
+  /* ---------- PERGUNTAS FREQUENTES (botões de ajuda, sem IA) ---------- */
+  // O visitante toca na pergunta e a resposta aparece. Para tirar uma pergunta, apague a linha.
+  // As respostas marcadas com "PROVISÓRIA" são genéricas: troque pelas informações reais da loja.
   perguntas: [
     { pergunta: "Qual o horário de funcionamento?",
       resposta: "Atendemos de segunda a sexta, das 9h às 19h, e aos sábados, das 9h às 17h." },
-    { pergunta: "Qual a autonomia?",              resposta: "[RESPOSTA]" },
-    { pergunta: "Quanto tempo leva para carregar?", resposta: "[RESPOSTA]" },
-    { pergunta: "Qual a garantia?",               resposta: "[RESPOSTA]" },
-    { pergunta: "Quais as formas de pagamento?",  resposta: "[RESPOSTA]" },
-    { pergunta: "Precisa de habilitação?",        resposta: "[RESPOSTA]" },
-    { pergunta: "Precisa emplacar?",              resposta: "[RESPOSTA]" }
-  ],
-
-  /* ---------- PARCERIAS ---------- */
-  // "logo" é o nome do arquivo na pasta imagens. "link" é opcional (site ou Instagram do parceiro).
-  parceiros: [
-    { nome: "[PARCEIRO 1]", logo: "parceiro-1.png", link: "" },
-    { nome: "[PARCEIRO 2]", logo: "parceiro-2.png", link: "" },
-    { nome: "[PARCEIRO 3]", logo: "parceiro-3.png", link: "" },
-    { nome: "[PARCEIRO 4]", logo: "parceiro-4.png", link: "" }
+    { pergunta: "Onde fica a loja?",
+      resposta: "Av. São José dos Campos, 2410 - Parque São Martinho, Campinas - SP. Na seção “Onde estamos” você vê o mapa." },
+    { pergunta: "Vocês consertam outras marcas?",
+      resposta: "Sim! Nossa assistência técnica atende também outras marcas. Toque em “Agendar avaliação” na seção Assistência técnica." },
+    { pergunta: "Vocês têm seminovos ou consignados?",
+      resposta: "Sim, temos seminovos e consignados. Veja a seção “Seminovos e consignados” ou pergunte pelo WhatsApp." },
+    { pergunta: "Como agendar um test drive?",
+      resposta: "É só tocar em “Agendar test drive”. Abrirá o WhatsApp com a mensagem pronta e nossa equipe confirma o horário." },
+    { pergunta: "Qual a autonomia?",
+      resposta: "PROVISÓRIA: A autonomia varia conforme o modelo. Chame no WhatsApp e informe qual modelo você quer saber." },
+    { pergunta: "Quanto tempo leva para carregar?",
+      resposta: "PROVISÓRIA: O tempo de carga varia conforme o modelo e a bateria. Chame no WhatsApp e informe o modelo." },
+    { pergunta: "Qual a garantia?",
+      resposta: "PROVISÓRIA: A garantia depende do modelo. Chame no WhatsApp para saber as condições do veículo que você quer." },
+    { pergunta: "Quais as formas de pagamento?",
+      resposta: "Consulte as condições de pagamento pelo WhatsApp e encontre a melhor opção para você." },
+    { pergunta: "Precisa de habilitação e emplacamento?",
+      resposta: "PROVISÓRIA: Depende do tipo de veículo. Nossa equipe orienta você sobre o modelo que escolher. Chame no WhatsApp." },
+    { pergunta: "Como falar com o responsável (negócios)?",
+      resposta: "Para negócios e parcerias, fale com a gente pelo WhatsApp que encaminhamos para o responsável." }
   ]
 };

@@ -88,6 +88,11 @@ h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;backg
 .selo{align-self:flex-start;background:rgba(255,212,0,.15);color:var(--amarelo);border:1px solid var(--amarelo);
   border-radius:999px;padding:2px 12px;font-size:.8rem;font-weight:700}
 .vazio{color:var(--suave);padding:20px 0}
+.selos{display:flex;gap:8px;flex-wrap:wrap}
+.selo.ex{background:transparent;color:var(--suave);border-color:#666}
+.preco{font-size:1.4rem;font-weight:800;color:var(--amarelo)}
+td small{display:block;color:var(--suave);font-size:.8rem;font-weight:400}
+.video video{width:100%;max-height:540px;display:block;background:#000}
 
 /* faixa de ação (test drive) */
 .faixa{background:var(--amarelo);color:#111;border-radius:var(--raio);padding:26px 20px;text-align:center}
@@ -148,10 +153,6 @@ tr:last-child td{border-bottom:0}
 .chat-rodape{padding:0 14px 14px;background:#191919}
 
 /* parcerias */
-.parceiros{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
-.parceiros a,.parceiros div.p{display:block;text-decoration:none}
-.parceiros .foto{aspect-ratio:3/2}
-.parceiros .foto img{object-fit:contain;padding:10px}
 
 /* onde estamos */
 .info{display:grid;gap:12px;margin-bottom:18px}
@@ -184,8 +185,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   .grade{grid-template-columns:repeat(2,1fr)}
   .videos{grid-template-columns:repeat(2,1fr)}
   .beneficios{grid-template-columns:repeat(3,1fr)}
-  .galeria,.parceiros{grid-template-columns:repeat(3,1fr)}
-  .fotos2{grid-template-columns:repeat(4,1fr)}
+  .galeria,  .fotos2{grid-template-columns:repeat(4,1fr)}
   .duas{grid-template-columns:1fr 1fr}
   .btn{width:auto}
   .card .btn,.faixa .btn{width:100%}
@@ -195,8 +195,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
 @media (min-width:900px){
   .grade{grid-template-columns:repeat(3,1fr)}
   .videos{grid-template-columns:repeat(3,1fr)}
-  .parceiros{grid-template-columns:repeat(4,1fr)}
-  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+    .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
   .hero .foto{margin-top:0}
   .info{grid-template-columns:repeat(2,1fr)}
 }
@@ -258,7 +257,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
     <h2>Assistência técnica</h2>
     <p class="lead"><span class="aviso" id="assistenciaAviso"></span></p>
     <table>
-      <caption>Serviços e preços</caption>
+      <caption id="assistenciaTitulo">Serviços e preços</caption>
       <thead><tr><th scope="col">Serviço</th><th scope="col">Preço</th></tr></thead>
       <tbody id="tabelaServicos"></tbody>
     </table>
@@ -327,17 +326,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   </div>
 </section>
 
-<!-- 11. PARCERIAS -->
-<section id="parcerias">
-  <div class="wrap">
-    <h2>Parcerias</h2>
-    <p class="lead">Quem anda com a gente.</p>
-    <div class="parceiros" id="listaParceiros"></div>
-    <div id="parceriaBotao"></div>
-  </div>
-</section>
-
-<!-- 12. ONDE ESTAMOS -->
+<!-- 11. ONDE ESTAMOS -->
 <section id="onde">
   <div class="wrap">
     <h2>Onde estamos</h2>
@@ -352,7 +341,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   </div>
 </section>
 
-<!-- 13. TRABALHE CONOSCO -->
+<!-- 12. TRABALHE CONOSCO -->
 <section id="trabalhe">
   <div class="wrap">
     <h2>Trabalhe conosco</h2>
@@ -363,7 +352,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
 
 </main>
 
-<!-- 14. RODAPÉ -->
+<!-- 13. RODAPÉ -->
 <footer>
   <div class="wrap">
     <h2 id="rodapeNome"></h2>
@@ -372,7 +361,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   </div>
 </footer>
 
-<!-- 15. WHATSAPP FIXO -->
+<!-- 14. WHATSAPP FIXO -->
 <a class="wa-fixo" id="waFixo" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"></a>
 
 <script src="dados.js"></script>
@@ -394,11 +383,14 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
       else if (k.indexOf("on") === 0) el.addEventListener(k.slice(2), v);
       else el.setAttribute(k, v);
     });
-    for (var i = 2; i < arguments.length; i++) {
-      var c = arguments[i];
-      if (c == null || c === false) continue;
-      el.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
-    }
+    (function add(lista) {
+      for (var i = 0; i < lista.length; i++) {
+        var c = lista[i];
+        if (c == null || c === false) continue;
+        if (Array.isArray(c)) add(c);
+        else el.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+      }
+    })(Array.prototype.slice.call(arguments, 2));
     return el;
   }
   function $(id) { return document.getElementById(id); }
@@ -444,7 +436,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
     ["catalogo", "Loja"], ["testdrive", "Test drive"], ["assistencia", "Assistência técnica"],
     ["videos", "Vídeos de manutenção"], ["seminovos", "Seminovos e consignados"], ["sobre", "Sobre nós"],
     ["beneficios", "Benefícios"], ["feedbacks", "Feedbacks"], ["duvidas", "Perguntas frequentes"],
-    ["parcerias", "Parcerias"], ["onde", "Onde estamos"], ["trabalhe", "Trabalhe conosco"]
+    ["onde", "Onde estamos"], ["trabalhe", "Trabalhe conosco"]
   ];
   var menu = $("menuLista"), menuBtn = $("menuBtn");
   secoes.forEach(function (s) {
@@ -469,9 +461,13 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
 
   /* ---- 2. catálogo ---- */
   function cardProduto(p) {
+    var selos = [];
+    if (p.condicao) selos.push(h("span", { class: "selo", text: p.condicao }));
+    if (p.exemplo) selos.push(h("span", { class: "selo ex", text: "Exemplo" }));
     var corpo = h("div", { class: "card-corpo" },
-      p.condicao ? h("span", { class: "selo", text: p.condicao }) : null,
+      selos.length ? h("div", { class: "selos" }, selos) : null,
       h("h3", { text: p.nome }),
+      p.preco ? h("div", { class: "preco", text: p.preco }) : null,
       p.potencia ? h("div", { class: "dado" }, "Potência", h("b", { text: p.potencia })) : null,
       p.autonomia ? h("div", { class: "dado" }, "Autonomia", h("b", { text: p.autonomia })) : null,
       botaoWa("Tenho interesse", DADOS.mensagens.interesse.replace("{NOME}", p.nome))
@@ -507,8 +503,11 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   /* ---- 4. assistência ---- */
   var A = DADOS.assistencia;
   $("assistenciaAviso").textContent = A.texto;
+  if (A.titulo) $("assistenciaTitulo").textContent = A.titulo;
   A.servicos.forEach(function (s) {
-    $("tabelaServicos").appendChild(h("tr", null, h("td", { text: s.servico }), h("td", { text: s.preco })));
+    $("tabelaServicos").appendChild(h("tr", null,
+      h("td", null, s.servico, s.nota ? h("small", { text: s.nota }) : null),
+      h("td", { text: s.preco })));
   });
   $("assistenciaObs").textContent = A.observacao || "";
   $("assistenciaBotao").appendChild(botaoWa("Agendar avaliação", DADOS.mensagens.avaliacao));
@@ -521,11 +520,12 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   DADOS.videos.forEach(function (v) {
     var src = embedInsta(v.link);
     var caixa = h("div", { class: "video" });
-    if (src) caixa.appendChild(h("iframe", { src: src, title: v.titulo, loading: "lazy", allowfullscreen: "" }));
+    if (v.arquivo) caixa.appendChild(h("video", { src: "videos/" + v.arquivo, controls: "", preload: "metadata", playsinline: "", title: v.titulo }));
+    else if (src) caixa.appendChild(h("iframe", { src: src, title: v.titulo, loading: "lazy", allowfullscreen: "" }));
     else {
       var ph = foto("", v.titulo);
       ph.firstChild.textContent = "[VÍDEO]";
-      ph.appendChild(h("span", { class: "ph-nome", text: "Cole o link do Instagram em dados.js" }));
+      ph.appendChild(h("span", { class: "ph-nome", text: "Coloque o vídeo em dados.js" }));
       caixa.appendChild(ph);
     }
     caixa.appendChild(h("p", { text: v.titulo }));
@@ -584,16 +584,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   opcoes.appendChild(h("button", { class: "opcao limpar", type: "button", text: "Recomeçar conversa", onclick: inicioChat }));
   $("chatRodape").appendChild(botaoWa("Outra dúvida? Fale no WhatsApp", DADOS.mensagens.geral, "sec"));
 
-  /* ---- 11. parcerias ---- */
-  DADOS.parceiros.forEach(function (p) {
-    var f = foto(p.logo, p.nome);
-    $("listaParceiros").appendChild(p.link
-      ? h("a", { href: p.link, target: "_blank", rel: "noopener", "aria-label": p.nome }, f)
-      : h("div", { class: "p" }, f));
-  });
-  $("parceriaBotao").appendChild(botaoWa("Quero ser parceiro", DADOS.mensagens.parceria, "sec"));
-
-  /* ---- 12. onde estamos ---- */
+  /* ---- 11. onde estamos ---- */
   $("ondeEndereco").textContent = L.endereco;
   var hor = $("ondeHorario");
   L.horario.forEach(function (x, i) {
@@ -603,10 +594,10 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   $("mapa").src = "https://www.google.com/maps?q=" + encodeURIComponent(L.endereco) + "&output=embed";
   $("btnRota").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(L.endereco);
 
-  /* ---- 13. trabalhe conosco ---- */
+  /* ---- 12. trabalhe conosco ---- */
   $("trabalheBotao").appendChild(botaoWa("Enviar mensagem no WhatsApp", DADOS.mensagens.trabalhe));
 
-  /* ---- 14. rodapé ---- */
+  /* ---- 13. rodapé ---- */
   $("rodapeNome").textContent = L.nome + " - " + L.segmento;
   var c = $("rodapeContatos");
   c.appendChild(h("a", { href: wa(DADOS.mensagens.geral), target: "_blank", rel: "noopener" },
@@ -617,7 +608,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   c.appendChild(h("a", { href: L.instagramUrl, target: "_blank", rel: "noopener" },
     h("small", { text: "Instagram" }), L.instagram));
 
-  /* ---- 15. whatsapp fixo ---- */
+  /* ---- 14. whatsapp fixo ---- */
   var fixo = $("waFixo");
   fixo.href = wa(DADOS.mensagens.geral);
   fixo.appendChild(icone());
