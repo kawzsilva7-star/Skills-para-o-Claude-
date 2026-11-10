@@ -1,8 +1,8 @@
 # Skills
 
-Skills (instruções prontas) copiadas do repositório privado `Pensamento-critico` em 10/11/2026.
-No GitHub público do bot vão **só 3 skills de autoria do dono**: `banca-de-avaliadores`, `rodada-de-tubaroes` e `video-de-produto`. As de Remotion (material de terceiros, licença não confirmada) ficam **só no PC**.
-Nunca coloque chaves, tokens, senhas ou dados pessoais aqui: esta pasta é pública.
+Skills (instruções prontas) do dono. Algumas foram **pagas** (ex.: Clube das Skills, licença de uso individual).
+**Nunca vão para o GitHub público do bot** (`skills/` inteira está no `.gitignore`). Ficam só no PC e no repositório **privado** `Skills-para-o-Claude-`.
+Nunca coloque chaves, tokens, senhas ou dados pessoais aqui.
 
 ## Regra de uso (economizar tokens) — vale para o Claude
 O dono pediu: **não carregar skill à toa**. Cada skill gasta tokens.
@@ -11,10 +11,10 @@ O dono pediu: **não carregar skill à toa**. Cada skill gasta tokens.
 3. **Remotion: comece pela necessária.** Só abra `remotion-best-practices` (que indica qual das outras ler) quando for fazer vídeo. Leia só o `SKILL.md` e **só os arquivos de apoio que a tarefa pedir**, não a pasta toda.
 4. Se a tarefa não está na tabela, **não force uma skill**: faça direto.
 5. Ao usar uma skill, diga ao dono qual e por quê, em uma linha.
-6. Skill nova só vai para o GitHub com autorização do dono, depois de conferir a licença e de procurar chaves ou dados pessoais nos arquivos.
+6. Skill nova vai para a pasta da sua função aqui e para o repositório privado `Skills-para-o-Claude-` (script `scripts/sincronizar_skills.ps1`), depois de procurar chaves nos arquivos. Nunca para repositório público.
 
 ## Índice completo
-Há mais de 450 skills no PC (vindas dos repositórios `Pensamento-critico`, `72-skills-` e `380-skills`). As skills estão separadas em **21 pastas por função** (`skills/01-marketing-e-anuncios/` ... `skills/21-agentes-e-automacao/`). A lista com o nome e para que serve cada uma está em `skills/INDICE.md` (só no PC). **Leia o índice só quando a tabela abaixo não resolver**, e depois abra apenas a skill escolhida.
+Há mais de 520 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380-skills` e do PDF pago do Clube das Skills). Estão separadas em **pastas por função** (`skills/01-marketing-e-anuncios/` ... `skills/24-motion-e-animacao/`; `22` = versões alternativas, `23` = notas e guias). A lista com o nome e para que serve cada uma está em `skills/INDICE.md` (só no PC). **Leia o índice só quando a tabela abaixo não resolver**, e depois abra apenas a skill escolhida.
 
 ## Qual skill para qual função (as mais usadas neste bot; o caminho é `skills/<pasta da função>/<skill>/`)
 | Função | Skill | Quando usar |

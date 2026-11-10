@@ -37,14 +37,27 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `seo-audit` | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "S |
 | `web-perf` | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse perf |
 
-## 04-video-e-imagem: Vídeo e imagem (17)
+## 04-video-e-imagem: Vídeo, voz e imagem (36)
 
 | Skill | Para que serve |
 |---|---|
+| `brandkit` | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity |
+| `canvas-design` | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when |
+| `dubbing` | Dub audio and video into other languages using the ElevenLabs Dubbing API (dubbing_v2), preserving the origina |
+| `fal-ai-media` | Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/im |
+| `ffmpeg` | Video and audio processing with FFmpeg. Use for format conversion, resizing, compression, audio extraction, an |
+| `higgsfield-product-photoshoot` | / Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image  |
 | `hyperframes` | Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including lau |
+| `hyperframes-cli` | The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in |
+| `hyperframes-registry` | About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, t |
 | `image` | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics |
+| `imagegen` | Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrat |
 | `imagegen-frontend-web` | Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITI |
+| `kinetic-typography` | This skill should be used when the user asks to "animate a headline", "make a kinetic typography video", "do a |
 | `media-use` | Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar  |
+| `music` | Generate music using ElevenLabs Music API. Use when creating instrumental tracks, songs with lyrics, backgroun |
+| `nanobanana` | Gemini-native Nano Banana image generation and editing across Nano Banana, Nano Banana 2, and Nano Banana Pro. |
+| `playwright-recording` | Record browser interactions as video using Playwright. Use for capturing demo videos, app walkthroughs, and UI |
 | `remotion-best-practices` | Router for all Remotion skills |
 | `remotion-captions` | Transcribing, displaying and animating captions |
 | `remotion-create` | Create a new Remotion video |
@@ -57,17 +70,31 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `remotion-saas` | Build an app with Remotion |
 | `remotion-studio` | Preview a Remotion video |
 | `remotion-upgrade` | Upgrade Remotion, and related packages |
+| `sound-effects` | Generate sound effects from text descriptions using ElevenLabs. Use when creating sound effects, generating au |
+| `speech-to-text` | Transcribe audio to text using ElevenLabs Scribe v2. Use when converting audio/video to text, generating subti |
+| `text-to-speech` | Convert text to speech using ElevenLabs voice AI. Use when generating audio from text, creating voiceovers, bu |
+| `video` | When the user wants to create video with AI tools or code, or asks which approach to use (screen recording, AI |
 | `video-de-produto` | Cria um vídeo curto para Instagram/Reels mostrando o produto do usuário de forma profissional, usando Remotion |
+| `video-use` | Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — fo |
+| `voice-isolator` | Remove background noise and isolate vocals/speech from audio using ElevenLabs Voice Isolator (audio isolation) |
 
-## 05-design-e-sites: Design e sites (5)
+## 05-design-e-sites: Design e sites (13)
 
 | Skill | Para que serve |
 |---|---|
+| `banner-design` | Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction optio |
+| `better-typography` | Sets and reviews how text renders, from the type scale and spacing to font features, wrapping, truncation and  |
 | `design-taste-frontend` | tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated |
+| `extract-design-system` | Extract design primitives from a public website and generate starter token files for your project. |
 | `frontend-design` | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps w |
+| `interface-design` | Craft-first interface design for dashboards, admin panels, SaaS apps, tools, settings pages, data interfaces,  |
 | `shadcn` | Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI, incl |
 | `stitch-design-taste` | Classic skill for Google Stitch, opt-in: it runs only when called by name. Writes an agent-friendly DESIGN.md  |
+| `superdesign` | Design or redesign frontend UI, presentations, and graphics on the Superdesign canvas with a choice of leading |
+| `tailwind-design-system` | Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive pattern |
+| `theme-factory` | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing page |
 | `vercel-react-best-practices` | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when  |
+| `web-typography` | Select, pair, and implement typefaces for web projects. Use when the user mentions "font pairing", "which type |
 
 ## 06-planejar-e-decidir: Planejar e decidir (10)
 
@@ -84,28 +111,48 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `teach` | Teach the user a new skill or concept, within this workspace. |
 | `writing-plans` | Use when you have a spec or requirements for a multi-step task, before touching code |
 
-## 07-codigo-e-qualidade: Código e qualidade (9)
+## 07-codigo-e-qualidade: Código e qualidade (25)
 
 | Skill | Para que serve |
 |---|---|
+| `accessibility` | Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to "improve accessibility",  |
+| `ci-cd-and-automation` | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you  |
 | `code-review` | Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does th |
 | `codebase-design` | Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interfac |
 | `diagnosing-bugs` | Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or r |
 | `domain-modeling` | Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLO |
 | `find-skills` | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for  |
+| `finishing-a-development-branch` | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work |
+| `git-workflow-and-versioning` | Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving  |
 | `guia-das-skills` | Índice da "Bíblia das Skills" (72 skills organizadas por tarefa). Use quando o usuário perguntar qual skill us |
+| `improve-codebase-architecture` | Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whicheve |
+| `performance-optimization` | Optimizes application performance across frontend, backend, queries, and databases. Use when performance requi |
+| `playwright-best-practices` | Use when writing Playwright tests, fixing flaky tests, debugging failures, implementing Page Object Model, con |
+| `receiving-code-review` | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear |
+| `requesting-code-review` | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
+| `security-and-hardening` | Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling us |
+| `security-review` | Security code review for vulnerabilities. Use when asked to "security review", "find vulnerabilities", "check  |
+| `shipping-and-launch` | Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in p |
+| `systematic-debugging` | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
 | `tdd` | Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green |
+| `vercel-composition-patterns` | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, buildi |
+| `verification-before-completion` | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires runn |
+| `webapp-testing` | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend  |
 | `wizard` | Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provision |
 | `writing-for-agents` | Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md. |
 
-## 08-servidor-banco-e-pagamentos: Servidor, banco e pagamentos (12)
+## 08-servidor-banco-e-pagamentos: Servidor, banco e pagamentos (16)
 
 | Skill | Para que serve |
 |---|---|
+| `api-and-interface-design` | Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. U |
+| `better-auth-best-practices` | Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle en |
 | `cloudflare` | Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for  |
 | `deploy-to-vercel` | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app" |
 | `firebase-basics` | Provides foundational Firebase CLI setup, CLI installation, version checks (`firebase-tools@latest --version`) |
 | `firebase-security-rules-auditor` | Audits Firebase (Firestore, Cloud Storage) security rules for vulnerabilities, privilege escalation, role bypa |
+| `openapi-spec-generation` | Generate and maintain OpenAPI 3.1 specifications from code, design-first specs, and validation patterns. Use w |
+| `postgresql-table-design` | Use this skill when designing or reviewing a PostgreSQL-specific schema. Covers best-practices, data types, in |
 | `prisma-client-api` | Prisma Client API reference covering model queries, filters, operators, and client methods. Use when writing d |
 | `prisma-compute` | Deploy and operate apps on Prisma Compute with the Prisma 8 CLI. Use whenever the user mentions Prisma Compute |
 | `resend` | Use when working with the Resend email API — sending transactional emails (single or batch), receiving inbound |
@@ -239,7 +286,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `write-a-skill` | Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wa |
 | `zero-hallucination-coder` | Use before high-stakes or multi-file coding (auth, databases, migrations), or when asked to plan carefully and |
 
-## 13-time-de-engenharia: Time de engenharia (front, back, QA, DevOps) (54)
+## 13-time-de-engenharia: Time de engenharia (front, back, QA, DevOps, apps) (56)
 
 | Skill | Para que serve |
 |---|---|
@@ -252,6 +299,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `cloud-security` | Use when checking AWS, Azure or GCP for security misconfigurations: IAM privilege escalation, public buckets,  |
 | `code-reviewer` | Use for any code review: a pull request, a diff, a commit, or a pasted function, handler or file in TypeScript |
 | `coverage` | Find what is not tested: map untested pages and flows and coverage gaps. Use whenever the user asks what needs |
+| `eas-app-stores` | Build and submit iOS and Android apps with EAS to TestFlight, the App Store, or Google Play. Supports Expo and |
 | `email-template-builder` | Use when adding or reworking transactional email (React Email templates, Resend, Postmark, SendGrid or SES, pr |
 | `embedded-iot-mentor` | Use for any embedded or IoT hardware project (ESP32, STM32, Arduino, Pico, firmware, PCB, MQTT, Home Assistant |
 | `engineering-skills` | Find which engineering skill fits a task: architecture, frontend, backend, QA, DevOps, security, AI/ML, data,  |
@@ -297,6 +345,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `tech-stack-evaluator` | Compare frameworks or tech stacks before committing: side-by-side scoring, total cost of ownership, ecosystem  |
 | `testrail` | Use when syncing Playwright tests with TestRail ('testrail', 'sync test cases', 'push results to testrail', 'i |
 | `threat-detection` | Use when hunting threats, sweeping IOCs or looking for anomalies in logs and telemetry. Ranks ATT&CK-mapped si |
+| `vercel-react-native-skills` | React Native and Expo best practices for building performant mobile apps. Use when building React Native compo |
 
 ## 14-marketing-completo: Marketing completo (conteúdo, SEO, redes, e-mail) (51)
 
@@ -556,19 +605,52 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `stock-analysis` | Analyze, research or value a listed stock or company (US, global, NSE or BSE) with verified data, ratios, scor |
 | `vendor-management` | Use when scoring or auditing vendors: scorecards, SLA compliance and service credits, third-party risk tier or |
 
-## 21-agentes-e-automacao: Agentes e automação (12)
+## 21-agentes-e-automacao: Agentes e automação (14)
 
 | Skill | Para que serve |
 |---|---|
 | `agent-launcher-orchestrator` | Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic accou |
+| `claude-api` | /- Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents |
 | `design-system` | Use when setting up brand settings before the first markdown-to-HTML conversion, or changing them. Runs a 10-q |
 | `grade-iterate` | Use when a launched managed agent needs grading against a rubric and improving ('grade my agent', 'is it good  |
 | `interview` | Use when someone has an agent idea to scope before launch ('help me scope an agent'). Interviews them about th |
 | `loop-library` | Discover, find, compare, audit, repair, adapt, and design repeatable AI-agent loops with explicit triggers, ac |
 | `markdown-html-orchestrator` | Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review |
+| `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with externa |
 | `md-document` | Use when converting long-form markdown (spec, RFC, report, plan) into a single-file HTML page with sticky TOC, |
 | `md-review` | Use when converting a markdown code review with diff blocks and severity callouts into a two-column HTML revie |
 | `md-slides` | Turn a markdown file into a single-file HTML slide deck with keyboard navigation, presenter notes and print-to |
 | `run-without-you` | Use when a graded managed agent should run on a schedule, on an event trigger or on demand ('run it every morn |
 | `stage-launch` | Use when a managed-agent build sheet is ready to launch ('launch it', 'deploy the agent'). Generates and valid |
 | `wrap-up` | Use when closing out a launched managed agent ('wrap up', 'what do I own now'). Inventories primitives with pr |
+
+## 22-versoes-alternativas: Versões alternativas (12)
+
+| Skill | Para que serve |
+|---|---|
+| `ad-creative__380-skills` | Use for any ad copy request (RSA headlines, Meta, LinkedIn or TikTok ads, bulk variations), before writing. Ch |
+| `caveman__380-skills` | Ultra-short replies that cut tokens about 75% by dropping filler, articles and pleasantries while staying tech |
+| `copy-editing__380-skills` | Edit, proofread and tighten existing marketing copy in focused passes: clarity, voice, proofreading, specifici |
+| `copywriting__380-skills` | Use for any headline, tagline, CTA, landing, pricing or about-page copy request, before drafting. Scores candi |
+| `handoff__380-skills` | Compact the current conversation into a handoff document for another agent to pick up, referencing existing ar |
+| `marketing-psychology__380-skills` | Apply persuasion and behavioral science ethically to a page, offer or campaign, from 70+ mental models. Use wh |
+| `media-use__clube-das-skills` | Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar  |
+| `programmatic-seo__380-skills` | Use when building many SEO pages from a template and data (location, integration, comparison or directory page |
+| `remotion-best-practices__72-skills` | Router for all Remotion skills |
+| `remotion-captions__clube-das-skills` | Transcribing, displaying and animating captions |
+| `remotion-render__clube-das-skills` | Export a Remotion video |
+| `seo-audit__380-skills` | Find why a site is not ranking: technical SEO, on-page issues, meta tags, site health. Use whenever the user a |
+
+## 24-motion-e-animacao: Motion e animação (GSAP, Three.js, efeitos) (9)
+
+| Skill | Para que serve |
+|---|---|
+| `animate` | Build an animation from scratch, making the decisions in the order that determines whether it feels right — sh |
+| `animation-vocabulary` | Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term |
+| `fixing-motion-performance` | Audit and fix animation performance issues including layout thrashing, compositor properties, scroll-linked mo |
+| `gsap-core` | Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap. |
+| `gsap-plugins` | Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, |
+| `gsap-scrolltrigger` | Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building  |
+| `motion-design` | > Applies motion design principles to create emotionally-driven, technically sound animations and transitions. |
+| `review-animations` | Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering phi |
+| `threejs-fundamentals` | Three.js scene setup: scenes and fog, cameras, the renderer and tone mapping, the animation loop, object hiera |
