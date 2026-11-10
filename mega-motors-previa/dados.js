@@ -31,6 +31,7 @@ const DADOS = {
     mapsUrl: "https://maps.app.goo.gl/PyJKYSdRAHc4Tt3g7",   // perfil da loja no Google Maps (botão "Como chegar")
     // Botão "Avalie no Google": abre direto a tela de avaliação da loja.
     googleAvaliacaoUrl: "https://search.google.com/local/writereview?placeid=ChIJ1Zq91evPyJQRTAlzcfRIwjw",
+    selo: "selo.png",                    // selo redondo (mascote: mulher + cachorro). Pasta imagens.
     logo: "logo.png",                    // logo com fundo transparente (pasta imagens)
     fotoFachada: "fachada.jpg"
   },
@@ -57,17 +58,23 @@ const DADOS = {
   ],
 
   /* ---------- PRODUTOS NOVOS ---------- */
-  // ATENÇÃO: modelos e preços abaixo são EXEMPLOS só para a prévia ("exemplo: true" mostra o selo "Exemplo").
-  // Quando colocar o produto real, apague "exemplo: true" e ajuste o preço.
+  // As fotos das scooters e dos triciclos são reais (Instagram da loja). Os PREÇOS são só exemplo:
+  // "precoExemplo: true" mostra o selo "Preço de exemplo". Troque o preço e apague essa marca.
+  // Os nomes marcados [MODELO] precisam ser confirmados. "exemplo: true" = item inteiro de exemplo.
   // Para adicionar um produto, copie uma linha { ... } e cole abaixo dela.
   // Campos vazios ("") não aparecem no card (ex.: capacete não tem autonomia).
   produtos: [
-    { categoria: "scooters",  nome: "Bolin E40",       preco: "R$ 8.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-1.jpg", exemplo: true },
-    { categoria: "scooters",  nome: "ZUB L70",         preco: "R$ 6.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-2.jpg", exemplo: true },
-    { categoria: "scooters",  nome: "Bolin e60",       preco: "R$ 7.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-3.jpg", exemplo: true },
+    { categoria: "scooters",  nome: "Bolin ONE",                    preco: "R$ 8.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-1.jpg", precoExemplo: true },
+    { categoria: "scooters",  nome: "Scooter pêssego [MODELO]",     preco: "R$ 6.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-2.jpg", precoExemplo: true },
+    { categoria: "scooters",  nome: "Bolin prata e verde [MODELO]", preco: "R$ 7.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-3.jpg", precoExemplo: true },
+    { categoria: "scooters",  nome: "Bolin preta e verde [MODELO]", preco: "R$ 7.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-4.jpg", precoExemplo: true },
+    { categoria: "scooters",  nome: "OEK vermelha [MODELO]",        preco: "R$ 9.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-5.jpg", precoExemplo: true },
+    { categoria: "scooters",  nome: "H.Way preta e verde [MODELO]", preco: "R$ 6.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-6.jpg", precoExemplo: true },
+    { categoria: "scooters",  nome: "Scooter branca [MODELO]",      preco: "R$ 6.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "scooter-7.jpg", precoExemplo: true },
+    { categoria: "triciclos", nome: "Triciclo Letto",               preco: "R$ 9.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "triciclo-1.jpg", precoExemplo: true },
+    { categoria: "triciclos", nome: "Triciclo Luck",                preco: "R$ 9.000", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "triciclo-2.jpg", precoExemplo: true },
     { categoria: "bikes",     nome: "[MODELO BIKE]",      preco: "R$ 4.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "bike-1.jpg", exemplo: true },
     { categoria: "patinetes", nome: "[MODELO PATINETE]",  preco: "R$ 2.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "patinete-1.jpg", exemplo: true },
-    { categoria: "triciclos", nome: "[MODELO TRICICLO]",  preco: "R$ 9.500", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "triciclo-1.jpg", exemplo: true },
     { categoria: "infantis",  nome: "[MODELO INFANTIL]",  preco: "R$ 1.800", potencia: "[POTÊNCIA]", autonomia: "[AUTONOMIA]", foto: "infantil-1.jpg", exemplo: true },
     { categoria: "capacetes", nome: "[MODELO CAPACETE]",  preco: "R$ 250",   potencia: "", autonomia: "", foto: "capacete-1.jpg", exemplo: true }
   ],
@@ -118,7 +125,9 @@ const DADOS = {
       { arquivo: "loja-1.jpg",   legenda: "Nossa loja" },
       { arquivo: "loja-2.jpg",   legenda: "Nossa loja" },
       { arquivo: "loja-3.jpg",   legenda: "Nossa loja" },
-      { arquivo: "equipe-1.jpg", legenda: "Nossa equipe" }
+      { arquivo: "equipe-1.jpg", legenda: "Nossa equipe" },
+      { arquivo: "equipe-2.jpg", legenda: "Nossa equipe" },
+      { arquivo: "equipe-3.jpg", legenda: "Nossa equipe" }
     ]
   },
 
@@ -131,16 +140,19 @@ const DADOS = {
 
   /* ---------- FEEDBACKS DE CLIENTES ---------- */
   feedbacks: {
+    titulo: "Avaliações de clientes",
     texto: "Prezamos pela sua felicidade e pela sua satisfação com o nosso produto. Veja alguns clientes que já rodam com a Mega Motors.",
-    // Vídeos de clientes: "arquivo" fica na pasta "videos"; "capa" é a imagem que aparece antes de dar play (opcional).
-    videos: [
-      { titulo: "Cliente 1", arquivo: "cliente-1.mp4", capa: "cliente-1-capa.jpg" },
-      { titulo: "Cliente 2", arquivo: "cliente-2.mp4", capa: "cliente-2-capa.jpg" },
-      { titulo: "Cliente 3", arquivo: "cliente-3.mp4", capa: "cliente-3-capa.jpg" },
-      { titulo: "Cliente 4", arquivo: "cliente-4.mp4", capa: "cliente-4-capa.jpg" }
-    ],
-    // Fotos de clientes (pasta "imagens"). Os nomes sem foto aparecem como espaço reservado.
-    fotos: ["cliente-1.jpg", "cliente-2.jpg", "cliente-3.jpg", "cliente-4.jpg"]
+    // Carrossel automático: vídeos e fotos de clientes passam sozinhos (pausa quando alguém toca ou dá play).
+    // tipo "video": "arquivo" fica na pasta "videos"; "capa" é a imagem antes do play (opcional).
+    // tipo "foto": "arquivo" fica na pasta "imagens". Para adicionar, copie uma linha.
+    itens: [
+      { tipo: "video", titulo: "Cliente 1",        arquivo: "cliente-1.mp4", capa: "cliente-1-capa.jpg" },
+      { tipo: "foto",  titulo: "Mais uma família feliz", arquivo: "cliente-1.jpg" },
+      { tipo: "video", titulo: "Cliente 2",        arquivo: "cliente-2.mp4", capa: "cliente-2-capa.jpg" },
+      { tipo: "video", titulo: "Ficha aprovada!",  arquivo: "cliente-5.mp4", capa: "cliente-5-capa.jpg" },
+      { tipo: "video", titulo: "Cliente 3",        arquivo: "cliente-3.mp4", capa: "cliente-3-capa.jpg" },
+      { tipo: "video", titulo: "Cliente 4",        arquivo: "cliente-4.mp4", capa: "cliente-4-capa.jpg" }
+    ]
   },
 
   /* ---------- PERGUNTAS FREQUENTES (botões de ajuda, sem IA) ---------- */

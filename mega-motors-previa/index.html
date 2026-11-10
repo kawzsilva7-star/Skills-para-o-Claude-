@@ -96,7 +96,8 @@ h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;backg
 .chip[aria-pressed="true"]{background:var(--amarelo);border-color:var(--amarelo);color:#111}
 .grade{display:grid;gap:16px;grid-template-columns:1fr}
 .card{background:var(--card);border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden;display:flex;flex-direction:column}
-.card .foto{aspect-ratio:16/10;border-radius:0}
+.card .foto{aspect-ratio:1/1;border-radius:0}
+.card .foto img{object-position:50% 72%}
 .card-corpo{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .card h3{font-size:1.15rem}
 .dado{display:flex;justify-content:space-between;gap:12px;color:var(--suave);font-size:.95rem;border-bottom:1px dashed var(--linha);padding-bottom:6px}
@@ -114,6 +115,28 @@ td small{display:block;color:var(--suave);font-size:.8rem;font-weight:400}
 .carrossel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;padding:2px 18px 14px;margin:0 -18px 14px;scrollbar-width:thin}
 .carrossel .video{flex:0 0 72%;max-width:300px;scroll-snap-align:start}
 .carrossel:empty{display:none}
+.carrossel-area{position:relative}
+.seta{display:none;position:absolute;top:42%;z-index:5;width:46px;height:46px;border-radius:50%;border:1px solid var(--linha);
+  background:rgba(14,14,14,.85);color:var(--amarelo);font-size:1.7rem;line-height:1;cursor:pointer}
+.seta.esq{left:4px}.seta.dir{right:4px}
+@media (hover:hover) and (pointer:fine){.seta{display:block}}
+.foto-slide .foto{aspect-ratio:9/16;border-radius:0}
+.selo-bloco{display:flex;align-items:center;gap:16px}
+.selo-redondo{flex:none;width:96px;height:96px;border-radius:50%;border:3px solid var(--amarelo);overflow:hidden;background:#222;
+  box-shadow:0 0 0 5px rgba(255,212,0,.15)}
+.selo-redondo .foto{width:100%;height:100%;border-radius:50%;border:0}
+.selo-redondo .foto.vazia{border:2px dashed #4a4a4a}
+.selo-redondo .ph-nome{font-size:.55rem}
+.selo-redondo .ph-tag{font-size:.7rem}
+.selo-bloco h2{margin:0}
+/* entrada suave das seções (só transform e opacity) */
+.rev{opacity:0;transform:translateY(14px)}
+.rev.vis{opacity:1;transform:none;transition:opacity .45s cubic-bezier(.23,1,.32,1),transform .45s cubic-bezier(.23,1,.32,1)}
+@media (hover:hover) and (pointer:fine){
+  .card{transition:transform .2s cubic-bezier(.23,1,.32,1),border-color .2s}
+  .card:hover{transform:translateY(-3px);border-color:var(--amarelo)}
+}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}}
 
 /* faixa de ação (test drive) */
 .faixa{background:var(--amarelo);color:#111;border-radius:var(--raio);padding:26px 20px;text-align:center}
@@ -155,8 +178,6 @@ tr:last-child td{border-bottom:0}
 .beneficio p{margin:0;color:#d0d0d0}
 
 /* feedbacks */
-.galeria{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
-.galeria .foto{aspect-ratio:1/1}
 
 /* chat de perguntas */
 .chat{background:var(--card);border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden}
@@ -206,7 +227,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   .grade{grid-template-columns:repeat(2,1fr)}
   .videos{grid-template-columns:repeat(2,1fr)}
   .beneficios{grid-template-columns:repeat(3,1fr)}
-  .galeria,  .fotos2{grid-template-columns:repeat(4,1fr)}
+  .fotos2{grid-template-columns:repeat(3,1fr)}
   .duas{grid-template-columns:1fr 1fr}
   .btn{width:auto}
   .card .btn,.faixa .btn{width:100%}
@@ -328,10 +349,18 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
 <!-- 9. FEEDBACKS -->
 <section id="feedbacks">
   <div class="wrap">
-    <h2>Feedbacks</h2>
+    <div class="selo-bloco">
+      <div class="selo-redondo" id="seloSatisfacao"></div>
+      <div>
+        <h2 id="feedbacksTitulo">Avaliações de clientes</h2>
+      </div>
+    </div>
     <p class="lead" id="feedbacksTexto"></p>
-    <div class="carrossel" id="videosClientes"></div>
-    <div class="galeria" id="galeriaClientes"></div>
+    <div class="carrossel-area">
+      <button class="seta esq" type="button" id="setaEsq" aria-label="Anterior">‹</button>
+      <div class="carrossel" id="videosClientes" tabindex="0" aria-label="Vídeos e fotos de clientes"></div>
+      <button class="seta dir" type="button" id="setaDir" aria-label="Próximo">›</button>
+    </div>
     <button class="btn" id="btnGoogle" type="button">★ Avalie no Google</button>
   </div>
 </section>
@@ -539,7 +568,8 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   function cardProduto(p) {
     var selos = [];
     if (p.condicao) selos.push(h("span", { class: "selo", text: p.condicao }));
-    if (p.exemplo) selos.push(h("span", { class: "selo ex", text: "Exemplo" }));
+    if (p.precoExemplo) selos.push(h("span", { class: "selo ex", text: "Preço de exemplo" }));
+    else if (p.exemplo) selos.push(h("span", { class: "selo ex", text: "Exemplo" }));
     var corpo = h("div", { class: "card-corpo" },
       selos.length ? h("div", { class: "selos" }, selos) : null,
       h("h3", { text: p.nome }),
@@ -634,12 +664,50 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
       h("h3", { text: b.titulo }), h("p", { text: b.texto })));
   });
 
-  /* ---- 9. feedbacks ---- */
-  $("feedbacksTexto").textContent = DADOS.feedbacks.texto;
-  (DADOS.feedbacks.videos || []).forEach(function (v) { $("videosClientes").appendChild(cardVideo(v)); });
-  DADOS.feedbacks.fotos.forEach(function (f, i) {
-    $("galeriaClientes").appendChild(foto(f, "Foto de cliente " + (i + 1)));
+  /* ---- 9. feedbacks: carrossel automático de vídeos e fotos ---- */
+  var FB = DADOS.feedbacks;
+  if (FB.titulo) $("feedbacksTitulo").textContent = FB.titulo;
+  $("feedbacksTexto").textContent = FB.texto;
+  $("seloSatisfacao").appendChild(foto(L.selo, "Selo Mega Motors"));
+  var carrossel = $("videosClientes");
+  FB.itens.forEach(function (it) {
+    if (it.tipo === "video") carrossel.appendChild(cardVideo(it));
+    else carrossel.appendChild(h("div", { class: "video foto-slide" }, foto(it.arquivo, it.titulo), h("p", { text: it.titulo || "" })));
   });
+  (function () {
+    var itens = carrossel.children, pausaAte = 0, visivel = false, tocando = 0;
+    function alvo(i) { return itens[i].offsetLeft - itens[0].offsetLeft; }
+    function atual() {
+      var melhor = 0, d = 1e9;
+      for (var i = 0; i < itens.length; i++) { var x = Math.abs(alvo(i) - carrossel.scrollLeft); if (x < d) { d = x; melhor = i; } }
+      return melhor;
+    }
+    function ir(i) { carrossel.scrollTo({ left: alvo(i), behavior: "smooth" }); }
+    function proximo(dir) {
+      var n = itens.length, i = atual() + dir;
+      var fim = carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth - 4;
+      if (dir > 0 && (fim || i >= n)) i = 0;
+      if (dir < 0 && i < 0) i = n - 1;
+      ir(i);
+    }
+    function pausar(ms) { pausaAte = Date.now() + ms; }
+    ["pointerdown", "wheel", "focusin"].forEach(function (ev) { carrossel.addEventListener(ev, function () { pausar(9000); }, { passive: true }); });
+    $("setaEsq").addEventListener("click", function () { pausar(9000); proximo(-1); });
+    $("setaDir").addEventListener("click", function () { pausar(9000); proximo(1); });
+    carrossel.addEventListener("play", function () { tocando++; }, true);
+    carrossel.addEventListener("pause", function () { tocando = Math.max(0, tocando - 1); pausar(4000); }, true);
+    carrossel.addEventListener("ended", function () { pausar(1500); }, true);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e) { visivel = e[0].isIntersecting; }, { threshold: 0.3 }).observe(carrossel);
+    } else visivel = true;
+    var semMovimento = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!semMovimento && itens.length > 1) {
+      setInterval(function () {
+        if (!visivel || document.hidden || tocando || Date.now() < pausaAte) return;
+        proximo(1);
+      }, 4500);
+    }
+  })();
   $("btnGoogle").addEventListener("click", function () {
     if (L.googleAvaliacaoUrl) window.open(L.googleAvaliacaoUrl, "_blank", "noopener");
     else aviso("Link de avaliação do Google ainda não configurado (prévia).");
@@ -702,6 +770,24 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   var fixo = $("waFixo");
   fixo.href = wa(DADOS.mensagens.geral);
   fixo.appendChild(icone());
+
+  /* ---- entrada suave ao rolar (uma vez, só opacidade e deslocamento) ---- */
+  var reduz = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !reduz) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("vis");
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.08 });
+    var n = 0;
+    Array.prototype.forEach.call(document.querySelectorAll("section h2, #gradeProdutos .card, #gradeSeminovos .card, .beneficio, .fotos2 figure, .info > div"), function (el) {
+      el.classList.add("rev");
+      el.style.transitionDelay = (n++ % 4) * 50 + "ms";
+      io.observe(el);
+    });
+  }
 })();
 </script>
 </body>
