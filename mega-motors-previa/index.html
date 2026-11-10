@@ -664,7 +664,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
     hor.appendChild(document.createTextNode(x.dia + ": " + textoHorario(x)));
   });
   $("mapa").src = "https://www.google.com/maps?q=" + encodeURIComponent(L.endereco) + "&output=embed";
-  $("btnRota").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(L.endereco);
+  $("btnRota").href = L.mapsUrl || ("https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(L.endereco));
 
   /* ---- 12. trabalhe conosco ---- */
   $("trabalheBotao").appendChild(botaoWa("Enviar mensagem no WhatsApp", DADOS.mensagens.trabalhe));

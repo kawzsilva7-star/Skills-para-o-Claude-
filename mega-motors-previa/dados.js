@@ -28,7 +28,10 @@ const DADOS = {
     email: "redemegamotors@gmail.com",   // e-mail que aparece no perfil do WhatsApp da loja
     instagram: "@megamotors.eletrica",
     instagramUrl: "https://www.instagram.com/megamotors.eletrica/",
-    googleAvaliacaoUrl: "",              // [LINK DE AVALIAÇÃO DO GOOGLE] cole aqui o link
+    mapsUrl: "https://maps.app.goo.gl/PyJKYSdRAHc4Tt3g7",   // perfil da loja no Google Maps (botão "Como chegar")
+    // Botão "Avalie no Google": por enquanto abre o perfil da loja, onde fica o botão "Avaliar".
+    // Quando tiver o link direto de avaliação, cole aqui no lugar.
+    googleAvaliacaoUrl: "https://maps.app.goo.gl/PyJKYSdRAHc4Tt3g7",
     fotoFachada: "fachada.jpg"
   },
 
