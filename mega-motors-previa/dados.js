@@ -15,9 +15,13 @@ const DADOS = {
     segmento: "Mobilidade Elétrica",
     frase: "A forma inteligente de se locomover",
     endereco: "Av. São José dos Campos, 2410 - Parque São Martinho, Campinas - SP",
+    // Horários de funcionamento (usados no botão "Horários" e em "Onde estamos").
+    // "dias": 0=domingo, 1=segunda ... 6=sábado. "abre"/"fecha": hora cheia (9 = 9h; 9.5 = 9h30).
+    // Para dia fechado use: { dia: "Domingo", dias: [0], fechado: true }
     horario: [
-      { dia: "Segunda a sexta", horas: "9h às 19h" },
-      { dia: "Sábado", horas: "9h às 17h" }
+      { dia: "Segunda a sexta", dias: [1, 2, 3, 4, 5], abre: 9, fecha: 19 },
+      { dia: "Sábado",          dias: [6],             abre: 9, fecha: 17 },
+      { dia: "Domingo",         dias: [0],             fechado: true }
     ],
     whatsapp: "5519999499216",          // só números, com 55 + DDD
     whatsappExibicao: "(19) 99949-9216",
@@ -31,6 +35,7 @@ const DADOS = {
   /* ---------- MENSAGENS PRONTAS DO WHATSAPP ---------- */
   mensagens: {
     geral: "Olá! Vim pelo site da Mega Motors e gostaria de mais informações.",
+    agendarHorario: "Olá! Gostaria de agendar um horário na Mega Motors. Quais dias e horários estão disponíveis?",
     interesse: "Olá! Tenho interesse no modelo {NOME}. Como posso fazer?",   // {NOME} vira o nome do produto
     testDrive: "Olá! Gostaria de agendar um test drive. Quais modelos e horários estão disponíveis?",
     avaliacao: "Olá! Gostaria de agendar uma avaliação na assistência técnica. Como posso fazer?",

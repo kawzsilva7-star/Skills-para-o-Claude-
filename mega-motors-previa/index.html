@@ -60,6 +60,20 @@ h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;backg
 .hero h1{font-size:2.6rem;margin:8px 0 6px}
 .hero h1 span{color:var(--amarelo)}
 .hero p{font-size:1.2rem;color:#dcdcdc;margin:0 0 22px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.acoes .btn{flex:1 1 220px}
+.horarios{margin-top:14px;background:var(--card);border:1px solid var(--linha);border-radius:var(--raio);padding:18px;animation:surge .2s ease-out}
+.horarios[hidden]{display:none}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;margin-bottom:12px}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:#777}
+.status.aberto{color:#4be07f}.status.aberto::before{background:#4be07f}
+.status.fechado{color:#ff7a6b}.status.fechado::before{background:#ff7a6b}
+.horarios ul{list-style:none;margin:0 0 16px;padding:0}
+.horarios li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-bottom:1px solid var(--linha);border-radius:8px}
+.horarios li:last-child{border-bottom:0}
+.horarios li.hoje{background:rgba(255,212,0,.12);font-weight:700}
+.horarios li .h{color:var(--suave)}
+.horarios li.hoje .h{color:var(--amarelo)}
 .hero .foto{margin-top:26px;aspect-ratio:16/10;border-radius:var(--raio);border:1px solid var(--linha)}
 
 /* fotos e espaços reservados */
@@ -224,7 +238,8 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
       <span class="tag" id="heroSegmento"></span>
       <h1 id="heroNome"></h1>
       <p id="heroFrase"></p>
-      <div id="heroBotao"></div>
+      <div class="acoes" id="heroBotao"></div>
+      <div id="heroHorarios"></div>
     </div>
     <div id="heroFoto"></div>
   </div>
@@ -448,6 +463,25 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
     menuBtn.setAttribute("aria-expanded", String(aberto));
   });
 
+  /* ---- horários ---- */
+  function fmtH(n) {
+    var hh = Math.floor(n), mm = Math.round((n - hh) * 60);
+    return hh + "h" + (mm ? String(mm).padStart(2, "0") : "");
+  }
+  function textoHorario(x) { return x.fechado ? "Fechado" : fmtH(x.abre) + " às " + fmtH(x.fecha); }
+  function agoraBrasil() {
+    var partes = new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", weekday: "short",
+      hour: "numeric", minute: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+    var o = {};
+    partes.forEach(function (p) { o[p.type] = p.value; });
+    var dia = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(o.weekday);
+    return { dia: dia, hora: parseInt(o.hour, 10) + parseInt(o.minute, 10) / 60 };
+  }
+  function faixaDoDia(dia) {
+    for (var i = 0; i < L.horario.length; i++) if (L.horario[i].dias.indexOf(dia) >= 0) return L.horario[i];
+    return null;
+  }
+
   /* ---- 1. topo ---- */
   $("heroSegmento").textContent = L.segmento;
   var h1 = $("heroNome");
@@ -456,6 +490,31 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   h1.appendChild(h("span", { text: partes[partes.length - 1] }));
   $("heroFrase").textContent = L.frase;
   $("heroBotao").appendChild(botaoWa("Falar no WhatsApp", DADOS.mensagens.geral));
+
+  /* botão Horários: abre/fecha o painel com os horários e o botão de agendar */
+  var btnHor = h("button", { class: "btn sec", type: "button", "aria-expanded": "false", "aria-controls": "painelHorarios", text: "🕒 Horários" });
+  var painel = h("div", { class: "horarios", id: "painelHorarios", hidden: "" });
+  function desenhaHorarios() {
+    var agora = agoraBrasil(), faixa = faixaDoDia(agora.dia);
+    var aberto = faixa && !faixa.fechado && agora.hora >= faixa.abre && agora.hora < faixa.fecha;
+    painel.textContent = "";
+    painel.appendChild(h("div", { class: "status " + (aberto ? "aberto" : "fechado"),
+      text: aberto ? "Aberto agora" : "Fechado agora" }));
+    var ul = h("ul");
+    L.horario.forEach(function (x) {
+      ul.appendChild(h("li", { class: x.dias.indexOf(agora.dia) >= 0 ? "hoje" : "" },
+        h("span", { text: x.dia }), h("span", { class: "h", text: textoHorario(x) })));
+    });
+    painel.appendChild(ul);
+    painel.appendChild(botaoWa("Agendar horário", DADOS.mensagens.agendarHorario));
+  }
+  btnHor.addEventListener("click", function () {
+    var abrir = painel.hasAttribute("hidden");
+    if (abrir) { desenhaHorarios(); painel.removeAttribute("hidden"); } else painel.setAttribute("hidden", "");
+    btnHor.setAttribute("aria-expanded", String(abrir));
+  });
+  $("heroBotao").appendChild(btnHor);
+  $("heroHorarios").appendChild(painel);
   $("heroFoto").appendChild(foto(L.fotoFachada, "Fachada da loja " + L.nome));
   document.querySelector("#heroFoto .foto").classList.add("fachada");
 
@@ -589,7 +648,7 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   var hor = $("ondeHorario");
   L.horario.forEach(function (x, i) {
     if (i) hor.appendChild(document.createElement("br"));
-    hor.appendChild(document.createTextNode(x.dia + ": " + x.horas));
+    hor.appendChild(document.createTextNode(x.dia + ": " + textoHorario(x)));
   });
   $("mapa").src = "https://www.google.com/maps?q=" + encodeURIComponent(L.endereco) + "&output=embed";
   $("btnRota").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(L.endereco);
