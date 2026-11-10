@@ -29,9 +29,8 @@ const DADOS = {
     instagram: "@megamotors.eletrica",
     instagramUrl: "https://www.instagram.com/megamotors.eletrica/",
     mapsUrl: "https://maps.app.goo.gl/PyJKYSdRAHc4Tt3g7",   // perfil da loja no Google Maps (botão "Como chegar")
-    // Botão "Avalie no Google": por enquanto abre o perfil da loja, onde fica o botão "Avaliar".
-    // Quando tiver o link direto de avaliação, cole aqui no lugar.
-    googleAvaliacaoUrl: "https://maps.app.goo.gl/PyJKYSdRAHc4Tt3g7",
+    // Botão "Avalie no Google": abre direto a tela de avaliação da loja.
+    googleAvaliacaoUrl: "https://search.google.com/local/writereview?placeid=ChIJ1Zq91evPyJQRTAlzcfRIwjw",
     fotoFachada: "fachada.jpg"
   },
 
