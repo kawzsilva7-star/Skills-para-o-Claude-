@@ -43,6 +43,7 @@ const DADOS = {
     interesse: "Olá! Tenho interesse no modelo {NOME}. Como posso fazer?",   // {NOME} vira o nome do produto
     testDrive: "Olá! Gostaria de agendar um test drive. Quais modelos e horários estão disponíveis?",
     avaliacao: "Olá! Gostaria de agendar uma avaliação na assistência técnica. Como posso fazer?",
+    servico: "Olá! Gostaria de agendar o serviço: {SERVICO} ({PRECO}). Como posso fazer?",   // {SERVICO} e {PRECO} são preenchidos sozinhos
     trabalhe: "Olá! Tenho interesse em trabalhar na Mega Motors. Como posso enviar meu currículo?"
   },
 
@@ -105,15 +106,12 @@ const DADOS = {
   },
 
   /* ---------- VÍDEOS DE MANUTENÇÃO ---------- */
-  // Duas formas (use uma por vídeo):
-  //  - "link": endereço de um post/reel do Instagram, ex.: "https://www.instagram.com/reel/XXXXXXXX/"
-  //  - "arquivo": nome de um vídeo .mp4 colocado na pasta "videos", ex.: "avaliacao-1.mp4"
-  // Enquanto os dois estiverem vazios, aparece um espaço reservado.
-  videos: [
-    { titulo: "[VÍDEO 1]", link: "", arquivo: "" },
-    { titulo: "[VÍDEO 2]", link: "", arquivo: "" },
-    { titulo: "[VÍDEO 3]", link: "", arquivo: "" }
-  ],
+  // Enquanto a lista "videos" estiver vazia, a seção mostra "Em breve".
+  // Para publicar vídeos, adicione linhas (use uma das duas formas por vídeo):
+  //   { titulo: "Troca de pastilha", link: "https://www.instagram.com/reel/XXXXXXXX/" }   // post/reel do Instagram
+  //   { titulo: "Troca de pastilha", arquivo: "pastilha.mp4" }                          // arquivo na pasta "videos"
+  videosEmBreve: "Em breve: vídeos de manutenção e dicas para cuidar da sua moto elétrica.",
+  videos: [],
 
   /* ---------- SOBRE NÓS ---------- */
   sobre: {

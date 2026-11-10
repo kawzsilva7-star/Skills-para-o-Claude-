@@ -110,7 +110,6 @@ h2::after{content:"";display:block;width:44px;height:4px;border-radius:2px;backg
 .selos{display:flex;gap:8px;flex-wrap:wrap}
 .selo.ex{background:transparent;color:var(--suave);border-color:#666}
 .preco{font-size:1.4rem;font-weight:800;color:var(--amarelo)}
-td small{display:block;color:var(--suave);font-size:.8rem;font-weight:400}
 .video video{width:100%;max-height:560px;display:block;background:#000;object-fit:contain}
 .carrossel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;padding:2px 18px 14px;margin:0 -18px 14px;scrollbar-width:thin}
 .carrossel .video{flex:0 0 72%;max-width:300px;scroll-snap-align:start}
@@ -148,13 +147,22 @@ td small{display:block;color:var(--suave);font-size:.8rem;font-weight:400}
 /* assistência */
 .aviso{display:inline-block;background:rgba(255,212,0,.14);border:1px solid var(--amarelo);color:var(--amarelo);
   padding:6px 14px;border-radius:999px;font-weight:700;margin-bottom:18px}
-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--raio);overflow:hidden;margin-bottom:12px}
-caption{text-align:left;color:var(--suave);padding-bottom:8px}
-th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--linha)}
-th{background:#262626;color:var(--amarelo);font-size:.9rem;text-transform:uppercase;letter-spacing:.8px}
-td:last-child,th:last-child{text-align:right;white-space:nowrap}
-tr:last-child td{border-bottom:0}
 .obs{color:var(--suave);font-size:.9rem;margin:0 0 20px}
+.sub-titulo{font-size:1.1rem;color:var(--amarelo);margin:0 0 4px}
+.dica{color:var(--suave);font-size:.9rem;margin:0 0 12px}
+.servicos{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:10px}
+.servico{display:flex;align-items:center;gap:12px;min-height:64px;padding:12px 14px;border-radius:14px;background:var(--card);
+  border:1px solid var(--linha);text-decoration:none}
+.servico:active{background:#262626}
+.servico .nome{flex:1;font-weight:600}
+.servico .nome small{display:block;color:var(--suave);font-size:.8rem;font-weight:400}
+.servico .preco{font-weight:800;color:var(--amarelo);white-space:nowrap}
+.servico .go{flex:none;width:44px;height:44px;border-radius:50%;background:var(--verde);display:grid;place-items:center}
+.servico .go svg{width:24px;height:24px;color:#fff}
+@media (hover:hover) and (pointer:fine){.servico:hover{border-color:var(--amarelo)}}
+.embreve{background:var(--card);border:2px dashed #4a4a4a;border-radius:var(--raio);padding:34px 20px;text-align:center}
+.embreve b{display:inline-block;background:var(--amarelo);color:#111;border-radius:999px;padding:4px 14px;margin-bottom:12px;letter-spacing:.5px}
+.embreve p{margin:0;color:#d0d0d0}
 
 /* vídeos */
 .videos{display:grid;gap:16px;grid-template-columns:1fr}
@@ -299,11 +307,9 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   <div class="wrap">
     <h2>Assistência técnica</h2>
     <p class="lead"><span class="aviso" id="assistenciaAviso"></span></p>
-    <table>
-      <caption id="assistenciaTitulo">Serviços e preços</caption>
-      <thead><tr><th scope="col">Serviço</th><th scope="col">Preço</th></tr></thead>
-      <tbody id="tabelaServicos"></tbody>
-    </table>
+    <h3 class="sub-titulo" id="assistenciaTitulo">Serviços e preços</h3>
+    <p class="dica">Toque no serviço para agendar pelo WhatsApp.</p>
+    <ul class="servicos" id="listaServicos"></ul>
     <p class="obs" id="assistenciaObs"></p>
     <div id="assistenciaBotao"></div>
   </div>
@@ -610,10 +616,14 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
   var A = DADOS.assistencia;
   $("assistenciaAviso").textContent = A.texto;
   if (A.titulo) $("assistenciaTitulo").textContent = A.titulo;
-  A.servicos.forEach(function (s) {
-    $("tabelaServicos").appendChild(h("tr", null,
-      h("td", null, s.servico, s.nota ? h("small", { text: s.nota }) : null),
-      h("td", { text: s.preco })));
+  A.servicos.forEach(function (sv) {
+    var msg = DADOS.mensagens.servico.replace("{SERVICO}", sv.servico).replace("{PRECO}", sv.preco);
+    var go = h("span", { class: "go", "aria-hidden": "true" });
+    go.appendChild(icone());
+    $("listaServicos").appendChild(h("li", null,
+      h("a", { class: "servico", href: wa(msg), target: "_blank", rel: "noopener" },
+        h("span", { class: "nome" }, sv.servico, sv.nota ? h("small", { text: sv.nota }) : null),
+        h("span", { class: "preco", text: sv.preco }), go)));
   });
   $("assistenciaObs").textContent = A.observacao || "";
   $("assistenciaBotao").appendChild(botaoWa("Agendar avaliação", DADOS.mensagens.avaliacao));
@@ -643,7 +653,11 @@ footer .contatos small{display:block;color:var(--amarelo);font-size:.75rem;text-
     caixa.appendChild(h("p", { text: v.titulo }));
     return caixa;
   }
-  DADOS.videos.forEach(function (v) { $("listaVideos").appendChild(cardVideo(v)); });
+  if (DADOS.videos.length) DADOS.videos.forEach(function (v) { $("listaVideos").appendChild(cardVideo(v)); });
+  else {
+    $("listaVideos").className = "";
+    $("listaVideos").appendChild(h("div", { class: "embreve" }, h("b", { text: "EM BREVE" }), h("p", { text: DADOS.videosEmBreve })));
+  }
   var vi = $("videosInsta");
   vi.href = L.instagramUrl;
   vi.textContent = "Ver mais no Instagram " + L.instagram;
