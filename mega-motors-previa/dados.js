@@ -114,8 +114,8 @@ const DADOS = {
     fotos: [
       { arquivo: "loja-1.jpg",   legenda: "Nossa loja" },
       { arquivo: "loja-2.jpg",   legenda: "Nossa loja" },
-      { arquivo: "equipe-1.jpg", legenda: "Nossa equipe" },
-      { arquivo: "equipe-2.jpg", legenda: "Nossa equipe" }
+      { arquivo: "loja-3.jpg",   legenda: "Nossa loja" },
+      { arquivo: "equipe-1.jpg", legenda: "Nossa equipe" }
     ]
   },
 
