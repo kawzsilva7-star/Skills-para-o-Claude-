@@ -1,0 +1,11 @@
+FOTOS DO SITE - coloque aqui os arquivos com EXATAMENTE estes nomes
+(ou troque os nomes em dados.js). Se faltar uma foto, o site mostra um espaço reservado.
+
+Topo:        fachada.jpg
+Catalogo:    scooter-1.jpg  bike-1.jpg  patinete-1.jpg  triciclo-1.jpg  infantil-1.jpg  capacete-1.jpg
+Seminovos:   seminovo-1.jpg  seminovo-2.jpg  seminovo-3.jpg
+Sobre nos:   loja-1.jpg  loja-2.jpg  equipe-1.jpg  equipe-2.jpg
+Clientes:    cliente-1.jpg ... cliente-6.jpg
+Parceiros:   parceiro-1.png ... parceiro-4.png
+
+Dica: use fotos de ate 1 MB (largura de 1200 px basta) para o site abrir rapido no celular.
