@@ -32,6 +32,11 @@ Responda em português.
   - `npx skills add https://github.com/mattpocock/skills --skill research --skill codebase-design -g -a claude-code -y`
   - `npx skills add https://github.com/heygen-com/hyperframes --skill slideshow --skill hyperframes-registry --skill media-use --skill hyperframes -g -a claude-code -y` (a hyperframes vai junto: é a base das outras 3)
   - `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit -g -a claude-code -y`
+  - `npx skills add https://github.com/anthropics/skills --skill canvas-design --skill theme-factory -g -a claude-code -y`
+  - `npx skills add https://github.com/heygen-com/hyperframes --skill hyperframes -g -a claude-code -y` (a HyperFrames também precisa do FFmpeg; no Windows: `winget install Gyan.FFmpeg`, mostrar antes)
+  - `npx skills add https://github.com/vercel-labs/skills --skill find-skills -g -a claude-code -y`
+  - **Atalho sem Node:** se a skill já estiver no repositório de skills do dono, é mais simples pôr no plugin certo (`skills/25-plugins-prontos/planos.json`) e rodar a faxina, sem `npx`.
+- **Criativo**: canvas-design e theme-factory (oficiais da Anthropic), HyperFrames (HeyGen) e o **conector do Canva**, que o próprio usuário liga em Personalização > Conectores > Canva: lembre ele no fim.
 - **context-mode** (plugin, github.com/mksglu/context-mode): `/plugin marketplace add mksglu/context-mode`, depois `/plugin install context-mode@context-mode` e `/reload-plugins`. Diga quais comandos o usuário precisa digitar. No fim, rode `/context-mode:ctx-doctor` e confirme que todos os itens passaram.
 - **Plugin do Codex** (github.com/openai/codex-plugin-cc): `/plugin marketplace add openai/codex-plugin-cc`, depois `/plugin install codex@openai-codex`, depois `/reload-plugins` e `/codex:setup`. Se faltar o Codex, mostre o comando antes (`npm install -g @openai/codex`). No fim, confirme que o `/codex:review` aparece.
 

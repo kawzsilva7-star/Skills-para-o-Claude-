@@ -77,7 +77,9 @@
         "code-review",
         "construir-sem-programar",
         "revisao-com-codex",
-        "auditoria-de-seguranca"
+        "auditoria-de-seguranca",
+        "security-audit",
+        "codebase-design"
       ]
     },
     "site-e-seo": {
@@ -116,7 +118,10 @@
         "canvas-design",
         "brandkit",
         "criativo-do-produto",
-        "usar-voicestudio"
+        "voz-clonar-dublar-transcrever",
+        "theme-factory",
+        "hyperframes-registry",
+        "media-use"
       ]
     },
     "ajudantes-do-claude": {
@@ -126,7 +131,9 @@
         "instalar-skills-com-cuidado",
         "economizar-limite",
         "tarefas-em-paralelo",
-        "cardapio-de-skills"
+        "cardapio-de-skills",
+        "achar-skill-nova",
+        "arrumar-pasta"
       ]
     }
   },
