@@ -9,7 +9,7 @@ Responda em português. **Tome cuidado.**
 
 ## Antes de começar
 - **Pergunte qual pasta arrumar** (caminho completo, ex.: `C:\Users\SeuNome\Downloads`).
-- Sugira testar primeiro numa **cópia** da pasta; quando ele gostar do resultado, roda na pasta de verdade.
+- **Sempre teste antes de aplicar:** faça primeiro numa **cópia** da pasta (ou mostre a lista de movimentos "de → para" sem mover nada) e só aplique na pasta de verdade depois que ele aprovar o resultado.
 - Nunca arrume a pasta do bot, o repositório do bot, o histórico ou a planilha.
 
 ## REGRA DE OURO

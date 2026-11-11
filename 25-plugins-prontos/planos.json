@@ -16,7 +16,8 @@
         "postmortem",
         "handoff",
         "teach",
-        "find-skills"
+        "find-skills",
+        "ideia-plano-execucao"
       ]
     },
     "bancas-do-dono": {
@@ -135,7 +136,8 @@
         "tarefas-em-paralelo",
         "cardapio-de-skills",
         "achar-skill-nova",
-        "arrumar-pasta"
+        "arrumar-pasta",
+        "frases-prontas"
       ]
     }
   },
