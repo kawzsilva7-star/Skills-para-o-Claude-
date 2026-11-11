@@ -43,6 +43,7 @@ Antes de vender qualquer skill, confira a origem e a licença. Atualizado em 11/
 | `resumo-da-manha-openjarvis` | 18-produtividade-e-pesquisa | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `ecc-poucos-agentes` | 21-agentes-e-automacao | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `projeto-com-plugins-oficiais` | 07-codigo-e-qualidade | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
+| `espelho-das-conversas` | 18-produtividade-e-pesquisa | Prompts do site do Clube das Skills (print enviado pelo dono) | Não confirmado |
 | `agentes de marketing (7)` | 26-agentes-de-marketing | Texto colado pelo dono (parece do Clube das Skills) | Não confirmado |
 
 Para cada skill nova: anotar aqui a origem no mesmo dia.
