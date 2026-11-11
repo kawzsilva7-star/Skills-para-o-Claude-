@@ -9,6 +9,18 @@ Responda em português.
 
 **Regra principal:** trabalhe em etapas e **PARE para o usuário aprovar antes de instalar qualquer coisa.** Nunca peça para colar senha ou chave no chat. Não crie serviço nem tarefa agendada sem perguntar.
 
+## O que saber antes (segundo o Clube das Skills; confira na documentação oficial)
+- No Windows, pede Python 3.10 a 3.13, Git e MSVC Build Tools, e uns 5 GB livres.
+- O resumo falado precisa de uma chave da OpenAI ou da Cartesia, paga por uso (na OpenAI, cerca de US$ 0,015 por minuto de áudio). O resto roda no computador, sem assinatura.
+- Modelo de nuvem é opcional e pago à parte.
+- Agenda: conectar exige criar uma credencial no Google, e essa conexão também cobre Gmail, Tarefas, Contatos e Drive. Só conecte se o usuário estiver de acordo. Sem ela, o resumo funciona só com as notícias.
+- Os feeds RSS não pedem chave.
+
+## Os 3 passos para o usuário
+1. Colar o pedido no Claude Code: o Claude confere o que falta no computador e instala depois do OK.
+2. Escolher o que acompanhar: conectar a agenda (opcional) e indicar os feeds RSS.
+3. Ligar o resumo falado (opcional, a parte paga): colocar a chave da OpenAI ou da Cartesia, fora do chat.
+
 ## Antes de começar
 Pergunte os endereços RSS dos assuntos que ele acompanha (ou ofereça 2 ou 3 sugestões de feeds do nicho dele).
 
