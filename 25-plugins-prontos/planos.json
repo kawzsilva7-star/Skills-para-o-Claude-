@@ -156,6 +156,27 @@
         "capture",
         "challenge"
       ]
+    },
+    "conversa-essencial": {
+      "descricao": "Para o chat normal, so conversa: julgar ideia, teste de batida, decisao dificil, prever falhas, entrevista ate ficar claro, professor, frases prontas e espelho das conversas",
+      "skills": [
+        "tribunal-da-ideia",
+        "teste-de-batida",
+        "hard-call",
+        "challenge",
+        "interview-me",
+        "professor",
+        "frases-prontas",
+        "espelho-das-conversas"
+      ]
+    },
+    "conversa-redes-sociais": {
+      "descricao": "Para o chat normal, quando o assunto for Instagram e conteudo: banca do perfil, banca de roteiro de video curto e posts por rede",
+      "skills": [
+        "banca-perfil-instagram",
+        "banca-roteiro-video-curto",
+        "social-content"
+      ]
     }
   },
   "instalar": {

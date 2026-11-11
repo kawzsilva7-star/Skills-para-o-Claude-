@@ -46,6 +46,7 @@ Antes de vender qualquer skill, confira a origem e a licença. Atualizado em 11/
 | `espelho-das-conversas` | 18-produtividade-e-pesquisa | Prompts do site do Clube das Skills (print enviado pelo dono) | Não confirmado |
 | `editar-video-ffmpeg` | 04-video-e-imagem | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `banca-roteiro-video-curto` | 14-marketing-completo | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
+| `professor` | 18-produtividade-e-pesquisa | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `agentes de marketing (7)` | 26-agentes-de-marketing | Texto colado pelo dono (parece do Clube das Skills) | Não confirmado |
 
 Para cada skill nova: anotar aqui a origem no mesmo dia.

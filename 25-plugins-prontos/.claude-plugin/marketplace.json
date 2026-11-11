@@ -51,6 +51,16 @@
       "name": "autoconhecimento",
       "source": "./autoconhecimento",
       "description": "Se enxergar pelas proprias conversas: o que voce nunca contou, seu padrao, 5 anos com e sem o pior habito, paragrafo da manhã, dar um passo atras, decisao dificil e organizar a cabeca"
+    },
+    {
+      "name": "conversa-essencial",
+      "source": "./conversa-essencial",
+      "description": "Para o chat normal, so conversa: julgar ideia, teste de batida, decisao dificil, prever falhas, entrevista ate ficar claro, professor, frases prontas e espelho das conversas"
+    },
+    {
+      "name": "conversa-redes-sociais",
+      "source": "./conversa-redes-sociais",
+      "description": "Para o chat normal, quando o assunto for Instagram e conteudo: banca do perfil, banca de roteiro de video curto e posts por rede"
     }
   ]
 }
