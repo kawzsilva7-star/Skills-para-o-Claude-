@@ -1,0 +1,26 @@
+---
+name: resumo-da-manha-openjarvis
+description: Instala o OpenJarvis (github.com/open-jarvis/OpenJarvis) e configura um resumo da manhã em português (notícias por RSS, agenda opcional, persona em português e voz opcional), em etapas que param para aprovação. Use quando o usuário pedir o OpenJarvis, um resumo da manhã ou um "digest" diário.
+---
+
+# Resumo da manhã com o OpenJarvis
+
+Responda em português.
+
+**Regra principal:** trabalhe em etapas e **PARE para o usuário aprovar antes de instalar qualquer coisa.** Nunca peça para colar senha ou chave no chat. Não crie serviço nem tarefa agendada sem perguntar.
+
+## Antes de começar
+Pergunte os endereços RSS dos assuntos que ele acompanha (ou ofereça 2 ou 3 sugestões de feeds do nicho dele).
+
+## Etapas
+1. **Sistema**: confira o sistema operacional, se tem 5 GB livres e, no Windows, se tem Python 3.10 a 3.13, Git e MSVC Build Tools. Diga o que falta e como instalar.
+2. **Instalar**: leia a documentação oficial (open-jarvis.github.io/OpenJarvis) e instale pelo instalador oficial do sistema dele.
+3. **Resumo da manhã**: configure com o preset `morning-digest` certo para o sistema.
+4. **Notícias**: crie `~/.openjarvis/connectors/news_rss.json` com os feeds dele e `https://github.com/anthropics/claude-code/releases.atom`.
+5. **Agenda (opcional)**: antes de conectar, avise o que esse acesso libera. Depois explique, passo a passo, como criar a credencial do Google e rodar `jarvis connect gdrive`. Ele mesmo cola a credencial no terminal. Se ele preferir, pule.
+6. **Português**: o resumo vem em inglês por padrão. Crie uma persona em português em `~/.openjarvis/prompts/personas/resumo.md` e use ela na configuração, sem chamar ele de "sir".
+7. **Teste**: rode `jarvis digest --fresh --text-only` e mostre o texto.
+8. **Voz (só se ele pedir)**: use `tts_backend = "openai"`, diga onde guardar a chave `OPENAI_API_KEY` fora do chat (variável de ambiente ou `.env`) e quanto custa antes de gerar o áudio.
+9. **No fim**: explique em linguagem simples como pedir o resumo e como desinstalar tudo.
+
+Não invente comando: se a documentação não mostrar, diga que não achou.
