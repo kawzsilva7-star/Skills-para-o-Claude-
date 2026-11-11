@@ -129,5 +129,11 @@ Take a second pass. Go back to the code and refine/polish further to make this a
 
 To create additional pages when requested, create more creative pages along the same lines as the design philosophy but distinctly different as well. Bundle those pages in the same .pdf or many .pngs. Treat the first page as just a single page in a whole coffee table book waiting to be filled. Make the next pages unique twists and memories of the original. Have them almost tell a story in a very tasteful way. Exercise full creative freedom.
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.

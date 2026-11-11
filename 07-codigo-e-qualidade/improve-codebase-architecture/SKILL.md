@@ -70,5 +70,11 @@ Side effects happen inline as decisions crystallize; call the Skill tool with "d
 - **User rejects the candidate with a load-bearing reason?** Offer an ADR, framed as: _"Want me to record this as an ADR so future architecture reviews don't re-suggest it?"_ Only offer when the reason would actually be needed by a future explorer to avoid re-suggesting the same thing; skip ephemeral reasons ("not worth it right now") and self-evident ones.
 - **Want to explore alternative interfaces for the deepened module?** Call the Skill tool with "codebase-design" and use its design-it-twice parallel sub-agent pattern.
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.

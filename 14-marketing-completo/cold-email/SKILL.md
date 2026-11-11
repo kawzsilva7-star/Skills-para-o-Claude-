@@ -281,5 +281,11 @@ All output follows the structured communication standard:
 - **content-strategy**: For creating the content assets (case studies, guides) you reference in cold email follow-ups. Good follow-up sequences often link to content.
 - **marketing-strategy-pmm**: For positioning and ICP definition. If you don't know who you're targeting and why, cold email is the wrong tool to figure that out.
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.

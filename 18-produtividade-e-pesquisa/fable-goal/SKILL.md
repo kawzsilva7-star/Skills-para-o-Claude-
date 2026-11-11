@@ -78,5 +78,11 @@ I want you to build 5 landing pages for my free prompt pack, each one fundamenta
 
 *Derived from [duncan-buildroom/freeskills](https://github.com/duncan-buildroom/freeskills) `fable-goal` ("free to use and modify"). Substantially restructured: wrong-tool check, observable-done principle, six-slot extraction, per-medium verification defaults, six-point self-check, anti-pattern list, second worked example.*
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.

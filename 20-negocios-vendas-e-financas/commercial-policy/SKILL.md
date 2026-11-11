@@ -150,5 +150,11 @@ python3 scripts/exception_router.py --input request.json --output json
 
 The sample matrix lints to **FAIL** with 4 BLOCKERs + 6 MAJORs + 2 MINORs — by design, to exercise every rule path. A real policy intake should lint to PASS or PASS_WITH_WARNINGS. The sample exception (42% on a $320K logo deal) routes to AE → Sales Manager → Director → VP Sales with 3 required compensating commitments (multi-year 36mo, prepay, named expansion path).
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.

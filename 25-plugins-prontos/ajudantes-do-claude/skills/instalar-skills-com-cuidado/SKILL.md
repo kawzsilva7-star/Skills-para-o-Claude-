@@ -43,5 +43,11 @@ Responda em português.
 - **context-mode** (plugin, github.com/mksglu/context-mode): `/plugin marketplace add mksglu/context-mode`, depois `/plugin install context-mode@context-mode` e `/reload-plugins`. Diga quais comandos o usuário precisa digitar. No fim, rode `/context-mode:ctx-doctor` e confirme que todos os itens passaram.
 - **Plugin do Codex** (github.com/openai/codex-plugin-cc): `/plugin marketplace add openai/codex-plugin-cc`, depois `/plugin install codex@openai-codex`, depois `/reload-plugins` e `/codex:setup`. Se faltar o Codex, mostre o comando antes (`npm install -g @openai/codex`). No fim, confirme que o `/codex:review` aparece.
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.

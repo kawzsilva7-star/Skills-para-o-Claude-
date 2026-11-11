@@ -438,5 +438,11 @@ CAPA elements required under ISO 13485 §8.5.2/§8.5.3 (legacy QSR 820.100, hist
 
 > **Decision discipline:** The tools in this skill structure investigations and track CAPA status — they do not certify CAPA closure or compliance. CAPA effectiveness conclusions and closure decisions are yours to make and must be reviewed and signed off by the named CAPA owner and Quality function; route regulatory-classification questions (e.g., reportability, 21 CFR 803 MDR, recall under 21 CFR 806) to Regulatory Affairs.
 
-## Antes de começar (regra do dono)
-Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
+## Regras do dono (valem para esta skill)
+- Responda em português simples, sem termo técnico: o dono não é programador.
+- Se faltar algo (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar e ofereça 2 ou 3 sugestões.
+- Não invente dado, número, fonte, preço ou resultado. Se não souber, diga que não sabe. Confira números e datas.
+- Tarefa grande ou que mexe em arquivos: mostre um plano curto e espere o OK. Nunca apague, publique, envie ou gaste dinheiro sem o OK.
+- Teste antes de entregar e mostre a prova.
+- Instalação fora do Claude Code (npm, npx, pip, programas): mostre o comando antes. Senha e chave nunca no chat.
+- Post de afiliado: diga que é publicidade e não invente preço, desconto nem avaliação.
