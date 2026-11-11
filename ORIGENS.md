@@ -55,3 +55,5 @@ Para cada skill nova: anotar aqui a origem no mesmo dia.
 | Skill | Pasta | Origem | Pode vender? |
 |---|---|---|---|
 | `interview-me` | 06-planejar-e-decidir | github.com/addyosmani/agent-skills (MIT) | Só mantendo o aviso de licença e o nome do autor |
+
+| `replica-*` (11 skills) | 12-engenharia-avancada/replica-skill-mit | github.com/Jakeschincariol/replica-skill (MIT) | Sim, mantendo o aviso de licença MIT e o nome do autor. Atenção: a ferramenta foi feita para clonar apps de terceiros; não usar para copiar produto de outra pessoa |
