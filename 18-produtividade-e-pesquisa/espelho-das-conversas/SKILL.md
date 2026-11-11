@@ -8,7 +8,9 @@ description: Quatro perguntas de autoconhecimento a partir das conversas do usu�
 Responda em português, com cuidado e honestidade, sem agradar e sem diagnosticar. **Diga quando estiver supondo em vez de sabendo.**
 
 ## Antes de começar
-Se for ler o histórico, peça o OK e combine: só ler o histórico em `~/.claude/projects`. Não altere, não apague e não envie nada para fora. Não mostre senha, chave de API nem dado de cliente que encontrar.
+- **No Claude Code:** se for ler o histórico, peça o OK (ler tudo gasta bastante limite) e combine: só ler o histórico em `~/.claude/projects`.
+- **Na conversa normal (claude.ai/celular):** não há pasta para ler; use a memória e as conversas anteriores que o app deixar ver e diga de onde tirou cada coisa.
+Em qualquer caso: Não altere, não apague e não envie nada para fora. Não mostre senha, chave de API nem dado de cliente que encontrar.
 
 ## As 4 perguntas
 1. **"Me fala cinco coisas que eu nunca te contei, mas que você percebeu."** Para ver o que aparece nas conversas sem ele ter dito.

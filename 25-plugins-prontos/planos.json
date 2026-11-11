@@ -61,7 +61,8 @@
         "referral-program",
         "content-production",
         "semana-instagram",
-        "calendario-do-mes"
+        "calendario-do-mes",
+        "banca-roteiro-video-curto"
       ]
     },
     "codigo-confiavel": {
@@ -127,7 +128,8 @@
         "voz-clonar-dublar-transcrever",
         "theme-factory",
         "hyperframes-registry",
-        "media-use"
+        "media-use",
+        "editar-video-ffmpeg"
       ]
     },
     "ajudantes-do-claude": {
@@ -143,6 +145,16 @@
         "frases-prontas",
         "ecc-poucos-agentes"
       ]
+    },
+    "autoconhecimento": {
+      "descricao": "Se enxergar pelas proprias conversas: o que voce nunca contou, seu padrao, 5 anos com e sem o pior habito, paragrafo da manhã, dar um passo atras, decisao dificil e organizar a cabeca",
+      "skills": [
+        "espelho-das-conversas",
+        "reflect",
+        "hard-call",
+        "capture",
+        "challenge"
+      ]
     }
   },
   "instalar": {
@@ -150,7 +162,8 @@
       "pensar-e-analisar",
       "codigo-confiavel",
       "bancas-do-dono",
-      "ajudantes-do-claude"
+      "ajudantes-do-claude",
+      "autoconhecimento"
     ],
     "project": [
       "essenciais-afiliado",
