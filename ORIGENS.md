@@ -49,3 +49,8 @@ Antes de vender qualquer skill, confira a origem e a licença. Atualizado em 11/
 | `agentes de marketing (7)` | 26-agentes-de-marketing | Texto colado pelo dono (parece do Clube das Skills) | Não confirmado |
 
 Para cada skill nova: anotar aqui a origem no mesmo dia.
+
+## Skills de terceiros adicionadas (licença do autor)
+| Skill | Pasta | Origem | Pode vender? |
+|---|---|---|---|
+| `interview-me` | 06-planejar-e-decidir | github.com/addyosmani/agent-skills (MIT) | Só mantendo o aviso de licença e o nome do autor |
