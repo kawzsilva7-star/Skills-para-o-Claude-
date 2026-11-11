@@ -27,6 +27,12 @@ Responda em português.
 - **Velocidade de página**: core-web-vitals e performance (addyosmani/web-quality-skills) e web-perf (cloudflare/skills).
 - **Instagram Agent**: as 13 skills ig-* de github.com/Jakeschincariol/instagram-agent-skill. Confirme que o `/ig-reel` funciona. Depois copie `templates/voice.md` para `~/.claude/instagram/voice.md` e faça as perguntas para preencher com o jeito de falar do usuário.
 - **founder-skill** (11 skills, github.com/Jakeschincariol/founder-skill), seguindo o README: como plugin (`/plugin marketplace add Jakeschincariol/founder-skill` e depois `/plugin install founder-skill@founder-skill`) ou copiando as pastas `skills/founder-*` para `~/.claude/skills/`. As ferramentas precisam do Python 3.8 ou mais novo. No fim, mostre os 11 comandos instalados.
+- **VoiceStudio** (programa de voz: clonar voz, dublar vídeo, transcrever; github.com/debpalash/VoiceStudio, licença AGPL-3.0): no Windows, baixe o instalador `VoiceStudio-<versão>-win-x64.exe` da página Releases, confira o SHA256 em `SHA256SUMS.txt` e só rode com o OK do usuário. No PC do dono (AMD RX 580, 8 GB) roda pelo processador, mais devagar. Clonar voz só com permissão do dono da voz.
+- **Pelo skills.sh** (precisa do Node.js 22.20 ou mais novo; no Windows: `winget install OpenJS.NodeJS.LTS`, mostrar antes). `-g -a claude-code -y` instala sem perguntas e vale em todos os projetos:
+  - `npx skills add https://github.com/mattpocock/skills --skill research --skill codebase-design -g -a claude-code -y`
+  - `npx skills add https://github.com/heygen-com/hyperframes --skill slideshow --skill hyperframes-registry --skill media-use --skill hyperframes -g -a claude-code -y` (a hyperframes vai junto: é a base das outras 3)
+  - `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit -g -a claude-code -y`
+- **context-mode** (plugin, github.com/mksglu/context-mode): `/plugin marketplace add mksglu/context-mode`, depois `/plugin install context-mode@context-mode` e `/reload-plugins`. Diga quais comandos o usuário precisa digitar. No fim, rode `/context-mode:ctx-doctor` e confirme que todos os itens passaram.
 - **Plugin do Codex** (github.com/openai/codex-plugin-cc): `/plugin marketplace add openai/codex-plugin-cc`, depois `/plugin install codex@openai-codex`, depois `/reload-plugins` e `/codex:setup`. Se faltar o Codex, mostre o comando antes (`npm install -g @openai/codex`). No fim, confirme que o `/codex:review` aparece.
 
 ## Antes de começar (regra do dono)

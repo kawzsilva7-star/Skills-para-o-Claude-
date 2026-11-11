@@ -28,7 +28,9 @@
         "banca-pagina-de-vendas",
         "cacadores-de-clientes",
         "teste-de-batida",
-        "validar-negocio-founder"
+        "validar-negocio-founder",
+        "pagina-de-vendas-com-revisor",
+        "revisor-inimigo-de-ia"
       ]
     },
     "essenciais-afiliado": {
@@ -74,7 +76,8 @@
         "tdd",
         "code-review",
         "construir-sem-programar",
-        "revisao-com-codex"
+        "revisao-com-codex",
+        "auditoria-de-seguranca"
       ]
     },
     "site-e-seo": {
@@ -111,7 +114,9 @@
         "kinetic-typography",
         "imagegen",
         "canvas-design",
-        "brandkit"
+        "brandkit",
+        "criativo-do-produto",
+        "usar-voicestudio"
       ]
     },
     "ajudantes-do-claude": {
@@ -120,7 +125,8 @@
         "escolher-skills-da-tarefa",
         "instalar-skills-com-cuidado",
         "economizar-limite",
-        "tarefas-em-paralelo"
+        "tarefas-em-paralelo",
+        "cardapio-de-skills"
       ]
     }
   },
