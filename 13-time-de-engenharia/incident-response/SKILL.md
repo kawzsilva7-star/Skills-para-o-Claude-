@@ -320,3 +320,6 @@ done
 | [cloud-security](../cloud-security/SKILL.md) | Cloud posture findings (IAM compromise, S3 exposure) may trigger incident classification |
 | [red-team](../red-team/SKILL.md) | Red team findings validate detection coverage; confirmed gaps become hunting hypotheses |
 | [security-pen-testing](../security-pen-testing/SKILL.md) | Pen test vulnerabilities exploited in the wild escalate to incident-response for active incident handling |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

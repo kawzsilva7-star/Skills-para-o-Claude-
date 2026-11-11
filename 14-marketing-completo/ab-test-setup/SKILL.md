@@ -314,3 +314,6 @@ All outputs should meet the quality standard: clear hypothesis, pre-registered m
 - **campaign-analytics** — USE after tests conclude to fold results into broader campaign attribution; NOT during the test itself.
 - **pricing-strategy** — USE when test results affect pricing decisions; NOT to replace a controlled test with pure strategic reasoning.
 - **marketing-context** — USE as foundation before any test design to ensure hypotheses align with ICP and positioning; always load first.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

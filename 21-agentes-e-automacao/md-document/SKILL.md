@@ -112,3 +112,6 @@ Load these only when the task needs them.
 - [references/information_density_patterns.md](references/information_density_patterns.md) — Information Density Patterns for Long-form Documents
 - [references/single_file_html_discipline.md](references/single_file_html_discipline.md) — Single-File HTML Discipline (md-document edition)
 - [references/toc_and_nav_ux.md](references/toc_and_nav_ux.md) — Table-of-Contents and Navigation UX
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

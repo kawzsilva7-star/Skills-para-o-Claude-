@@ -278,3 +278,6 @@ Ask the user after MVP: "Core is working. Want me to add auth/polish/deploy next
 Load these only when the task needs them.
 
 - [references/spec-parsing-guide.md](references/spec-parsing-guide.md) — Spec Parsing Guide
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

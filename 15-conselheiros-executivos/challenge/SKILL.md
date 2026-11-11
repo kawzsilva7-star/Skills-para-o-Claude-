@@ -179,3 +179,6 @@ These are the ones people skip:
 The output of `/executive-mentor:challenge` is not permission to stop. It's a vulnerability map. Now you can make conscious decisions: validate the risky assumptions, hedge the critical ones, or accept the bets you're making knowingly.
 
 Unknown risks are dangerous. Known risks are manageable.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

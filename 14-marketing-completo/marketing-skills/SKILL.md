@@ -120,3 +120,6 @@ All 59 scripts are stdlib-only; most run a demo with no args.
 - If `.claude/product-marketing-context.md` exists, read it before any marketing task.
 - `content-creator` is deprecated — use `skills/content-production/`.
 - Don't pip-install anything for these tools.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

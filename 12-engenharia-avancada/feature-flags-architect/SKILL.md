@@ -218,3 +218,6 @@ A team using this skill should achieve:
 - `flag_debt_scanner.py --max-age-days 90` returns ≤5 stale flags repo-wide
 - Every flag has a documented owner, type, and kill switch
 - Mean time to retire a Release flag: <60 days from 100% rollout
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

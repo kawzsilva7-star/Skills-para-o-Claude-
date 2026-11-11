@@ -77,3 +77,6 @@ All support `--help`, `--sample` and `--output json`.
 - [`references/layout_rtl_pseudo.md`](references/layout_rtl_pseudo.md): text expansion, pseudo-locales, RTL, release checklist (7)
 - [`assets/i18n-gate.yml`](assets/i18n-gate.yml): CI job example
 - [`assets/i18n-allow.example`](assets/i18n-allow.example): allowlist format
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

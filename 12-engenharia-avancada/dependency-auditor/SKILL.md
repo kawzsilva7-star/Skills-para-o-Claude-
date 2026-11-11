@@ -91,3 +91,6 @@ Load these only when the task needs them.
 - [references/dependency_management_best_practices.md](references/dependency_management_best_practices.md) — Dependency Management Best Practices
 - [references/license_compatibility_matrix.md](references/license_compatibility_matrix.md) — License Compatibility Matrix
 - [references/vulnerability_assessment_guide.md](references/vulnerability_assessment_guide.md) — Vulnerability Assessment Guide
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -70,3 +70,6 @@ Load these only when the task needs them.
 - [references/firecrawl-technical-guide.md](references/firecrawl-technical-guide.md) — Firecrawl Technical Guide
 - [references/local-extraction-patterns.md](references/local-extraction-patterns.md) — Local Extraction Patterns (BeautifulSoup + pandas)
 - [references/scraping-ethics-security.md](references/scraping-ethics-security.md) — Scraping Ethics, Robots.txt, and Security
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

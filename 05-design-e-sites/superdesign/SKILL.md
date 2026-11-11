@@ -155,3 +155,6 @@ Always close with a short, warm follow-up that offers to go further (on every su
 Read [SUPERDESIGN.md](references/SUPERDESIGN.md), then follow its instructions.
 
 For an image or video generation request, read [ASSET_GENERATION.md](references/ASSET_GENERATION.md). Load the other scenario-specific references linked above when those scenarios apply.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -149,3 +149,6 @@ requestAnimationFrame(() => { el.style.transition = 'transform 0.3s'; el.style.t
 - choose the least expensive rendering work that matches the intent
 - for any non-default choice, state the constraint that justifies it (surface size, duration, or interaction requirement)
 - when reviewing, prefer actionable notes and concrete alternatives over theory
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

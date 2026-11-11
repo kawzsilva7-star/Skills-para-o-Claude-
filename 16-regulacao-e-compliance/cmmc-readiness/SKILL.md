@@ -81,3 +81,6 @@ All support `--help`, `--sample` and `--output json`.
 - [`references/rev2_rev3_and_levels.md`](references/rev2_rev3_and_levels.md) — why you score Rev 2, preparing for Rev 3, Levels 1 and 3 (7 sources)
 - [`assets/assessment.example.csv`](assets/assessment.example.csv), [`assets/poam.example.csv`](assets/poam.example.csv), [`assets/inventory.example.csv`](assets/inventory.example.csv) — input formats
 - [`assets/assessment_readiness_signoff.md`](assets/assessment_readiness_signoff.md) — readiness sign-off before booking the assessment
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

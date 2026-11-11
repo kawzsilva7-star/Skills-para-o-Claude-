@@ -493,3 +493,6 @@ renderer.setAnimationLoop(animate);
 - `threejs-postprocessing` — EffectComposer passes and the WebGPU render pipeline.
 - `threejs-performance` — measuring frame cost and cutting draw calls, memory and fill rate.
 - `threejs-react-three-fiber` — the same scene graph written as React components.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

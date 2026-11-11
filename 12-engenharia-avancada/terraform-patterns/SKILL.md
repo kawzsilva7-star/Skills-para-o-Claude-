@@ -284,3 +284,6 @@ Load these only when the task needs them.
 
 - [references/module-patterns.md](references/module-patterns.md) — Terraform Module Design Patterns Reference
 - [references/state-management.md](references/state-management.md) — Terraform State Management Reference
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

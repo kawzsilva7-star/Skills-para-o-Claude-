@@ -292,3 +292,6 @@ question about a UI topic isn't automatically a visual question.
 
 If they accept, read `visual-companion.md` in this directory before
 starting the server.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

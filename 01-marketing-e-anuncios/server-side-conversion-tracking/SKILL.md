@@ -110,3 +110,6 @@ docker compose up
 For production it deploys to Cloudflare Workers, where the queued postback delivery and the hourly ad-reporting sync both run on the cron handler shipped in the repository. Confirm the cron triggers survived the deploy, or both queued conversions and ad-spend syncing stop silently.
 
 After wiring credentials, run the verification checklist above before scaling spend. The click-id-coverage number is the one to watch on day one.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

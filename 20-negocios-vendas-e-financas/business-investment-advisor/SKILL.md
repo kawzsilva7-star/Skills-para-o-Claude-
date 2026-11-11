@@ -218,3 +218,6 @@ For every investment analysis:
 - **financial-analyst**: Use for DCF valuation of entire companies, ratio analysis of financial statements. NOT for single capital expenditure decisions.
 - **saas-metrics-coach**: Use for SaaS-specific unit economics (CAC, LTV, churn). NOT for equipment or real estate investments.
 - **ceo-advisor**: Use for strategic direction and capital allocation across the entire business. NOT for individual investment math.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

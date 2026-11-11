@@ -174,3 +174,6 @@ Binding rules:
   that block's own framing intact — window-bounded, never projected, never verified.
 - The analyzer (caveman learn) is read-only. You are the only writer, and only after a
   yes.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

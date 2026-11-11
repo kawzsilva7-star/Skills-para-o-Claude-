@@ -475,3 +475,6 @@ For tracking setup, see the **conversion-tracking** skill; tool guides: [ga4.md]
 - **conversion-tracking**: For pixel and conversion tag installation, CAPI and server-side delivery, and tracking audits. Launching without conversion tracking is the first strategy mistake above
 - **analytics / attribution**: The blended-CAC inputs behind [payback-period.md](references/payback-period.md); **pricing** sets the ARPU + plan structure that drive its Payback math (why blended LTV:CAC hides $9-vs-$999 variance)
 - **ab-testing / cro**: For landing page tests and post-click conversion rates that improve ROAS
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

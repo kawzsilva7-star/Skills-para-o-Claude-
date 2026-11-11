@@ -97,3 +97,6 @@ issues HEALTHY / DRIFTING / OVERCOMMITTED. End the review with one named next ac
 ---
 
 **Version:** 1.0.0 · **Build pattern:** Path-B ritual skill — GTD weekly-review loop preserved + deterministic gate/scanner/auditor scripts added.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

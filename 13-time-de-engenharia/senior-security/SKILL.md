@@ -62,3 +62,6 @@ If the request spans lanes (e.g., "secure this new architecture"), do the threat
 | [references/cryptography-implementation.md](references/cryptography-implementation.md) | AES-GCM, Ed25519, password hashing (Argon2id), key management |
 
 The architecture and crypto references are kept because no sibling ships them; for *operating* those controls (scanning, compliance, monitoring) still route to `senior-secops`.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

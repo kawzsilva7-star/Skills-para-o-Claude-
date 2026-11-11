@@ -222,3 +222,6 @@ All output follows the structured standard:
 - **rag-architect**: Use when designing retrieval pipelines. Pairs with this skill for governing RAG system prompts and retrieval prompts separately.
 - **ci-cd-pipeline-builder**: Use when building CI/CD pipelines. Pairs with this skill for automating eval runs in CI.
 - **observability-designer**: Use when designing monitoring. Pairs with this skill for production prompt quality dashboards.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

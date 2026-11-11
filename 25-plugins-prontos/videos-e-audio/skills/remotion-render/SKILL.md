@@ -33,3 +33,6 @@ See https://www.remotion.dev/docs/cli/render.md#--frames for more options.
 ## Transparent videos
 
 See [Transparent videos](./transparent-videos.md) for rendering out a video with transparency.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

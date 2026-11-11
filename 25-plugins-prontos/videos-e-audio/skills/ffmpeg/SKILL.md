@@ -430,3 +430,6 @@ If this skill is missing information or could be improved:
   2. Create a PR to github.com/digitalsamba/claude-code-video-toolkit
 
 Just say "improve this skill" and I'll guide you through updating `.claude/skills/ffmpeg/SKILL.md`.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

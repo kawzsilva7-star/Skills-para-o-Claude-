@@ -139,3 +139,6 @@ Request: "I want to know when my greenhouse gets too cold at night, on my phone.
 
 - `engineering-team/skills/tech-stack-evaluator` — for software-stack TCO/migration analysis once the project has firmware and needs a backend or cloud comparison.
 - `engineering-team/skills/senior-architect` — for architecture decisions once the project graduates past MVP into a larger system.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

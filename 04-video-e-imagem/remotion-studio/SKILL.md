@@ -30,3 +30,6 @@ When using `--no-open`, open the exact printed URL in the in-app browser and ver
 | `--log=<level>`   | Set `error`, `warn`, `info` (default), or `verbose` logging.                                  |
 | `--port=<number>` | Request a Studio server port; otherwise Remotion finds a free port.                           |
 | `--force-new`     | Start another Studio instance even when one is already running for the same project and port. |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

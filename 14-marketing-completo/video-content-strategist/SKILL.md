@@ -216,3 +216,6 @@ All output follows the structured standard:
 - **seo-audit**: Use for auditing overall SEO. Pairs with this skill for YouTube keyword research and video SEO.
 - **social-media-manager**: Use for social media calendar and captions. NOT for video-specific strategy (that is this skill).
 - **launch-strategy**: Use when launching a product. Pairs with this skill for video launch content planning.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

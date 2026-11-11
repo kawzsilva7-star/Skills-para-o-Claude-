@@ -258,3 +258,6 @@ on capacity-margin discipline.
 **Walk these seven in order. One at a time. Write the answers down. The
 plan you submit is only as defensible as your answers to these seven
 questions.**
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

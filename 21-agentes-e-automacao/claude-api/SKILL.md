@@ -614,3 +614,6 @@ Live documentation URLs are in `shared/live-sources.md`.
 - **Eval / hillclimb work has dedicated guides:** If the user says "hillclimb", "improve my eval score", "iterate on my prompt against an eval", or "build me an eval" - load `shared/evals/eval-hillclimb.md` or `shared/evals/build-eval.md` rather than improvising. The bundled HTML report builder is `shared/evals/report/build-report.mjs` when it is on disk, else `shared/evals/report/build-report-lite.mjs` (always extracted with this skill); don't write a parallel one.
 - **Code execution output block type:** `code_execution_20260521` returns `bash_code_execution_tool_result` (with `.content.stdout`), **not** the legacy bare `code_execution_tool_result`. Iterate `response.content` and match on the correct type.
 - **Tool search: never defer everything.** The search tool itself must not have `defer_loading: true`, and at least one tool in `tools` must be non-deferred, or the API returns 400 `All tools have defer_loading set`.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

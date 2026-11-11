@@ -217,3 +217,6 @@ Automatically surface form-cro when:
 | Field Order & Layout Spec | Annotated outline | Recommended sequence, grouping, column layout, and mobile considerations |
 | Submit Button Copy Options | 3-option table | Action-oriented button copy variants with reasoning |
 | A/B Test Hypotheses | Table | Hypothesis × variant × success metric × priority for top 3-5 test ideas |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

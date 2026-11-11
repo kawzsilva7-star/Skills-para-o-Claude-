@@ -27,7 +27,8 @@
         "banca-curriculo-ats",
         "banca-pagina-de-vendas",
         "cacadores-de-clientes",
-        "teste-de-batida"
+        "teste-de-batida",
+        "validar-negocio-founder"
       ]
     },
     "essenciais-afiliado": {
@@ -86,7 +87,8 @@
         "landing-page-conversion-audit",
         "frontend-design",
         "design-taste-frontend",
-        "velocidade-da-pagina"
+        "velocidade-da-pagina",
+        "site-em-paralelo"
       ]
     },
     "videos-e-audio": {
@@ -117,7 +119,8 @@
       "skills": [
         "escolher-skills-da-tarefa",
         "instalar-skills-com-cuidado",
-        "economizar-limite"
+        "economizar-limite",
+        "tarefas-em-paralelo"
       ]
     }
   },

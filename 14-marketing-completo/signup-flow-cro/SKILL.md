@@ -231,3 +231,6 @@ Automatically surface signup-flow-cro when:
 | Flow Redesign Spec | Step-by-step outline | Recommended multi-step or single-step flow with copy for each screen |
 | SSO & Auth Options Recommendation | Decision table | Which auth methods to offer, placement, and priority for the target audience |
 | A/B Test Hypotheses | Table | Hypothesis × variant description × success metric × priority for top 3-5 tests |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

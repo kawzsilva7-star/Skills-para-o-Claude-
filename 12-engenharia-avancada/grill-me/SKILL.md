@@ -63,3 +63,6 @@ Load these only when the task needs them.
 
 - [references/forcing_question_patterns.md](references/forcing_question_patterns.md) — Forcing-Question Patterns for Plan Interrogation
 - [references/when_to_stop_grilling.md](references/when_to_stop_grilling.md) — When to Stop Grilling
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -72,3 +72,6 @@ and the outcome section of
 - `scripts/outcome_builder.py` — user.define_outcome payload (rubric required, cap 1..20).
 - `scripts/verdict_reader.py` — grader result → next move.
 - `scripts/eval_scaffold.py` — held-back cases + parallel run plan (≤25 threads).
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

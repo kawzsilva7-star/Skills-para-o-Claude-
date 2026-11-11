@@ -143,3 +143,6 @@ Every sub-skill produces at least one artifact (markdown, CSV, or JSON) saved to
 
 - See `c-level-advisor/coo-advisor` for strategic COO framing
 - Path-B build pattern: `documentation/implementation/bizops-commercial-expansion-plan.md`
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

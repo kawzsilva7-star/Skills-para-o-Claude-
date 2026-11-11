@@ -62,3 +62,6 @@ and name the next 1–2 upgrades so the founder leaves with a clear roadmap. The
 - `scripts/primitives_inventory.py` — recap every owned primitive.
 - `scripts/overview_page.py` — regenerate single-file agent-overview.html.
 - `scripts/upgrade_suggester.py` — next 1–2 upgrades with mechanisms.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

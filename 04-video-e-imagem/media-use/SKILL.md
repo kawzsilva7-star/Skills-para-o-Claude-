@@ -58,3 +58,6 @@ When you build or review a piece, scan once for concrete gaps (on-screen text wi
 | Fades, gain, ducking, automation, effects, buses on placed tracks | `references/mixing.md` |
 | Local commands: grade, cutout, loudness, beats | `references/local.md` |
 | Remembered preferences | `references/memory.md` |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

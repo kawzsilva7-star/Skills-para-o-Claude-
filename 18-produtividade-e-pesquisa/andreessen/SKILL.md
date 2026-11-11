@@ -176,3 +176,6 @@ python scripts/anti_todo_card.py --summary
 **Operating prompt:** user-supplied (preserved verbatim in `references/operating_prompt.md`)
 **Frameworks:** Marc Andreessen — "The Only Thing That Matters" (2007), "It's Time to Build" (2020),
 "Software Is Eating the World" (2011), "The Pmarca Guide to Personal Productivity" (2007)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

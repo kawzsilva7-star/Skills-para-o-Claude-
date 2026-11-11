@@ -304,3 +304,6 @@ Automated security checks on every PR: secret scanning (TruffleHog), dependency 
 | [senior-security](../senior-security/SKILL.md) | Security policy and governance — frameworks, risk registers, compliance |
 | `dependency-auditor` (engineering-advanced-skills plugin) | Deep supply chain security — SBOMs, license compliance, transitive risk |
 | [code-reviewer](../code-reviewer/SKILL.md) | Code review practices — includes security review checklist |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

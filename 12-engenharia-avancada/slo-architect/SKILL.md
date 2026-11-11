@@ -238,3 +238,6 @@ A team using this skill should achieve:
 - Burn-rate alerts fire ≤2 times/month per SLO that's hit (signal, not noise)
 - Mean time to detect SLO violation: <30 min (multi-window burn-rate alerts working)
 - Quarterly SLO review happens every quarter (not annually)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

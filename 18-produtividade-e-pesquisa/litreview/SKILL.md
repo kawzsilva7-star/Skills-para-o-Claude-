@@ -282,3 +282,6 @@ Plus:
 **Version:** 1.1.0
 **Source spec:** `megaprompts/09-litreview-megaprompt.md` (maintainer-local draft spec — gitignored, not present in the public repository)
 **Build pattern:** Path B (direct conversion). Sibling of `pulse` (research-pack shape). v1.1.0: free keyless APIs (PubMed + OpenAlex) became the default search lane; Consensus demoted to optional enhancement; plan-tier detection deleted per the 2026-06 newgen audit + ClawHub rule #3 (no paid-service dependencies).
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

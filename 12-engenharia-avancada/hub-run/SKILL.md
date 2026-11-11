@@ -109,3 +109,6 @@ If confirmed, run `/agenthub:merge`. If declined, inform the user they can:
 - **Stop on failure** — if any step fails, report the error and stop
 - **User confirms merge** — never auto-merge without asking
 - **Template is optional** — without `--template`, agents use the default dispatch prompt from `/agenthub:spawn`
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

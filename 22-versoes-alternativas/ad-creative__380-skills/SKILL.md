@@ -265,3 +265,6 @@ Notes: Benefit-first formula, tested format for consideration stage
 - **ab-test-setup**: Use when planning which ad variants to test and how to measure significance. NOT for generating the variants (use ad-creative for that).
 - **content-creator**: Use for organic social content and blog content. NOT for paid ad copy (different constraints, different voice).
 - **copy-editing**: Use when polishing existing copy. NOT for bulk generation or platform-specific formatting.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -131,3 +131,6 @@ Before invoking the tools, the orchestrator (or `/cs-grill-bizops`) walks the us
 7. **"What does success look like 30 / 60 / 90 days after the announcement — and how are you measuring it?"**
    Recommended: name 3 measurable signals (e.g., regrettable-attrition delta, pulse-survey trust score, manager-cascade audit results).
    Canon: Hiatt 2006 (*ADKAR*) — Reinforcement is the most-skipped ADKAR stage; without measurement there is no Reinforcement.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

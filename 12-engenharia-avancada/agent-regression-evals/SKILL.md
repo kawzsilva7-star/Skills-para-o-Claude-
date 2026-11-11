@@ -85,3 +85,6 @@ All support `--sample` and `--output json`.
 - [`assets/eval_case_spec.example.json`](assets/eval_case_spec.example.json) — trajectory spec for step 1
 - [`assets/sample_baseline.jsonl`](assets/sample_baseline.jsonl), [`assets/sample_candidate.jsonl`](assets/sample_candidate.jsonl) — results format
 - [`assets/ci_eval_gate.example.yml`](assets/ci_eval_gate.example.yml) — CI job that runs the gate and fails on exit 4
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

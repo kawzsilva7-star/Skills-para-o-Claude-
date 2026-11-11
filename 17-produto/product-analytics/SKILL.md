@@ -145,3 +145,6 @@ u002,signup
 - Related: `product-team/product-manager-toolkit` — for RICE prioritization of metric-driven features
 - Related: `product-team/product-discovery` — for assumption mapping when metrics reveal unknowns
 - Related: `finance/saas-metrics-coach` — for SaaS-specific metrics (ARR, MRR, churn, LTV)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -90,3 +90,6 @@ All support `--help`, `--output json`, and `--sample` (no real history needed).
 - [`references/session_mining_privacy.md`](references/session_mining_privacy.md) — the local-only contract, redaction pattern canon (7 sources)
 - [`references/skill_edit_governance.md`](references/skill_edit_governance.md) — the filing bar for proposing skill edits (7 sources)
 - [`assets/session_scores.example.json`](assets/session_scores.example.json) · [`assets/suggestions.example.json`](assets/suggestions.example.json) · [`assets/report.example.json`](assets/report.example.json) — the three handoff shapes
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

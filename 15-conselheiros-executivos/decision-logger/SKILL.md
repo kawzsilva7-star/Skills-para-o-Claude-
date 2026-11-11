@@ -152,3 +152,6 @@ Never delete completed items. The history is the record.
 ## References
 - `templates/decision-entry.md` — single entry template with field rules
 - `scripts/decision_tracker.py` — CLI parser, overdue tracker, conflict detector
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -382,3 +382,6 @@ Load these only when the task needs them.
 - [references/gws-command-reference.md](references/gws-command-reference.md) — Google Workspace CLI Command Reference
 - [references/recipes-cookbook.md](references/recipes-cookbook.md) — Google Workspace CLI Recipes Cookbook
 - [references/troubleshooting.md](references/troubleshooting.md) — Google Workspace CLI Troubleshooting
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

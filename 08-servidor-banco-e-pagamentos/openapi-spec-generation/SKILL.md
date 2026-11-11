@@ -64,3 +64,6 @@ Full template library and detailed worked examples live in `references/details.m
 - **Don't forget nullable** - Be explicit about null
 - **Don't mix styles** - Consistent naming throughout
 - **Don't hardcode URLs** - Use server variables
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

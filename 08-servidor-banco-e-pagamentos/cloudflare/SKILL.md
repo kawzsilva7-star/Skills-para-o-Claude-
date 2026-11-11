@@ -149,3 +149,6 @@ Prefer [Workers Cache](https://developers.cloudflare.com/workers/cache/index.md)
 
 Cloudflare documentation: <https://developers.cloudflare.com/llms.txt>
 Cloudflare changelog: <https://developers.cloudflare.com/changelog/index.md>
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -431,3 +431,6 @@ gsap.to(sprite, { pixi: { x: 200, y: 100, scale: 1.5 }, duration: 1 });
 ### Learn More
 
 https://gsap.com/docs/v3/Plugins/
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

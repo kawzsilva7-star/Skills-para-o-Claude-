@@ -274,3 +274,6 @@ Supply chain controls (lockfiles, pinned CI actions, signed artifacts) are in `r
 | `references/security_standards.md` | OWASP Top 10, secure coding, authentication, API security |
 | `references/vulnerability_management_guide.md` | CVE triage, CVSS scoring, remediation workflows |
 | `references/compliance_requirements.md` | SOC 2, PCI-DSS, HIPAA, GDPR full control mappings |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

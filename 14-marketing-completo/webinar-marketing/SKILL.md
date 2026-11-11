@@ -214,3 +214,6 @@ For webinar numbers, always tag whether a conversion rate is measured from their
 - **content-creator**: For producing the on-demand assets, recap posts, and clips that extend a webinar's life. Good follow-up reuses webinar content.
 - **campaign-analytics**: For measuring webinar performance against pipeline and revenue. Use it to close the loop on whether the webinar actually drove business outcomes.
 - **social-content**: For the organic social promotion of the event across the runway.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

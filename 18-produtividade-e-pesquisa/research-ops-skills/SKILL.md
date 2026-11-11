@@ -155,3 +155,6 @@ Each sub-skill ships its own `skills/<sub-skill>/scripts/ar_evaluator.py` — an
 - Market canon: Cochran, Dillman, Kotler, Bessemer market-sizing
 - Product canon: Nielsen, Guest et al., Christensen JTBD, ResearchOps/Polaris
 - Path-B build pattern: `documentation/implementation/research-ops-expansion-plan.md`
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -93,3 +93,6 @@ Launch plans should be concrete, time-bound, and channel-specific — no vague "
 - **content-strategy** — USE when the launch requires a sustained content program (blog posts, case studies) in the weeks after; NOT for single-day launch execution.
 - **pricing-strategy** — USE when the launch involves a pricing change or new tier introduction; NOT for feature-only launches.
 - **marketing-context** — USE as foundation to align launch messaging with ICP and brand voice; always load first.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

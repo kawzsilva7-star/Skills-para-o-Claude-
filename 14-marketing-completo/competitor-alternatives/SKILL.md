@@ -298,3 +298,6 @@ All competitor page outputs should be factually accurate, legally safe (no false
 - **content-strategy** — USE when planning a full competitive content program across multiple pages; NOT for single-page execution.
 - **competitive-intel** — USE when C-level strategic competitive analysis is needed beyond page creation; NOT for tactical page writing.
 - **marketing-context** — USE as foundation before any competitor page work to align positioning; always load first.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

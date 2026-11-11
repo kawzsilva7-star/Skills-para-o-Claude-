@@ -18,3 +18,6 @@ See [get-video-dimensions.md](get-video-dimensions.md) for getting the width and
 ## Getting video duration
 
 See [get-video-duration.md](get-video-duration.md) for getting the duration of a video file in seconds with Mediabunny.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

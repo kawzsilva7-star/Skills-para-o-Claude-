@@ -51,3 +51,6 @@ Load these only when the task needs them.
 - `python3 scripts/artifact_deduplicator.py --help` — Detect content in a handoff draft that should be referenced not duplicated
 - `python3 scripts/handoff_template_generator.py --help` — Generate a handoff document scaffold tailored to next-session focus
 - `python3 scripts/skill_recommender.py --help` — Recommend which skills the next session should use
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

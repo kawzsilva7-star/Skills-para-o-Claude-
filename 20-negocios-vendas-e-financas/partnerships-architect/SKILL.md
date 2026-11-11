@@ -208,3 +208,6 @@ canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
 Walk depth-first. Lock 1-3 (is this a real partner?) before opening 4-7 (is the structure
 right?). After all 7 are answered, invoke `partner_tier_classifier.py` →
 `joint_gtm_planner.py` → `revshare_modeler.py` in sequence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

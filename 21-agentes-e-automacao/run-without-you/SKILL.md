@@ -77,3 +77,6 @@ See [`../../references/loops-and-workflows.md`](../../references/loops-and-workf
 - `scripts/deployment_builder.py` — POST /v1/deployments payload (+ test-run curl).
 - `scripts/cron_validator.py` — 5-field cron + IANA tz + DST note.
 - `scripts/next_directions_writer.py` — write/refresh NEXT-DIRECTIONS.md.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

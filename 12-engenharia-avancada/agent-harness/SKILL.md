@@ -128,3 +128,6 @@ python3 scripts/harness_manifest_builder.py --domain engineering-team \
 
 See [references/domain_harness_design.md](references/domain_harness_design.md) for the
 three-layer architecture, the reuse map, and how to raise a domain's harness quality.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

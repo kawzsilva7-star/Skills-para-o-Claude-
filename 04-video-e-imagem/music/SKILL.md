@@ -441,3 +441,6 @@ Common errors: 401 (invalid key), 422 (invalid params), 429 (rate limit).
 
 - [Installation Guide](references/installation.md)
 - [API Reference](references/api_reference.md)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

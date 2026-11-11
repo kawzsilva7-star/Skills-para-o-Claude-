@@ -92,3 +92,6 @@ Recommended flow: **scaffold → interview per phase → write concepts → `okf
 ---
 
 **Version:** 1.0.0 · **Language:** English · **Output format:** OKF bundle (Open Knowledge Format v0.1)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

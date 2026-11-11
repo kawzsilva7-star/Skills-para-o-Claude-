@@ -303,3 +303,6 @@ Always provide alternatives for high-stakes elements (headline, CTA). Never deli
 - **content-humanizer**: USE when AI-drafted copy sounds robotic or templated. NOT for strategic decisions.
 - **ab-test-setup**: USE to design experiments testing copy variants. NOT for writing the copy itself.
 - **email-sequence**: USE for email copywriting specifically. NOT for page or landing page copy.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

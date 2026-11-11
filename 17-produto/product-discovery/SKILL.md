@@ -112,3 +112,6 @@ CLI utility that:
 - emits prioritized test plan with suggested test types
 
 See `references/discovery-frameworks.md` for framework details.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

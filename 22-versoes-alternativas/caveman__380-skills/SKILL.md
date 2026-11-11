@@ -74,3 +74,6 @@ Load these only when the task needs them.
 - `python3 scripts/caveman_compressor.py --help` — Apply Matt Pocock's caveman compression rules to text
 - `python3 scripts/caveman_lint.py --help` — Lint a response for caveman-mode compliance
 - `python3 scripts/token_savings_estimator.py --help` — Estimate token-cost savings from caveman compression
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -79,3 +79,6 @@ All support `--help`, `--sample` and `--output json`.
 - [`assets/collect_snapshot.js`](assets/collect_snapshot.js), [`assets/capture_snapshot.mjs`](assets/capture_snapshot.mjs): snapshot capture
 - [`assets/states.example.csv`](assets/states.example.csv), [`assets/snapshot.example.json`](assets/snapshot.example.json), [`assets/waivers.example.csv`](assets/waivers.example.csv): input formats
 - [`assets/finish_signoff.md`](assets/finish_signoff.md): sign-off before a screen is called done
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

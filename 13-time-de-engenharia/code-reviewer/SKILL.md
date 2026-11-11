@@ -181,3 +181,6 @@ behaviour change in the analyzer:
 python scripts/code_quality_checker.py assets/sample_java_smells.java --json \
   | diff - expected_outputs/sample_java_smells_quality.json
 ```
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

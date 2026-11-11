@@ -269,3 +269,6 @@ Surface these without being asked when noticed in context:
 - **`senior-architect`** — pure architecture decisions with no immediate implementation. NOT for tasks where code is written in the same session.
 - **`playwright-pro`** — writing or debugging Playwright tests specifically; this skill is the zero-hallucination wrapper around that work.
 - **`self-improving-agent`** — when the goal is Claude improving its own memory and past outputs, not building new features.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -487,3 +487,6 @@ See [references/pr-attachments.md](references/pr-attachments.md) for alt text, i
 * **Video recording** [references/video-recording.md](references/video-recording.md)
 * **Attaching screenshots and videos to pull requests** [references/pr-attachments.md](references/pr-attachments.md)
 * **Inspecting element attributes** [references/element-attributes.md](references/element-attributes.md)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

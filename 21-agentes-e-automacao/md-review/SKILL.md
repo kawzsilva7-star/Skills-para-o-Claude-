@@ -96,3 +96,6 @@ python3 markdown-html/skills/md-review/scripts/review_html_renderer.py \
 - Google *Code Review Developer Guide* — severity convention source
 - WCAG 2.2 §1.4.1 — color-not-sole-signal enforcement
 - See `references/` for full citations (diff_rendering_canon, severity_coding, pr_annotation_ux)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

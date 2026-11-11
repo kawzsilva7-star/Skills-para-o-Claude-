@@ -164,3 +164,6 @@ For the complete threat model, detection patterns, and known attack vectors agai
 - Dependency vulnerability checks use local pattern matching, not live CVE databases
 
 When in doubt after an audit, **don't install**. Ask the skill author for clarification.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

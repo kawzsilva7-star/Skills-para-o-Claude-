@@ -115,3 +115,6 @@ Loop the findings back into the negotiation-points table above before the next c
 - `references/due-diligence-checklist.md` — comprehensive DD checklist by domain
 - `../general-counsel-advisor/SKILL.md` — term sheet analyzer + contract risk scanner
 - `../chief-data-officer-advisor/SKILL.md` — data diligence + data-asset valuation
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

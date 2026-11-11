@@ -101,3 +101,6 @@ Output: `📊 Memory: {{n}}/200 lines | {{count}} rules | {{status_emoji}} {{sta
 - If capacity is yellow+, run `/si:memory-review` to identify promotion candidates
 - Stale entries waste space — delete references to files that no longer exist
 - Topic files are fine — Claude creates them to keep MEMORY.md under 200 lines
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

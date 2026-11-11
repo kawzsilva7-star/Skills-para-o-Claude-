@@ -157,3 +157,6 @@ Load these only when the task needs them.
 - [references/information_density_canon.md](references/information_density_canon.md) — Information Density Canon
 - [references/orchestrator_routing_patterns.md](references/orchestrator_routing_patterns.md) — Orchestrator Routing Patterns
 - [references/single_file_html_discipline.md](references/single_file_html_discipline.md) — Single-File HTML Discipline
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

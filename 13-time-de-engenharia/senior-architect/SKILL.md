@@ -341,3 +341,6 @@ python scripts/project_architect.py . --output json
 1. Run any script with `--help` for usage information
 2. Check reference documentation for detailed patterns and workflows
 3. Use `--verbose` flag for detailed explanations and recommendations
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

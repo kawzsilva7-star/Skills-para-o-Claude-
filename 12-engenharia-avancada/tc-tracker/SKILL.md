@@ -205,3 +205,6 @@ For onboarding an existing project with undocumented history, build a `retro_cha
 - [references/tc-schema.md](references/tc-schema.md) — Full JSON schema for TC records and the registry.
 - [references/lifecycle.md](references/lifecycle.md) — State machine, valid transitions, and recovery flows.
 - [references/handoff-format.md](references/handoff-format.md) — Session handoff structure and best practices.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -313,3 +313,6 @@ Load these only when the task needs them.
 
 - [references/experiment-domains.md](references/experiment-domains.md) — Experiment Domains Guide
 - [references/program-template.md](references/program-template.md) — program.md Templates
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -154,3 +154,6 @@ Animate the `startOffset` attribute (`0%` -> `100%`) to scroll text along the pa
 ## Reference files
 
 - `references/reveal-recipes.md` — copy-paste reveal cookbook: mask/blur/clip/char-stagger in CSS, GSAP SplitText timelines, Framer Motion staggered variants, Remotion per-character interpolation, variable-font keyframes, and a screen-reader-safe split helper.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

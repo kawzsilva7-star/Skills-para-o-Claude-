@@ -65,3 +65,6 @@ If the user hasn't connected Slack, Gmail, Drive, or Calendar, don't stall. Ask 
 | `project-management/meeting-analyzer` | Meeting insights can feed into 3P updates and status reports |
 | `project-management/confluence-expert` | Publish comms as Confluence pages for permanent record |
 | `marketing-skill/content-production` | External comms — use for public-facing content, not internal |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

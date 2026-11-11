@@ -170,3 +170,6 @@ Docs: [Compute](https://www.prisma.io/docs/compute), [Deploy your first app](htt
 ## Feedback
 
 `npx prisma feedback "<message>"` sends anonymous feedback to the CLI team with the CLI version, Node.js version, and OS platform. Add `--email <address>` for a reply. Never include tokens, connection URLs, or user data.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

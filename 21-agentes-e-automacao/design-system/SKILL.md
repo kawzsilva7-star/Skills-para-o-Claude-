@@ -163,3 +163,6 @@ Load these only when the task needs them.
 - [references/design_token_canon.md](references/design_token_canon.md) — Design Token Canon
 - [references/typography_pairing.md](references/typography_pairing.md) — Typography Pairing
 - [references/wcag_accessibility.md](references/wcag_accessibility.md) — WCAG Accessibility Floor
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

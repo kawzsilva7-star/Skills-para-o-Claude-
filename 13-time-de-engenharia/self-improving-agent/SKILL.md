@@ -160,3 +160,6 @@ Monitors command output for errors. When detected, appends a structured entry to
 - [Claude Code Memory Docs](https://code.claude.com/docs/en/memory)
 - [pskoett/self-improving-agent](https://clawhub.ai/pskoett/self-improving-agent) — inspiration
 - `playwright-pro` — sister plugin in this repo
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

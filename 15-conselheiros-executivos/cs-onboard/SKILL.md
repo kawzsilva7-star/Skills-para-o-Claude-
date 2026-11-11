@@ -106,3 +106,6 @@ Update the context file, refresh timestamp, reset to `fresh`.
 ## References
 - `templates/company-context-template.md` — blank template for output
 - `references/interview-guide.md` — deep interview craft: probes, red flags, handling reluctant founders
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

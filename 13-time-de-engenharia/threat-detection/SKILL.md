@@ -297,3 +297,6 @@ fi
 | [red-team](../red-team/SKILL.md) | Red team exercises generate realistic TTPs that inform hunt hypothesis prioritization |
 | [cloud-security](../cloud-security/SKILL.md) | Cloud posture findings (open S3, IAM wildcards) create hunting targets for data exfiltration TTPs |
 | [security-pen-testing](../security-pen-testing/SKILL.md) | Pen test findings identify attack surfaces that threat hunting should monitor post-remediation |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

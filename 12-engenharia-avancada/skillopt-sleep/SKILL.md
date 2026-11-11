@@ -126,3 +126,6 @@ See the upstream SkillOpt-Sleep guide section
 output and the full design. (The original repo-relative design-doc path,
 `docs/superpowers/specs/...`, is not vendored into this repo — see this
 skill's README.md "What was and wasn't vendored" table.)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -18,3 +18,6 @@ No fim, diga o tamanho do CLAUDE.md hoje (linhas e caracteres) e o que dá para 
 
 ## Resumo para continuar em outra conversa
 Quando ele pedir: resuma o que importa da conversa (decisões, arquivos e próximo passo) em poucas linhas, para ele continuar numa conversa nova sem perder nada.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

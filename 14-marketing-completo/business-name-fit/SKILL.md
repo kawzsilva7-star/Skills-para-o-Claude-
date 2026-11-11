@@ -118,3 +118,6 @@ Expand any of these only if asked.
 - **brand-guidelines** (`marketing-skill/skills/brand-guidelines`) — use after a name is chosen, to build the visual and verbal identity system around it.
 - **copywriting** (`marketing-skill/skills/copywriting`) — use once the name is locked, for tagline and messaging work that needs to match the name's tone.
 - **marketing-context** (`marketing-skill/skills/marketing-context`) — load first if available; ICP and positioning context should inform which candidate names fit best.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -256,3 +256,6 @@ Paywall recommendations must account for where the user is in their value journe
 | Upgrade Flow Diagram | Step-by-step from paywall click to post-upgrade confirmation with friction reduction notes |
 | Anti-Pattern Audit | Review of existing paywall for dark patterns, trust-damaging copy, and conversion killers |
 | A/B Test Backlog | Prioritized experiment ideas for trigger timing, copy, and pricing display |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

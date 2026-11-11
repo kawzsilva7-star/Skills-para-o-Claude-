@@ -390,3 +390,6 @@ Load these only when the task needs them.
 - [references/developer-portfolio-proof.md](references/developer-portfolio-proof.md) — Developer Portfolio Proof: The AI Collaboration Evidence Problem
 - [references/session-documentation-patterns.md](references/session-documentation-patterns.md) — Session Documentation Patterns
 - [references/tamper-evident-proof.md](references/tamper-evident-proof.md) — Tamper-Evident Proof via Git Notes
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

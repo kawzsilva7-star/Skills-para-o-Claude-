@@ -213,3 +213,6 @@ Print the image URLs as a short bulleted list. No JSON, no IDs, no internal mode
 - Calling `higgsfield generate create gpt_image_2 --prompt ...` directly instead of `higgsfield product-photoshoot create` — bypasses the prompt enhancer and produces noticeably worse output.
 - Pasting the assembled prompt back to the user — they want the URLs.
 - Using a `--mode` value not in the table above.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

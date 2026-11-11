@@ -301,3 +301,6 @@ After writing or modifying tests:
    - Re-run tests
 3. **Only proceed when all tests pass**
 4. **Run multiple times** for critical tests: `npx playwright test --repeat-each=5`
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

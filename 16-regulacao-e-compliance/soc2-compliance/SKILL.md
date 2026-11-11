@@ -421,3 +421,6 @@ python scripts/gap_analyzer.py --controls current_controls.json --type type2 --j
 Load these only when the task needs them.
 
 - [references/soc2_audit_playbook.md](references/soc2_audit_playbook.md) — SOC 2 Type II Audit Playbook
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

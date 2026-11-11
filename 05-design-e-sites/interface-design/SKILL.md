@@ -318,3 +318,6 @@ Always offer to save: "Want me to save these patterns for future sessions?" If y
 - `/interface-design:design-deslop` — fast, diff-scoped pass that strips visual slop from a branch
 
 If a user asks for design status, audit, or pattern extraction in natural language: read `.interface-design/system.md` and summarize it, check UI files against it for drift, or scan for repeated spacing/radius/color/component values and propose a system.md — perform the equivalent inline.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

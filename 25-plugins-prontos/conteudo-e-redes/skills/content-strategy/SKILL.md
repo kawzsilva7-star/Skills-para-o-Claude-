@@ -144,3 +144,6 @@ Output format defaults: tables for prioritization, bullet lists for options, pro
 - **seo-audit**: USE when auditing existing content for technical and on-page issues. NOT for creating new strategy from scratch.
 - **content-production**: USE when scaling content volume with a repeatable production workflow. NOT for initial strategy definition.
 - **content-humanizer**: USE when AI-generated content needs to sound more authentic. NOT for topic selection.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

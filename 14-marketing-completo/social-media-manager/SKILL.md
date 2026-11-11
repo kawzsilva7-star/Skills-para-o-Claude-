@@ -203,3 +203,6 @@ All output passes quality verification:
 - **copywriting**: For landing pages and web copy that social drives to.
 - **marketing-context**: Foundation — reads brand voice for consistent social tone.
 - **ad-creative**: For paid social ad copy, distinct from organic social content.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

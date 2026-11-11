@@ -226,3 +226,6 @@ Apply stage-specific facilitation (details in `references/team-dynamics-framewor
 Load these only when the task needs them.
 
 - [references/retro-formats.md](references/retro-formats.md) — Sprint Retrospective Formats
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

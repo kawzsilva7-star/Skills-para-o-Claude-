@@ -154,3 +154,6 @@ Follow the user's language unless they request another language.
 - Use `meta-research` when the task is to find and triangulate external sources before synthesis.
 - Use `product-team/research-summarizer` when the desired output is a conventional research brief, citation extraction, or multi-document summary rather than a learning workflow.
 - Use `notebooklm` when the task specifically requires operating the NotebookLM interface.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -100,3 +100,6 @@ This is the property that makes it evidence: a reviewer who distrusts the issuer
 - `ra-qm-team/skills/eu-ai-act-specialist/` — decide the AI system's risk tier and Article 12 obligations; this skill mints the per-action record those obligations require.
 - `ra-qm-team/skills/iso42001-specialist/` — the AI management-system controls; receipts are the per-decision evidence those controls call for.
 - OpenAgentOntology (Apache-2.0): the open receipt primitive this skill drives — `pip install "openagentontology[pq]"`.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

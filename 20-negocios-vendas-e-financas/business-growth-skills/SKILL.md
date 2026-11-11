@@ -44,3 +44,6 @@ python3 business-growth/skills/customer-success-manager/scripts/health_score_cal
 
 - Route to exactly one skill, then follow that skill's workflow. This router ships no tools of its own.
 - Use the skills' Python scorers for metrics, not manual estimates; deal/contract outputs are drafts for human legal/commercial review.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

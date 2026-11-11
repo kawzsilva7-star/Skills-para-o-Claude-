@@ -93,3 +93,6 @@ After routing, fork to the sub-skill with: the goal string, `agent_name`,
 - `scripts/goal_state.py` — own `goal.json` (init/set/status/advance).
 - `scripts/goal_router.py` — goal → lane (exit 0 route / 3 ask / 4 refuse).
 - `scripts/loop_compiler.py` — goal+phase → `plan.v1` execution shape.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

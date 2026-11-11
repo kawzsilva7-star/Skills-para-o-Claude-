@@ -98,3 +98,6 @@ Full hardening guidance: [references/production-hardening-guide.md](references/p
 - [references/typescript-server-template.md](references/typescript-server-template.md)
 - [references/validation-checklist.md](references/validation-checklist.md)
 - [README.md](README.md)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

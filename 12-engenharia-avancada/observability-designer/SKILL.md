@@ -278,3 +278,6 @@ Load these only when the task needs them.
 - [references/alert_design_patterns.md](references/alert_design_patterns.md) — Alert Design Patterns: A Guide to Effective Alerting
 - [references/dashboard_best_practices.md](references/dashboard_best_practices.md) — Dashboard Best Practices: Design for Insight and Action
 - [references/slo_cookbook.md](references/slo_cookbook.md) — SLO Cookbook: A Practical Guide to Service Level Objectives
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

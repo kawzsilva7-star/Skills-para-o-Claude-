@@ -238,3 +238,6 @@ Deliver findings sweep-by-sweep. Don't dump all issues at once. Prioritize by co
 Load these only when the task needs them.
 
 - [references/ai-detection-patterns.md](references/ai-detection-patterns.md) — AI Content Detection Patterns
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

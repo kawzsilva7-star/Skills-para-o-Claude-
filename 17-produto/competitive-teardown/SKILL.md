@@ -176,3 +176,6 @@ Load these only when the task needs them.
 
 - [references/competitive-analysis-frameworks.md](references/competitive-analysis-frameworks.md) — Competitive Analysis Frameworks
 - [references/scoring-rubric.md](references/scoring-rubric.md) — Competitive Scoring Rubric
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -79,3 +79,6 @@ All support `--sample` and `--output json`.
 - [`references/flux_analysis_and_materiality.md`](references/flux_analysis_and_materiality.md) — expectations, thresholds, corroboration, materiality rules of thumb (6 sources)
 - [`assets/close_plan.example.json`](assets/close_plan.example.json), [`assets/gl_cash.example.csv`](assets/gl_cash.example.csv), [`assets/bank_statement.example.csv`](assets/bank_statement.example.csv), [`assets/flux_input.example.csv`](assets/flux_input.example.csv) — input formats
 - [`assets/reconciliation_signoff.md`](assets/reconciliation_signoff.md) — sign-off sheet with the evidence fields a reviewer fills in
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

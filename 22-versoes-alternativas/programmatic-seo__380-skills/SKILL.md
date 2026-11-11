@@ -286,3 +286,6 @@ Automatically surface programmatic-seo when:
 | Page Template Spec | Markdown with annotated sections | URL pattern, title/meta templates, content block structure, unique value rules |
 | Pre-Launch Checklist | Checkbox list | Content quality, technical SEO, internal linking, indexation gates |
 | Post-Launch Monitoring Plan | Table | Metrics to track × tools × alert thresholds × review cadence |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

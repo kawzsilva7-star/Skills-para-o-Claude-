@@ -137,3 +137,6 @@ Without the two price flags, `--estimate-cost` reports token estimates only. The
 - `engineering-team/skills/senior-ml-engineer` — model deployment and serving (this skill stops at the prompt/eval layer)
 - `engineering/rag-architect` — RAG system architecture (this skill measures RAG quality; that one designs the pipeline)
 - `engineering/agent-designer` — full agent system design (this skill validates configs; that one designs the architecture)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

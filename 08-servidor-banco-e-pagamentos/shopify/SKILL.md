@@ -121,3 +121,5 @@ request into a topic that does not fit.
 > `OPT_OUT_INSTRUMENTATION=true`. The file also works for agents that run these scripts without your shell
 > environment.
 
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

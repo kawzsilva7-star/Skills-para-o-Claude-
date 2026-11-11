@@ -13,3 +13,6 @@ Use as skills `web-perf`, `performance` e `core-web-vitals`, se estiverem instal
 4. **Meça de novo** no fim e mostre o antes e o depois.
 
 Não invente medições: só mostre números que você mediu.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

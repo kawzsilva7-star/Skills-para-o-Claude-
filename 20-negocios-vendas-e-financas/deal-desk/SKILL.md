@@ -137,3 +137,6 @@ Walked one at a time by `/cs-grill-commercial` or the Commercial orchestrator. R
    Canon: Bridge Group SaaS AE compensation research — named approval reduces precedent drift by 50%+.
 
 Walk depth-first. Lock 1-4 before opening 5-7. After all 7 are answered, invoke `deal_scorer.py` → `discount_approval_router.py` → `terms_redliner.py` in sequence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

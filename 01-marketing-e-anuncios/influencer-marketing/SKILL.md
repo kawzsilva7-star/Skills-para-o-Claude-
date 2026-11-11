@@ -207,3 +207,6 @@ For Telegram channels, the vetting options (the public preview with a manual rea
 - **attribution** — reconciling promo-code / UTM / survey / platform numbers; branded-search and direct blind spots that hide influencer impact
 - **ai-seo** — when discovery happened in AI search (citations vs. recommendations)
 - **social** — organic content strategy the partnerships plug into
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

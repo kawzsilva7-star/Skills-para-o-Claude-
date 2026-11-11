@@ -34,3 +34,6 @@ Every technique directory is self-contained and may be removed without breaking 
 
 - Flythroughs through terrain and mountains
 - "Flight simulator" perspective
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

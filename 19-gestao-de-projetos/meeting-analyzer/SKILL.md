@@ -253,3 +253,6 @@ Recommend `YYYY-MM-DD - Meeting Name.ext` naming convention for easy chronologic
 | `project-management/scrum-master` | Agile ceremonies — pairs with meeting-analyzer for retro quality |
 | `project-management/confluence-expert` | Store meeting analysis outputs as Confluence pages |
 | `c-level-advisor/executive-mentor` | Executive communication coaching — complementary perspective |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

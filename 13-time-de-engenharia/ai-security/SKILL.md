@@ -362,3 +362,6 @@ fi
 | [incident-response](../incident-response/SKILL.md) | Confirmed prompt injection exploitation or data extraction from a model should be classified as a security incident |
 | [cloud-security](../cloud-security/SKILL.md) | LLM API keys and model endpoints are cloud resources — IAM misconfiguration enables unauthorized model access (AML.T0012) |
 | [security-pen-testing](../security-pen-testing/SKILL.md) | Application-layer security testing covers the web interface and API layer; ai-security covers the model and agent layer |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

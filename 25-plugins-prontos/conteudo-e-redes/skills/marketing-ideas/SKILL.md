@@ -209,3 +209,6 @@ Never dump all 139 ideas. Curate ruthlessly for context. If stage or budget is u
 - **content-production**: USE when scaling content-based ideas to high volume. NOT for the initial brainstorm.
 - **seo-audit**: USE when content/SEO ideas need technical validation. NOT for ideation.
 - **free-tool-strategy**: USE when Engineering as Marketing (#15) is the chosen tactic and a tool needs to be planned and built. NOT for general idea browsing.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

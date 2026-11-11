@@ -367,3 +367,6 @@ After designing an API:
 - [ ] A reused key with a different payload fails loudly rather than replaying the wrong response
 - [ ] The in-flight-duplicate response is a deliberate choice (409, wait, or 202) rather than whatever falls out
 - [ ] Key retention outlives the longest retry path, including dead-letter replay
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

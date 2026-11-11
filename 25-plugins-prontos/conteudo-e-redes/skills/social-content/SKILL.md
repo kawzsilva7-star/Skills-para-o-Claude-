@@ -321,3 +321,6 @@ Always include a hook as the first element. Never deliver body copy without it. 
 - **content-production**: USE when operating a high-volume content machine across multiple creators. NOT for one-off post creation.
 - **content-humanizer**: USE when AI-drafted posts sound robotic or templated. NOT for strategy or scheduling.
 - **launch-strategy**: USE when coordinating social content around a product launch. NOT for evergreen posting schedules.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

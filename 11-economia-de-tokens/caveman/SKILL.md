@@ -87,3 +87,6 @@ Plain prose, then resume:
 2. Last sentence recaps or offers help? Delete.
 3. Every not/never/no/only present? Every code span, path, number, error verbatim?
 4. Any sentence with two readings? Make it a full sentence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

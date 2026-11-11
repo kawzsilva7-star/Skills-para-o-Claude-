@@ -179,3 +179,6 @@ until the lane-defining decision is locked:
 - [references/ai_product_evals.md](references/ai_product_evals.md) — evals-as-PRD, model
   cards, evaluator-optimizer loops
 - Loop engine: `engineering/agent-harness` · Loop vocabulary: `loop-library`
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -121,3 +121,6 @@ file /tmp/screenshot.png
 
 - [`engineering/browser-automation`](../browser-automation/SKILL.md) — General browser automation patterns via CDP/Playwright
 - [`engineering/performance-profiler`](../performance-profiler/SKILL.md) — Performance analysis that may complement visual captures
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

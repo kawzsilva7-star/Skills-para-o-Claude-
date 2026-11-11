@@ -79,3 +79,6 @@ session's transcript when a prompt asks about past work; disable it with `AGENT_
 - [`references/claim_verification.md`](references/claim_verification.md): turning a summary into claims, verdicts, and how to correct an account (7)
 - [`assets/forensic_answer_template.md`](assets/forensic_answer_template.md): the shape of an answer
 - [`assets/claims_example.txt`](assets/claims_example.txt): a claims file for `--claims-file`
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -406,3 +406,6 @@ Reference: `references/portfolio-kpis.md` for full definitions and measurement g
 
 - **Product Strategist** (`product-team/product-strategist/`) — Product OKRs align with portfolio objectives
 - **Scrum Master** (`project-management/scrum-master/`) — Sprint velocity data feeds project health dashboards
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

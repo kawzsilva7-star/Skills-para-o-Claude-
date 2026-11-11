@@ -77,3 +77,6 @@ I want you to build 5 landing pages for my free prompt pack, each one fundamenta
 ---
 
 *Derived from [duncan-buildroom/freeskills](https://github.com/duncan-buildroom/freeskills) `fable-goal` ("free to use and modify"). Substantially restructured: wrong-tool check, observable-done principle, six-slot extraction, per-medium verification defaults, six-point self-check, anti-pattern list, second worked example.*
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

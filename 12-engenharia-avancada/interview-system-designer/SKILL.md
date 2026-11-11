@@ -57,3 +57,6 @@ python3 scripts/interview_planner.py --role "Product Manager" --level mid --json
 2. Require evidence for each score recommendation.
 3. Use the same baseline rubric across comparable roles.
 4. Revisit loop design based on quality-of-hire outcomes.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

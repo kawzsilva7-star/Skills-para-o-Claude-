@@ -90,3 +90,6 @@ Features:
 - [ ] Terminology is consistent across artifacts.
 - [ ] Risks and dependencies are not hidden.
 - [ ] Next actions and owners are specified.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

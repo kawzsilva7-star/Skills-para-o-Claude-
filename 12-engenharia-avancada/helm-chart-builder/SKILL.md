@@ -454,3 +454,6 @@ Load these only when the task needs them.
 
 - [references/chart-patterns.md](references/chart-patterns.md) — Helm Chart Patterns Reference
 - [references/values-design.md](references/values-design.md) — Values.yaml Design Reference
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

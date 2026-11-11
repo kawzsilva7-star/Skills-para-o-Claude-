@@ -230,3 +230,6 @@ Automatically surface page-cro recommendations when:
 | High-Impact Recommendations | Structured list | Each with rationale, effort estimate, and success metric |
 | Copy Alternatives | Side-by-side table | 2-3 variants per key element (headline, CTA, subhead) with reasoning |
 | A/B Test Hypotheses | Table | Hypothesis × variant description × success metric × priority |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

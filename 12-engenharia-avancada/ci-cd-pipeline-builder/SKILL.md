@@ -87,3 +87,6 @@ python3 scripts/pipeline_generator.py --repo . --platform gitlab --output .gitla
 - [references/gitlab-ci-templates.md](references/gitlab-ci-templates.md)
 - [references/deployment-gates.md](references/deployment-gates.md)
 - [README.md](README.md)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

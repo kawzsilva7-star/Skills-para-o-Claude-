@@ -80,3 +80,6 @@ All support `--help`, `--sample` and `--output json`.
 - [`references/control_crosswalk.md`](references/control_crosswalk.md) — finding codes to controls across six frameworks, with the caveats (7 sources)
 - [`assets/hr_roster.example.csv`](assets/hr_roster.example.csv), [`assets/accounts.example.csv`](assets/accounts.example.csv), [`assets/campaign.example.csv`](assets/campaign.example.csv) — input formats
 - [`assets/access_review_signoff.md`](assets/access_review_signoff.md) — campaign sign-off with the evidence fields a reviewer fills in
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

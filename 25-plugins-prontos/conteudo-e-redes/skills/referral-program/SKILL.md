@@ -284,3 +284,6 @@ All output follows the structured communication standard:
 - **marketing-demand-acquisition**: Use for multi-channel paid and organic acquisition strategy. NOT for referral-specific mechanics.
 - **ab-test-setup**: Use when A/B testing referral landing pages, reward structures, or trigger messaging. NOT for the program design.
 - **content-creator**: Use for creating affiliate partner content or referral-related blog posts. NOT for program mechanics.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

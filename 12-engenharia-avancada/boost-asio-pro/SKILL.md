@@ -143,3 +143,6 @@ Three CI-verified implementations of the same full-duplex framed-protocol server
 - `engineering/docker-development` — the old-Boost verification lanes this skill's floors come from are containerised builds (Debian 9 / bookworm, Fedora).
 - `engineering/chaos-engineering` — for exercising the failure paths this skill tells you to handle: half-open sockets, idle timeouts, partial frames.
 - `engineering-team/playwright-pro` — the client-side counterpart when the server built here is driven from browser-based integration tests.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

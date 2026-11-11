@@ -308,3 +308,6 @@ All output passes quality verification:
 - **campaign-analytics**: For cross-channel analytics including social.
 - **content-strategy**: For planning social content themes.
 - **marketing-context**: Provides audience context for better analysis.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

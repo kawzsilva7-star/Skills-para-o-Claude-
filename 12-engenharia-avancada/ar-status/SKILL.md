@@ -70,3 +70,6 @@ engineering     bundle-size          23     8   412KB        -58.3%    paused   
 marketing       medium-ctr           31    11   8.4/10       +68.0%    active   daily
 prompts         support-tone         15     6   82/100       +46.4%    done     —
 ```
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

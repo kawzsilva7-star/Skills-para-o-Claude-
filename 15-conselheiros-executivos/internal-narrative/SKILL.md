@@ -195,3 +195,6 @@ Run before any major external communication:
 ## Detailed References
 - `references/narrative-frameworks.md` — Storytelling structures, founder narrative, bad news delivery, all-hands templates
 - `templates/all-hands-template.md` — All-hands presentation template
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

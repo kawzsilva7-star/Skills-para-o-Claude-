@@ -478,3 +478,6 @@ Load these only when the task needs them.
 - [references/incident_severity_matrix.md](references/incident_severity_matrix.md) — Incident Severity Classification Matrix
 - [references/rca_frameworks_guide.md](references/rca_frameworks_guide.md) — Root Cause Analysis (RCA) Frameworks Guide
 - [references/sla-management-guide.md](references/sla-management-guide.md) — SLA Management Guide
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

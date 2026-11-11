@@ -91,3 +91,6 @@ Brand consistency is not a design preference — it's a trust signal. Every devi
 - **content-humanizer** — USE when existing content needs to be rewritten to match brand tone without losing information; NOT for structural content work.
 - **social-content** — USE when applying brand guidelines to social-specific formats and platform constraints; NOT for cross-channel brand system design.
 - **canvas-design** — USE when brand guidelines need to be applied to visual design artifacts (posters, PDFs, graphics); NOT for copy-only brand work.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

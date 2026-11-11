@@ -438,3 +438,6 @@ Nonconforming Product Identified
 | [qms-audit-expert](../qms-audit-expert/) | Advanced audit techniques |
 | [quality-documentation-manager](../quality-documentation-manager/) | DHF, DMR, DHR management |
 | [risk-management-specialist](../risk-management-specialist/) | ISO 14971 integration |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

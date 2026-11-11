@@ -173,3 +173,6 @@ Walked one at a time by `/cs-grill-bizops` or the BizOps orchestrator. Recommend
    Canon: Productiv / Zylo / Vendr industry reports on SaaS sprawl.
 
 Walk depth-first. Lock 1-4 before opening 5-7. After all are answered, invoke `spend_categorizer.py` → `purchasing_cycle_analyzer.py` → `supplier_consolidation.py` in sequence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

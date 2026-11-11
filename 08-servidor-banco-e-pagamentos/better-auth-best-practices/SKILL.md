@@ -190,3 +190,6 @@ For separate client/server projects: `createAuthClient<typeof auth>()`.
 - [LLMs.txt](https://better-auth.com/llms.txt)
 - [GitHub](https://github.com/better-auth/better-auth)
 - [Init Options Source](https://github.com/better-auth/better-auth/blob/main/packages/core/src/types/init-options.ts)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

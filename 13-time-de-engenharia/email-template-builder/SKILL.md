@@ -437,3 +437,6 @@ export function addTrackingParams(html: string, params: TrackingParams): string 
 - **Dark mode media queries** — must use `!important` to override inline styles
 - **Missing plain text** — all major providers have a plain text field; always populate it
 - **Transactional vs marketing** — use separate sending domains/IPs to protect deliverability
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

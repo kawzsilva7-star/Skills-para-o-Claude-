@@ -191,3 +191,6 @@ Use this quick selector before creating a new worktree:
 - If dependency install fails: keep worktree created, mark status and continue manual recovery.
 - If env copy fails: continue with warning and explicit missing file list.
 - If port allocation collides with external service: rerun with adjusted base ports.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

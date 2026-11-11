@@ -40,3 +40,6 @@ If you genuinely cannot find anything relevant, reply with the single line:
 
 That honest answer is better than a guess. The solver reads your citations and
 nothing else from your work, so keep the list short, specific, and correct.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

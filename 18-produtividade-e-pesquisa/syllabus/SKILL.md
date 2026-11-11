@@ -291,3 +291,6 @@ See [`references/bundled_script_pattern.md`](references/bundled_script_pattern.m
 **Version:** 1.0.0
 **Source spec:** `megaprompts/10-syllabus-megaprompt.md` (maintainer-local draft spec — gitignored, not present in the public repository)
 **Build pattern:** Path B (direct conversion). Bundled-JS-DOCX-generator variant.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

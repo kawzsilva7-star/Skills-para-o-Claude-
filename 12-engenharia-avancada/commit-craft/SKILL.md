@@ -79,3 +79,6 @@ All support `--help`, `--sample` and `--output json`.
 - [`assets/hooks/`](assets/hooks/): `pre-commit`, `commit-msg`, `pre-push`
 - [`assets/commit-craft-allow.example`](assets/commit-craft-allow.example): waiver format
 - [`assets/series_checklist.md`](assets/series_checklist.md): pre-push sign-off
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

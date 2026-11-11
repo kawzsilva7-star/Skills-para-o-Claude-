@@ -340,3 +340,6 @@ Checks: depth attributes, aria-hidden, reduced-motion, alt text, performance lim
 - **page-cro**: Use after the 2.5D site is built to optimize conversion. NOT during the initial build.
 - **senior-architect**: Use when the 2.5D site is part of a larger system architecture. NOT for standalone pages.
 - **accessibility-auditor**: Use to verify full WCAG compliance after build. This skill includes basic reduced-motion handling.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

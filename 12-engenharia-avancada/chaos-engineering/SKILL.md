@@ -230,3 +230,6 @@ A team using this skill should achieve:
 - Mean time between chaos experiments <14 days (continuous, not one-off)
 - Each experiment produces ≥1 follow-up action that gets shipped
 - No chaos experiment escalates to a customer-impacting incident in trailing 90 days
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

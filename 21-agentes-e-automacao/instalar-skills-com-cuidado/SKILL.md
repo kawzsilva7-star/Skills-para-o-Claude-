@@ -26,4 +26,8 @@ Responda em português.
 - **Programar**: prototype, diagnosing-bugs, code-review e tdd (mattpocock/skills) e a Superpowers (obra/superpowers; também está no catálogo oficial: `superpowers@claude-plugins-official`).
 - **Velocidade de página**: core-web-vitals e performance (addyosmani/web-quality-skills) e web-perf (cloudflare/skills).
 - **Instagram Agent**: as 13 skills ig-* de github.com/Jakeschincariol/instagram-agent-skill. Confirme que o `/ig-reel` funciona. Depois copie `templates/voice.md` para `~/.claude/instagram/voice.md` e faça as perguntas para preencher com o jeito de falar do usuário.
+- **founder-skill** (11 skills, github.com/Jakeschincariol/founder-skill), seguindo o README: como plugin (`/plugin marketplace add Jakeschincariol/founder-skill` e depois `/plugin install founder-skill@founder-skill`) ou copiando as pastas `skills/founder-*` para `~/.claude/skills/`. As ferramentas precisam do Python 3.8 ou mais novo. No fim, mostre os 11 comandos instalados.
 - **Plugin do Codex** (github.com/openai/codex-plugin-cc): `/plugin marketplace add openai/codex-plugin-cc`, depois `/plugin install codex@openai-codex`, depois `/reload-plugins` e `/codex:setup`. Se faltar o Codex, mostre o comando antes (`npm install -g @openai/codex`). No fim, confirme que o `/codex:review` aparece.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

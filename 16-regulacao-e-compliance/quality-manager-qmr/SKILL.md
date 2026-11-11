@@ -489,3 +489,6 @@ immediately    Yes─┴─No
 | [capa-officer](../capa-officer/) | CAPA system oversight |
 | [qms-audit-expert](../qms-audit-expert/) | Internal audit program |
 | [quality-documentation-manager](../quality-documentation-manager/) | Document control oversight |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

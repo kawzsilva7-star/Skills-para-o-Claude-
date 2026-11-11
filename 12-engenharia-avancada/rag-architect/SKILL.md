@@ -69,3 +69,6 @@ The design is done only when:
 - `references/chunking_strategies_comparison.md` — strategy trade-offs the optimizer implements
 - `references/embedding_model_benchmark.md` — benchmark *methodology* (dated snapshot; staleness warning at top)
 - `references/rag_evaluation_framework.md` — metric definitions (faithfulness, relevance, precision/recall/NDCG)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -395,3 +395,6 @@ Breaking Changes: None detected
 5. Label each comment clearly: "nit:", "must:", "question:", "suggestion:"
 6. Batch all comments in one review round — don't trickle feedback
 7. Acknowledge good patterns, not just problems — specific praise improves culture
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -121,3 +121,6 @@ return story? Then **"Pass as presented — insufficient disclosure"** + the re-
 ## Cross-References
 - **financial-analyst** — corporate-finance ratios, DCF, forecasting; NOT LP deal screening or waterfalls.
 - **business-investment-advisor** — generic investment analysis; NOT the LP fee-stack / waterfall / red-flag lens.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

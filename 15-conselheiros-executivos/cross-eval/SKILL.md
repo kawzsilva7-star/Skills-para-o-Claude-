@@ -113,3 +113,6 @@ This is weaker than true multi-model. Treat the result as suggestive, not conclu
 ---
 
 **Version:** 1.0.0
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

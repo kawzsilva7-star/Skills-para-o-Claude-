@@ -353,3 +353,6 @@ For every release (anything with consumers):
 - [ ] The version bump matches the change: breaking → major, additive → minor, fix → patch
 - [ ] The release is tagged, and the version is derived from the tag, not hand-edited out of sync
 - [ ] The changelog has a curated, human-readable entry grouped by impact for this version
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

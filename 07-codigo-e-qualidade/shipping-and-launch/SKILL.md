@@ -334,3 +334,6 @@ After deploying:
 For every shipped service:
 
 - [ ] Error budget policy in place: know what action to take when budget drops below 20% and when it's exhausted
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -255,3 +255,6 @@ All output passes the Internal Quality Loop before reaching the founder (see `..
 - `references/technology_evaluation_framework.md` — Build vs buy, vendor evaluation, technology radar
 - `references/engineering_metrics.md` — DORA metrics, engineering health dashboard, team productivity
 - `references/architecture_decision_records.md` — ADR templates, decision governance, review process
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

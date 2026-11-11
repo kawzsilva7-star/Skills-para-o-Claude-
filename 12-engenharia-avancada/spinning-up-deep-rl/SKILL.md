@@ -190,3 +190,6 @@ research-grade. For topics beyond this source, I say so rather than improvising.
 
 *Compiled from OpenAI's Spinning Up in Deep RL documentation (MIT, Copyright (c) 2018 OpenAI),
 primarily developed by Joshua Achiam. Structured study notes, not a reproduction of the source.*
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

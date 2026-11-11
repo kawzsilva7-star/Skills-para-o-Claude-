@@ -435,3 +435,6 @@ Load these only when the task needs them.
 - [references/data_reconciliation_strategies.md](references/data_reconciliation_strategies.md) — Data Reconciliation Strategies
 - [references/migration_patterns_catalog.md](references/migration_patterns_catalog.md) — Migration Patterns Catalog
 - [references/zero_downtime_techniques.md](references/zero_downtime_techniques.md) — Zero-Downtime Migration Techniques
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

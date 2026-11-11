@@ -155,3 +155,6 @@ Walked one at a time by `/cs-grill-commercial` or the orchestrator. Recommended 
    Canon: Charles Horngren (*Cost Accounting: A Managerial Emphasis*) — allocation consistency is the precondition for cross-segment margin comparison. Without it, every conclusion is contaminated.
 
 Walk depth-first. Lock 1-3 before opening 4-7. After all 7 are answered, invoke `cost_to_serve_calculator.py` → `channel_roi_analyzer.py` → `channel_mix_optimizer.py` in sequence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -83,3 +83,6 @@ After every 10th experiment (check results.tsv line count), update the Strategy 
 - NEVER modify the evaluator (evaluate.py). It's ground truth.
 - Simplicity wins. Equal performance with simpler code is an improvement.
 - No new dependencies.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

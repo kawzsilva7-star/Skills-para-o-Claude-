@@ -455,3 +455,6 @@ sqlite3 dbname ".backup backup.db"
 | **migration-architect** | Complex multi-step migration orchestration |
 | **api-design-reviewer** | Ensuring API endpoints align with query patterns |
 | **observability-platform** | Query performance monitoring, slow query alerts |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

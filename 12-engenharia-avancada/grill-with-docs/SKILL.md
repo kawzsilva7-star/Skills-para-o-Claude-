@@ -141,3 +141,6 @@ The additions below are **not** part of Matt's upstream skill. They operationali
 
 **Version:** 1.0.0
 **Derived:** Matt Pocock's grill-with-docs (MIT) + this repo's wrapper
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -295,3 +295,6 @@ h1 { font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
 ## About the Author
 
 **Jason Santa Maria** is a graphic designer and educator who served as Creative Director at Typekit (now Adobe Fonts) and co-founded A Book Apart. He teaches at the School of Visual Arts in New York, and *On Web Typography* distills his bridge between traditional typographic craft and the realities of designing for screens.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

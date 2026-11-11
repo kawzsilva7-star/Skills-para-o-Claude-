@@ -111,3 +111,6 @@ Always name the misclassification cost. It is the part that changes behaviour.
 Based on the Augmented Marketing Decision Architecture, developed in an enterprise product marketing function and observed across 16 product launches at Tableau (Salesforce) prior to 2025. Observational deployment, not a controlled study. The 70% figure and the zone definitions come from that context and may not transfer to yours.
 
 Framework by Kuber Sharma. Specification: kubersharma.com/frameworks/amda
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

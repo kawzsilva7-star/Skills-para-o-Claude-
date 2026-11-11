@@ -101,3 +101,6 @@ python3 markdown-html/skills/md-slides/scripts/deck_html_renderer.py \
 - Tufte — *The Cognitive Style of PowerPoint* (the polemic)
 - reveal.js / Big / Marp — convergent markdown-to-deck conventions
 - See `references/` for full citations (presentation_ux, keyboard_nav_patterns, single_file_deck_conventions)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

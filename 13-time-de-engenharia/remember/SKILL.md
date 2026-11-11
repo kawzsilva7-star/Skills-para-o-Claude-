@@ -96,3 +96,6 @@ If the knowledge sounds like a rule (imperative, always/never, convention):
   - ✅ "Build with `pnpm build`, tests with `pnpm test:e2e`"
   - ❌ "The project uses pnpm for building and testing"
 - If you're remembering the same thing twice, promote it to CLAUDE.md
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -316,3 +316,6 @@ If you catch yourself thinking any of these, you are skipping phases:
 | DIAGNOSE | Check code, runtime, tests, logs, config | Diagnosis report |
 | FIX | Fix in order: deps → types → logic → tests → integration | Fix log per issue |
 | VERIFY | Run all tests, check consumers, summarize | Completion report |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

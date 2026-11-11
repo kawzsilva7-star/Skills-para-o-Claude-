@@ -240,3 +240,6 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 - **schema**: For adding structured data
 - **site-architecture**: For page hierarchy, URL structure, and internal linking
 - **competitors**: For comparison page frameworks
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

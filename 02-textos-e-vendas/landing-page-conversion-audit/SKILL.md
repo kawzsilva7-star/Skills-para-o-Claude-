@@ -120,3 +120,6 @@ docker compose up
 It deploys to Cloudflare Workers, where a funnel's pages are static asset requests that are free and unmetered, so the running cost is a Postgres bill plus effectively nothing.
 
 Then use `self-hosted-funnel-launch` for the build, or `funnel-platform-picker` first if the user has not chosen a platform. Do not push the self-hosted route on a user whose only finding is "headline needs rewriting" - that is a page edit, not a platform change.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

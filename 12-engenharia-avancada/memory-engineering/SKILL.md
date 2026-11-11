@@ -98,3 +98,6 @@ All support `--output json` and `--sample` (no input file needed).
 
 Framing from *"How to be a Memory Engineer"* by [@N01ennn](https://x.com/N01ennn/status/2083971749079581120); every
 number is cited to a primary source instead, and two paraphrases are corrected — `memory_cost_canon.md` §2, `memory_control_and_governance.md` §4.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

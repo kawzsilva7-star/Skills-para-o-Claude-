@@ -74,3 +74,6 @@ python3 scripts/runbook_generator.py payments-api --owner platform --output docs
 2. Include health checks after every critical step.
 3. Validate runbooks on a fixed review cadence.
 4. Update runbook content after incidents and postmortems.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

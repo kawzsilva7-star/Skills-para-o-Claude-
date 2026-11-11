@@ -175,3 +175,6 @@ When given a codebase, follow this process:
 5. Test that sensitive fields (password, secret) are never in responses
 6. For auth tests, always test the "missing header" case separately from "invalid token"
 7. Add rate limit tests last — they can interfere with other test suites if run in parallel
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

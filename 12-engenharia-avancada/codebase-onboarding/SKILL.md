@@ -82,3 +82,6 @@ Detailed template and section examples live in:
 2. Document the "why" for key architectural decisions.
 3. Update docs in the same PR as behavior changes.
 4. Treat onboarding docs as living operational assets, not one-time deliverables.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

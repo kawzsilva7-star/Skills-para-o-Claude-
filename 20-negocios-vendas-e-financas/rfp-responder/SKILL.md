@@ -153,3 +153,6 @@ Walked one at a time before any script runs. Recommended answer + canon citation
    Canon: Strategic Proposals proposal-management research — evaluators score on the rubric they were given, not on your narrative.
 
 Walk depth-first. Lock 1-3 before opening 4-7. After all 7 are answered, invoke `rfp_parser.py` → `response_drafter.py` → `winrate_predictor.py` in sequence. If question 6 lands on "we don't have a threshold," set one now or no-bid.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

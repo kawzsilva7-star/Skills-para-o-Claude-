@@ -199,3 +199,6 @@ Present findings as:
 2. **Top Issues** - Prioritized list of problems with estimated impact (high/medium/low)
 3. **Recommendations** - Specific, actionable fixes with code snippets or config changes
 4. **Codebase Findings** - Framework/bundler detected, optimization opportunities (omit if no codebase access)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

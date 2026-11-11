@@ -127,3 +127,6 @@ CREATE INDEX profiles_attrs_gin ON profiles USING GIN (attrs);
 - Workload patterns: update-heavy, insert-heavy, upsert design, safe schema evolution.
 - Generated columns and extensions (`pg_trgm`, `citext`, `timescaledb`, `postgis`, `pgvector`, and more).
 - JSONB indexing strategies, including `jsonb_path_ops` and extracted B-tree columns.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

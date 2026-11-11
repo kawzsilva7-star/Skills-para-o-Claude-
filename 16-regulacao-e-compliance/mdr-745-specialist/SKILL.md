@@ -334,3 +334,6 @@ Analyzes device against MDR requirements, identifies compliance gaps, generates 
 - [ ] QMS (ISO 13485) certified
 - [ ] Labeling and IFU finalized
 - [ ] **Validation:** Internal gap assessment complete
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

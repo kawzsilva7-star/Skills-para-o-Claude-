@@ -79,3 +79,6 @@ All support `--sample` and `--output json`.
 - [`assets/managed-settings.example.json`](assets/managed-settings.example.json) — baseline team policy
 - [`assets/approved-components.example.json`](assets/approved-components.example.json) — allowlist format for step 2
 - [`assets/rollout_plan.md`](assets/rollout_plan.md) — four-phase plan with exit criteria per phase
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -58,3 +58,6 @@ python3 ra-qm-team/skills/risk-management-specialist/scripts/risk_matrix_calcula
 - Route to exactly one skill, then follow that skill's workflow. This router ships no tools of its own.
 - All outputs are decision support: final compliance determinations route to the named human owner (QMR, DPO, regulatory counsel) — never auto-decide.
 - Verify regulatory citations against the current text (e.g., FDA QMSR effective 2026-02-02 replaced the legacy QSR subsections).
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

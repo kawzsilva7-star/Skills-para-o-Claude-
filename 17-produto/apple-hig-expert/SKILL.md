@@ -106,3 +106,6 @@ Surface these WITHOUT being asked: low contrast over translucent layers; interac
 - **ui-design-system**: token-based component systems (not platform HIG rules).
 - **ux-researcher-designer**: persona/research validation (not visual styling).
 - **landing-page-generator**: web marketing pages, not native apps.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

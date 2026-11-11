@@ -109,3 +109,6 @@ Escolha HyperFrames OU Remotion. Aprove uma prévia curta antes do final.
 4. Nunca coloque chaves secretas no código da página nem na conversa.
 
 O PDF original está em `docs/Biblia-das-Skills.pdf` na raiz do repositório.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

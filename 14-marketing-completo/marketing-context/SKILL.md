@@ -181,3 +181,6 @@ All output passes quality verification:
 - **content-strategy**: For planning what content to create. Reads target keywords + personas from this context.
 - **marketing-strategy-pmm**: For positioning and GTM strategy. Reads competitive landscape from this context.
 - **cs-onboard** (C-Suite): For company-level context. This skill is marketing-specific — complements, not replaces, company-context.md.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

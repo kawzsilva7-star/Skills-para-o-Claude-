@@ -179,3 +179,6 @@ _A curated snapshot mirroring the project's `/vocabulary` page; keep the two in 
 - **Spatial consistency** — Animating so an element keeps its identity and position across states, so users never lose track of where things went.
 - **Hardware acceleration** — Animating transform and opacity lets the GPU keep motion smooth.
 - **Reduced motion** — Respecting the user's prefers-reduced-motion setting by toning down or removing motion.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

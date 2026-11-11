@@ -126,3 +126,6 @@ Before invoking the tools, the orchestrator (or `/cs-grill-bizops`) walks the us
    Canon: Fowler 2016 (*Production-Ready Microservices*) — operations docs that cover only the happy path are responsible for 60%+ of incident-time waste.
 
 After all 7 are locked, invoke `kb_ingester.py` → `runbook_validator.py` → `sop_generator.py` in sequence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

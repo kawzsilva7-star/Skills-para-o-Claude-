@@ -176,3 +176,6 @@ Walked one at a time by `/cs-grill-bizops` or the BizOps orchestrator. Recommend
    Canon: ISO/IEC 27036 (supplier relationships security).
 
 Walk depth-first. Lock 1-3 before opening 4-6. After all are answered, invoke `vendor_scorer.py` → `sla_compliance_tracker.py` → `vendor_risk_classifier.py` in sequence.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -319,3 +319,6 @@ Load these only when the task needs them.
 - [references/database_selection_decision_tree.md](references/database_selection_decision_tree.md) — Database Selection Decision Tree
 - [references/index_strategy_patterns.md](references/index_strategy_patterns.md) — Index Strategy Patterns
 - [references/normalization_guide.md](references/normalization_guide.md) — Database Normalization Guide
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

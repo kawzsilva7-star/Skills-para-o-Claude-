@@ -95,3 +95,6 @@ python scripts/action_item_extractor.py --input notes.md
 
 **Version:** 1.0.0
 **Build pattern:** Path-B discipline skill — meeting-science canon preserved + deterministic gate/agenda/extraction scripts added.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

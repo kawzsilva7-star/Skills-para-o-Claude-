@@ -103,3 +103,6 @@ international expansion, market entry, localization, go-to-market, GTM, regional
 ## Resources
 - `references/market-entry-playbook.md` — detailed entry playbook by market type
 - `references/regional-guide.md` — specific considerations for key regions (EU, US, APAC, LATAM)
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

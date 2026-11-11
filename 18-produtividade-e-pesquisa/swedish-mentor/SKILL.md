@@ -134,3 +134,6 @@ Recognize these patterns and adjust before recommending anything:
 
 - `productivity/weekly-review` — for learners who want to fold their Swedish practice into a recurring GTD-style review loop.
 - `productivity/deep-work` — for scheduling focused study blocks around the recommended learning path.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

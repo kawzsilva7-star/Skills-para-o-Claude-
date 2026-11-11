@@ -14,3 +14,6 @@ Precisa do plugin do Codex instalado (veja a skill `instalar-skills-com-cuidado`
 5. Corrija **só** o que o usuário aprovar.
 
 Se o Codex não estiver instalado, avise e ofereça fazer a revisão com as skills de revisão que existirem.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

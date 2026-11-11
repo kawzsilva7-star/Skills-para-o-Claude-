@@ -136,3 +136,6 @@ This enables deterministic grading across prompt variants.
 3. Run A/B suite against same cases.
 4. Promote only if winner improves average and keeps violation count at zero.
 5. Track post-release feedback and feed new failure cases back into test suite.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

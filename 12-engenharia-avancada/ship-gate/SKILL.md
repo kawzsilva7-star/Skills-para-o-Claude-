@@ -182,3 +182,6 @@ This skill does not:
 - **adversarial-reviewer**: deep security review for items ship-gate flags as critical
 - **security-pen-testing**: penetration testing methodology for SEC-category findings
 - **code-reviewer**: general code quality review complements ship-gate's automated checks
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

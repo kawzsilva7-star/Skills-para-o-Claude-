@@ -62,3 +62,6 @@ Load these only when the task needs them.
 - [references/brand_guidelines.md](references/brand_guidelines.md) — Brand Voice & Style Guidelines
 - [references/content_frameworks.md](references/content_frameworks.md) — Content Creation Frameworks & Templates
 - [references/social_media_optimization.md](references/social_media_optimization.md) — Social Media Optimization Guide
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

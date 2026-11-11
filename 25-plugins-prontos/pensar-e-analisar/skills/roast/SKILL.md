@@ -168,3 +168,6 @@ Then list the five panel scores in one line: `Critic X/10 · Champion X/10 · An
 
 **Version:** 1.0.0
 **Build pattern:** Path-B persona skill — adversarial panel preserved + deterministic verdict tooling added.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

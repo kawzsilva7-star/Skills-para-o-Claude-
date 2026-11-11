@@ -69,3 +69,6 @@ If the uncertainty is too high to write correct code without guessing, say:
 - Related: `engineering/minimalist` — use together: minimalist reduces code volume; strict-api ensures what is written is correct.
 - Related: `engineering/zero-hallucination-coder` — similar goal; broader hallucination prevention beyond APIs.
 - Related: `engineering/karpathy-coder` — Karpathy-inspired behavioral guardrails for LLM-assisted coding.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

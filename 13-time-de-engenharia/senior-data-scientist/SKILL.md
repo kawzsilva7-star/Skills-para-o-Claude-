@@ -215,3 +215,6 @@ python3 scripts/model_evaluation_suite.py --input model_predictions.json --outpu
 # Each prints a JSON run report ({status, processed_items, start/end_time}); any status other
 # than "completed" means the stage failed — fix before moving to the next pipeline stage.
 ```
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -440,3 +440,6 @@ Track document control system performance.
 | Inadequate audit trail | Validate DMS for Part 11 compliance |
 
 > **Decision discipline:** The validator scripts in this skill check structure and completeness — they do not certify a document or record as compliant. Approval and release decisions are yours and the document owner's to make under your controlled procedure; route regulatory-classification or submission-record questions to Regulatory Affairs.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

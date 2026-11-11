@@ -165,3 +165,6 @@ Rituals are the delivery mechanism for culture. What works at 10 people breaks a
 ## Detailed References
 - `references/culture-playbook.md` — Netflix analysis, survey design, ritual examples, M&A playbook
 - `templates/culture-code-template.md` — Culture code document template
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

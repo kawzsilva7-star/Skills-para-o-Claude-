@@ -45,3 +45,6 @@ Full matrix in `../chief-of-staff/SKILL.md` and `../chief-of-staff/references/ro
 - `../../../c-level-agents/` — 13 cs-* persona agents + 21 `/cs-*` slash commands on top of these skills
 - `../../executive-mentor/` — adversarial `/executive-mentor:*` critic commands
 - `../../CLAUDE.md` — full architecture diagram and integration guide
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

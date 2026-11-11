@@ -124,3 +124,6 @@ All 15 are stdlib-only Python with `--help`, `--sample`, and `--output {human,js
 `route.py` also returns a cost estimate: S3 feeds the transcript anew on every run, so the price grows
 as interviews × runs. `--council-runs` is the lever — 6 interviews cost 26 transcript feeds at 3 runs
 and 14 at 1.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -276,3 +276,6 @@ All output follows the structured communication standard:
 Load these only when the task needs them.
 
 - [references/launch-playbook.md](references/launch-playbook.md) — Launch Playbook — How to Launch a Free Tool for Maximum Impact
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -109,3 +109,6 @@ Load these only when the task needs them.
 
 - `python3 scripts/memory_extract.py --help` — L0 -> L1. Rule-based, no LLM
 - `python3 scripts/validate_examples.py` — drift gate for DESIGN.md, memory_schema.json and the worked examples
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

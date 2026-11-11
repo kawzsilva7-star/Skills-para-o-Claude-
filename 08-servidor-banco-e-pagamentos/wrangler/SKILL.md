@@ -69,3 +69,6 @@ For deployment changes, use the project's build workflow and `wrangler deploy --
 For Previews, a returned URL does not validate behavior that depends on bindings Wrangler reports as missing. Validate the behavior the user requested, using Preview-specific logs and configuration when needed. Writes to production resources, destructive testing, and deletion of named Previews must match the user's explicit intent.
 
 Report what changed, the target environment, checks performed, and any unresolved validation gaps. Link the documentation used when the result depends on current command or configuration behavior.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

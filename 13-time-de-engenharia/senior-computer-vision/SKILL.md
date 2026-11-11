@@ -436,3 +436,6 @@ python scripts/dataset_pipeline_builder.py data/final/ \
 - **Optimization Guide**: `references/object_detection_optimization.md`
 - **Deployment Guide**: `references/production_vision_systems.md`
 - **Scripts**: `scripts/` directory for automation tools
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

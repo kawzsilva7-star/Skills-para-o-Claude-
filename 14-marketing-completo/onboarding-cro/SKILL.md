@@ -255,3 +255,6 @@ Deliver recommendations following the output quality standard: lead with the hig
 | Checklist Copy | 3–7 onboarding checklist items ordered by value, with completion messaging |
 | Email Trigger Map | Trigger conditions, timing, and goals for each onboarding email in the sequence |
 | Experiment Backlog | Prioritized A/B test ideas for onboarding steps, sorted by expected impact |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

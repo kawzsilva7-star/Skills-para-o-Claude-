@@ -410,3 +410,6 @@ This skill is invokable by any other agent or skill via three surfaces:
 3. **Direct tool call:** `python scripts/fullstack_decision_engine.py ...` — deterministic profile match without the conversational grill (use when inputs are already known).
 
 See `agents/engineering/cs-fullstack-engineer.md` for the full invocation contract.
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

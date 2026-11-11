@@ -151,3 +151,6 @@ Only when the open-source path is blocked (typically IP blocking on a cloud host
 - `marketing-skill/skills/video-content-strategist` — for video strategy, scripting, and content planning
 - `marketing-skill/skills/social-media-manager` — for publishing and scheduling derived from transcripts
 - `marketing-skill/skills/content-production` — for turning transcripts into blog posts, summaries, or articles
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

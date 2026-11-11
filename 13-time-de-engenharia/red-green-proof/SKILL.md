@@ -168,3 +168,6 @@ skill. Copyright © 2026 RooAGI. Contributed under the MIT License.
 Load these only when the task needs them.
 
 - `python3 scripts/red_green_evidence.py --help` — Check that a red-green-red evidence record is complete
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

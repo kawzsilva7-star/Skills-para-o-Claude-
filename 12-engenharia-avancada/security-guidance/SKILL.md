@@ -164,3 +164,6 @@ The cache prevents nag-spam but is per-session. Don't rely on "I dismissed this 
 Load these only when the task needs them.
 
 - [references/pretooluse_hook_canon.md](references/pretooluse_hook_canon.md) — PreToolUse Hook Discipline — When To Block, When To Warn
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

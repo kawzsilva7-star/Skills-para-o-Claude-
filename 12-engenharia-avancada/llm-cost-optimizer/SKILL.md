@@ -220,3 +220,6 @@ If the conversation shifts to one of these, pause and invoke the relevant skill 
 | Ignoring system prompt size | A 3,000-token system prompt sent on every request is a hidden cost multiplier | Use prompt caching for static system prompts; strip unnecessary instructions |
 | Treating cost optimization as a one-time project | Model pricing changes, traffic patterns shift, new features launch -- costs drift | Set up continuous cost monitoring with weekly spend reports and anomaly alerts |
 | Compressing prompts to the point of ambiguity | Over-compressed prompts cause hallucination or low-quality output, requiring retries | Compress filler and redundant context; preserve all task-critical instructions |
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

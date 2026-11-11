@@ -191,3 +191,6 @@ Creates `api-client-regen/SKILL.md` with:
 - Keep skills focused — one problem per skill
 - Include the error messages people would search for
 - Test the skill by reading it without the original context — does it make sense?
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.

@@ -202,3 +202,6 @@ Personal Claude power-user coach. On first activation, delivers a ranked cheat-c
 - `scripts/cheat_code_filter.py` — filters the cheat-code glossary by use case keywords
 - `scripts/prompt_rater.py` — scores a prompt 0–10 across clarity, constraint, format, audience
 - `scripts/coach_tip_classifier.py` — classifies whether a turn is coachable per the 5-gate decision tree
+
+## Antes de começar (regra do dono)
+Se faltar algo para fazer bem a tarefa (link, referência, arquivo, a ideia, o público ou o objetivo), pergunte antes de começar. Quando ajudar, ofereça 2 ou 3 sugestões para o usuário escolher. Não invente dados nem resultados.
