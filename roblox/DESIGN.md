@@ -54,6 +54,10 @@ Mesmo jogo, mesma graça, com **políticos e partidos inventados**:
 - País fictício com cara de Brasil (praia, sertão, floresta, cidade grande, capital).
 - **Sem** nome, rosto, bordão ou slogan de político real. Não vale nome real com letra trocada (regra já combinada).
 
+**Personagem pedido pelo dono: "Lulatron"** (político robô). A ideia do robô é boa e original. O nome é o risco: é o nome de um presidente atual com um sufixo, e o Roblox proíbe governantes atuais; nome real alterado também quebra a regra já combinada. Opção com a mesma graça: **Promessatron 3000**. Decisão do dono.
+
+Conceito visual: `design_visual.html`.
+
 Isso também protege o dono fora do Roblox (uso de imagem de pessoa real em produto pago).
 
 ---
