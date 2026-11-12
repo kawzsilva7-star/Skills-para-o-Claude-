@@ -42,7 +42,7 @@ Na nuvem, o Remotion não consegue baixar o navegador dele; por isso o `--browse
 
 ## Decisões do dono
 - Qualidade: máxima (1080p). WhatsApp: existe, manter na fala e no vídeo. TikTok `@achadosbiblicais`: está certo.
-- Link da bio: o dono disse que vai trocar para abrir direto a página; o vídeo mostra um toque só. Em 12/11 a bio ainda apontava para o Beacons.
+- Link da bio: **continua no Beacons** (decisão do dono em 12/11). O caminho real é: link da bio -> Beacons -> toque em "VER PRODUTOS" -> página de produtos (GitHub, com o botão do WhatsApp). O Beacons não precisa do WhatsApp.
 
 ## Pendências (esperando o "pode fazer" do dono, cerca de 63 mil créditos)
 1. Gerar o clipe A e trocar a imagem parada das cenas 1 e 2 (em `Video.tsx`, componente `DonoSozinho`).
@@ -51,7 +51,7 @@ Na nuvem, o Remotion não consegue baixar o navegador dele; por isso o `--browse
    e fazer cada nicho aparecer como etiqueta amarela (cerca de 300 créditos).
 3. Versão para Telegram e Facebook: fala final "Clica no link aqui embaixo." (cerca de 80 créditos).
 4. ~~Trocar o cartão da loja pelo print real do Mercado Livre~~: o dono decidiu (12/11) manter o cartão simplificado (fatiador de legumes, um produto que está na página). Não pedir esse print.
-5. Print novo do perfil do Instagram com o link da bio atual (o do vídeo ainda mostra o link antigo do Beacons). O dono já trocou o link da bio e o botão do WhatsApp aparece na página.
+5. **Cena 5 precisa de um passo a mais:** perfil do Instagram -> toque no link da bio -> cartão do Beacons (print `prints-do-dono/beacons-ver-produtos.png`, cortar a barra de cima do celular) -> toque em "VER PRODUTOS" -> página de produtos -> produto -> loja. Hoje o vídeo vai direto do perfil para a página. O print do Instagram que já está no vídeo (mostra o link do Beacons) está certo: não precisa de print novo. Cuidado com o tempo: a cena 5 dura 5,7 s (de 26,9 s a 32,6 s) e agora terá um cartão a mais.
 
 ## Diferenças em relação ao roteiro
 - 53,6 s em vez de 47 s (só as falas somam 46,5 s).
