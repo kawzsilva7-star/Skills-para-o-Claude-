@@ -59,7 +59,7 @@ Mesmo jogo, mesma graça, com **políticos e partidos inventados**:
 - **Skins** (Robux): 3 para começar (ex.: Calango Dourado, Calango Neon, Calango Sertanejo).
 - **Modo Feijão Puro:** transformação temporária, o personagem fica musculoso e gigante, com Soco Sísmico que quebra muro. Dura poucos segundos e precisa de barra de carga (enche ao bater/apanhar) para não ficar forte demais.
 - Código: entra na parte 4 (Personagens) e na parte 5 (Combate).
-- **Linha política: esquerda** (decisão do dono). No jogo vira o **Partido Evolução do Feijão** (PEF), fictício, que combina com o Feijão Puro. Cores sem relação com partido real: verde-lagarto e amarelo. **Sem** estrela, bandeira vermelha, foice, número de partido real ou slogan real.
+- **Linha política: esquerda** (decisão do dono). No jogo vira o **Partido Revolução Esquerda Evolution** (PREE), fictício, que combina com o Feijão Puro. Cores sem relação com partido real: verde-lagarto e amarelo. **Sem** estrela, bandeira vermelha, foice, número de partido real ou slogan real.
 - Regra para todos os rumos (esquerda, direita, nacionalismo, neoliberalismo...): cada um é um partido inventado, com personagens inventados e com vantagens e problemas. O jogo não diz qual é o "certo" e não faz propaganda de nenhum.
 
 Conceito visual: `design_visual.html`.
