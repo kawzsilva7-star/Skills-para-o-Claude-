@@ -88,6 +88,27 @@ Personagens: a última imagem enviada (boneco de blocos, low-poly) fica como pos
 
 **Ganhar / perder:** rodada de alguns minutos; ganha o partido com mais Votos. Quem é derrotado volta para a base em poucos segundos.
 
+### Mapa destrutível (pedido do dono)
+- Paredes, muros, placas e objetos quebram com ataques e gadgets. Chão e estrutura principal não quebram (senão o jogador cai do mapa).
+- O que um jogador quebrou **volta quando ele morre ou sai**. No fim da rodada, o mapa inteiro é consertado.
+- Blocos voltam um por um (efeito de reconstrução).
+- Código: `MapaDestrutivel.lua` + `MapaDestrutivel_Teste.lua`. Tudo dentro da pasta `Workspace > MapaDestrutivel` é quebrável.
+- Cuidado de desempenho: blocos de 4 studs ou maiores; evitar milhares de peças pequenas.
+
+### Dinheiro do jogo (pedido do dono)
+- Personagens: liberados por **nível**, jogando.
+- Skins: compradas com **Robux**.
+- Moedas: ganhas jogando ou compradas com Robux; servem para armas/gadgets.
+- Regra de equilíbrio: arma comprada não pode ser mais forte que a ganha jogando (senão vira "pague para ganhar" e os jogadores largam o jogo).
+
+### Modo história (fase 2, depois do modo de luta funcionar)
+- O jogador vira presidente de um **país fictício** e escreve a própria história.
+- Escolhe um rumo: esquerda, direita, nacionalismo, neoliberalismo e outros. Cada rumo tem sua campanha, com personagens e eventos próprios.
+- Em cada capítulo o jogador toma decisões. Elas mexem em 4 medidores: Economia, Popularidade, Segurança e Meio ambiente.
+- Vários finais por rumo, bons e ruins. Todo rumo tem vantagens e problemas: o jogo não diz qual é "o certo".
+- Decisões por **botões de escolha**, não texto livre (texto digitado por jogador precisa passar pelo filtro do Roblox e dá muito trabalho de moderação).
+- Mesmo cuidado da seção 2: sem presidente, partido ou eleição reais. "Como seria o Brasil com o presidente X" com nome real não passa.
+
 ---
 
 ## 5. Pontos do áudio que precisam de ajuste
@@ -106,20 +127,22 @@ Personagens: a última imagem enviada (boneco de blocos, low-poly) fica como pos
 
 ## 6. Partes de código (uma por vez)
 
-1. [pronta] Dados do jogador e salvamento: `Parte1_Dados.lua` (trocar "Poder" por "Votos" na Parte 2)
-2. Partidos: escolher time e nascer na base
-3. Personagens: escolher e trocar; lista de liberados salva
-4. Combate: ataque básico + 1 habilidade, vida, derrota e retorno
-5. Recompensas: Votos, Moedas, nível, liberar personagens
-6. Loja: skins e gadgets (Moedas e Robux)
-7. Códigos com validade
-8. Caixa de sugestões
-9. Rodadas e placar de partidos
-10. Interface em pixel art
+1. [escrita, falta testar] Dados do jogador e salvamento: `Parte1_Dados.lua` (trocar "Poder" por "Votos" depois)
+2. [escrita, falta testar] Mapa destrutível: `MapaDestrutivel.lua` + `MapaDestrutivel_Teste.lua`
+3. Partidos: escolher time e nascer na base
+4. Personagens: escolher e trocar; lista de liberados salva
+5. Combate: ataque básico + 1 habilidade, vida, derrota e retorno (ataques quebram o mapa)
+6. Recompensas: Votos, Moedas, nível, liberar personagens
+7. Loja: skins (Robux), gadgets (Moedas), compra de Moedas
+8. Códigos com validade
+9. Caixa de sugestões
+10. Rodadas, placar de partidos e conserto do mapa no fim da rodada
+11. Interface em pixel art
+12. Modo história (fase 2)
 
 Arte (em paralelo): texturas base, 1 área do mapa, 3 personagens, 3 gadgets.
 
-Primeiro jogo de teste (farm): pode reutilizar as partes 1, 5 e 6.
+Primeiro jogo de teste (farm): pode reutilizar as partes 1, 6 e 7.
 
 ---
 
