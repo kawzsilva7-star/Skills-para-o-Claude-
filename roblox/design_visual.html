@@ -55,8 +55,10 @@
 
   <h2>2. PERSONAGENS (liberados por nível)</h2>
   <div class="grade">
-    <div class="painel carta"><canvas id="p1" width="16" height="22"></canvas><h3>LULATRON</h3><span class="tag" style="background:#b9c0cc;color:#16111f">ROBÔ</span>
-      <ul><li>Raio de Promessas</li><li>Escudo de Aço</li></ul><p class="aviso">⚠ Nome é risco de moderação. Opção original: PROMESSATRON 3000.</p></div>
+    <div class="painel carta"><canvas id="p1" width="16" height="22"></canvas><h3>CALANGOTRON</h3><span class="tag" style="background:#7fe08a;color:#16111f">ROBÔ-LAGARTO</span>
+      <ul><li>Língua de Cabo (puxa o inimigo)</li><li>Escudo de Escamas</li><li>3 skins (Robux)</li></ul></div>
+    <div class="painel carta"><canvas id="p5" width="16" height="22"></canvas><h3>CALANGOTRON<br>FEIJÃO PURO</h3><span class="tag" style="background:#ffb347;color:#16111f">MODO MÚSCULO</span>
+      <ul><li>Fica gigante e forte</li><li>Soco Sísmico (quebra muro)</li><li>Dura poucos segundos</li></ul></div>
     <div class="painel carta"><canvas id="p2" width="16" height="22"></canvas><h3>CORONEL DO INTERIOR</h3><span class="tag" style="background:#c9a45c;color:#16111f">TANQUE</span>
       <ul><li>Laço de Boiadeiro</li><li>Grito do Sertão</li></ul></div>
     <div class="painel carta"><canvas id="p3" width="16" height="22"></canvas><h3>PREFEITA INFLUENCER</h3><span class="tag" style="background:#ff8fc7;color:#16111f">VELOZ</span>
@@ -121,8 +123,9 @@ function boneco(c,x,y,o){
   if(o.faixa) for(let i=0;i<6;i++) px(c,x+2+i,y+6+i,1,1,o.faixa);
   if(o.tipo==='robo'){
     px(c,x+3,y+2,4,1,'#5ff0ff'); px(c,x+3,y+4,4,1,'#3a3f4a');
-    px(c,x+4,y-2,1,2,'#8a909c'); px(c,x+4,y-3,1,1,'#ff5a5a');
-    px(c,x+4,y+6,2,4,'#d33a3a'); px(c,x+2,y+5,6,1,'#7d8490');
+    px(c,x+3,y-1,1,1,'#5fd16a'); px(c,x+5,y-1,1,1,'#5fd16a'); px(c,x+4,y-2,1,2,'#5fd16a'); px(c,x+8,y+14,5,2,'#3fa04a'); px(c,x+12,y+13,2,1,'#3fa04a');
+    px(c,x+4,y+7,2,3,'#ffd166'); px(c,x+2,y+5,6,1,'#7d8490');
+    if(o.musculo){ px(c,x-2,y+5,4,7,o.camisa); px(c,x+8,y+5,4,7,o.camisa); px(c,x-2,y+12,4,2,o.pele); px(c,x+8,y+12,4,2,o.pele); px(c,x+3,y+7,4,1,'#ffd166'); }
   } else {
     px(c,x+3,y+2,1,2,'#16111f'); px(c,x+6,y+2,1,2,'#16111f');
     px(c,x+2,y,6,1,o.cabelo);
@@ -132,12 +135,13 @@ function boneco(c,x,y,o){
   if(o.tipo==='deputado'){ px(c,x+4,y+6,2,4,'#2b4fa8'); px(c,x-1,y+8,2,4,'#ffffff'); px(c,x-1,y+9,2,1,'#b9c0cc'); }
 }
 const PERS=[
-  {tipo:'robo',pele:'#b9c0cc',camisa:'#8a909c',calca:'#5a6070',faixa:'#f79a5c'},
+  {tipo:'robo',pele:'#5fd16a',camisa:'#3fa04a',calca:'#2f7a3a',faixa:'#f79a5c'},
   {tipo:'coronel',pele:'#c98e62',cabelo:'#e8e8e8',camisa:'#f2ead8',calca:'#7a5a3a',faixa:'#e86a7a'},
   {tipo:'influencer',pele:'#e8b48c',cabelo:'#ff5fa8',camisa:'#ffd1e8',calca:'#4a3a8c',faixa:'#7fd6c2'},
   {tipo:'deputado',pele:'#8c5a3c',cabelo:'#2a2030',camisa:'#3a3f5a',calca:'#22263a',faixa:'#f79a5c'},
 ];
 PERS.forEach((o,i)=>{ const c=document.getElementById('p'+(i+1)).getContext('2d'); boneco(c,3,4,o); });
+boneco(document.getElementById('p5').getContext('2d'),3,4,Object.assign({musculo:true},PERS[0]));
 
 function tijolos(c,x,y,w,h,base,escuro,claro){
   px(c,x,y,w,h,base);

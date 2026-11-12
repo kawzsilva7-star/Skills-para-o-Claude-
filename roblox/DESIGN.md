@@ -54,7 +54,11 @@ Mesmo jogo, mesma graça, com **políticos e partidos inventados**:
 - País fictício com cara de Brasil (praia, sertão, floresta, cidade grande, capital).
 - **Sem** nome, rosto, bordão ou slogan de político real. Não vale nome real com letra trocada (regra já combinada).
 
-**Personagem pedido pelo dono: "Lulatron"** (político robô). A ideia do robô é boa e original. O nome é o risco: é o nome de um presidente atual com um sufixo, e o Roblox proíbe governantes atuais; nome real alterado também quebra a regra já combinada. Opção com a mesma graça: **Promessatron 3000**. Decisão do dono.
+**Personagem do dono: CalangoTron** (robô-lagarto, verde, com crista e cauda).
+- Decisão: nome sem o "13" e sem o rosto/estrela da imagem de referência. A imagem é um meme de um político atual com símbolo de partido real; reproduzir isso (ou o número do partido) viola a regra do Roblox e a regra de não disfarçar. Personagem 100% original.
+- **Skins** (Robux): 3 para começar (ex.: Calango Dourado, Calango Neon, Calango Sertanejo).
+- **Modo Feijão Puro:** transformação temporária, o personagem fica musculoso e gigante, com Soco Sísmico que quebra muro. Dura poucos segundos e precisa de barra de carga (enche ao bater/apanhar) para não ficar forte demais.
+- Código: entra na parte 4 (Personagens) e na parte 5 (Combate).
 
 Conceito visual: `design_visual.html`.
 
