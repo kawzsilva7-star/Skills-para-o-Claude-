@@ -96,6 +96,12 @@ Personagens: a última imagem enviada (boneco de blocos, low-poly) fica como pos
 
 **Ganhar / perder:** rodada de alguns minutos; ganha o partido com mais Votos. Quem é derrotado volta para a base em poucos segundos.
 
+### Câmera (pedido do dono)
+- Jogo 3D em **primeira pessoa** por padrão, com opção de **terceira pessoa** (câmera atrás do personagem). Tecla **V** alterna.
+- Código: `Camera.lua` (LocalScript). Na terceira pessoa o jogador vê o próprio personagem e as skins; na primeira, só braços e gadget.
+- Visual: **pixel art** em tudo (texturas, modelos em bloco, interface). O que está em `design_visual.html` é desenho de conceito 2D; no jogo tudo é 3D.
+- Primeira pessoa exige cuidado: mira no centro da tela, gadget visível na mão e menos poeira/partículas na frente da câmera.
+
 ### Mapa destrutível (pedido do dono)
 - Paredes, muros, placas e objetos quebram com ataques e gadgets. Chão e estrutura principal não quebram (senão o jogador cai do mapa).
 - O que um jogador quebrou **volta quando ele morre ou sai**. No fim da rodada, o mapa inteiro é consertado.
@@ -137,6 +143,7 @@ Personagens: a última imagem enviada (boneco de blocos, low-poly) fica como pos
 
 1. [escrita, falta testar] Dados do jogador e salvamento: `Parte1_Dados.lua` (trocar "Poder" por "Votos" depois)
 2. [escrita, falta testar] Mapa destrutível: `MapaDestrutivel.lua` + `MapaDestrutivel_Teste.lua`
+2b. [escrita, falta testar] Câmera 1ª/3ª pessoa: `Camera.lua`
 3. Partidos: escolher time e nascer na base
 4. Personagens: escolher e trocar; lista de liberados salva
 5. Combate: ataque básico + 1 habilidade, vida, derrota e retorno (ataques quebram o mapa)
