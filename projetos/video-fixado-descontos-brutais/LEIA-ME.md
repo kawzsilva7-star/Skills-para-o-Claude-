@@ -56,3 +56,6 @@ Na nuvem, o Remotion não consegue baixar o navegador dele; por isso o `--browse
 - 53,6 s em vez de 47 s (só as falas somam 46,5 s).
 - O mascote aparece dentro da fumaça amarela, em vez de entrar voando.
 - Cartão da loja é simplificado, com preço borrado; não usa a marca visual do Mercado Livre.
+
+## Skill do padrão
+Para ajustar este vídeo ou fazer outro igual, use a skill `video-pixel-art` (pasta `04-video-e-imagem/video-pixel-art/`). Ela manda reaproveitar este projeto e gastar o mínimo de crédito do ElevenLabs.

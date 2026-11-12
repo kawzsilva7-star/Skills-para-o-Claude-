@@ -20,7 +20,7 @@ Há mais de 520 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380
 | Função | Skill | Quando usar |
 |---|---|---|
 | Vídeo curto do produto (Reels/Instagram) | `video-de-produto` | Quando o dono pedir vídeo de produto |
-| Vídeo explicando a página (o vídeo fixado) | `video-de-produto` (+ `remotion-create`) | Só depois de existir roteiro |
+| Vídeo explicando a página (o vídeo fixado) | `video-pixel-art` | Para ajustar o vídeo fixado ou fazer outro no mesmo padrão (reaproveita o projeto e gasta pouco crédito) |
 | Criar um vídeo novo em código | `remotion-create` | Início de um vídeo novo |
 | Legendas no vídeo | `remotion-captions` | Só se o vídeo tiver legenda |
 | Mostrar o vídeo antes de exportar | `remotion-studio` | Ao pré-visualizar |

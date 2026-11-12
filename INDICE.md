@@ -37,7 +37,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `seo-audit` | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "S |
 | `web-perf` | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse perf |
 
-## 04-video-e-imagem: Vídeo, voz e imagem (36)
+## 04-video-e-imagem: Vídeo, voz e imagem (37)
 
 | Skill | Para que serve |
 |---|---|
@@ -75,6 +75,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `text-to-speech` | Convert text to speech using ElevenLabs voice AI. Use when generating audio from text, creating voiceovers, bu |
 | `video` | When the user wants to create video with AI tools or code, or asks which approach to use (screen recording, AI |
 | `video-de-produto` | Cria um vídeo curto para Instagram/Reels mostrando o produto do usuário de forma profissional, usando Remotion |
+| `video-pixel-art` | Refaz ou cria vídeo vertical no padrão do vídeo fixado (personagens blocados), reaproveitando o que já existe para gastar pouco crédito |
 | `video-use` | Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — fo |
 | `voice-isolator` | Remove background noise and isolate vocals/speech from audio using ElevenLabs Voice Isolator (audio isolation) |
 
