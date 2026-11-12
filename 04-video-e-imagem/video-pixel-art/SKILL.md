@@ -11,7 +11,7 @@ Responda em português simples.
 Pasta `projetos/video-fixado-descontos-brutais/` deste repositório (branch `claude/hopeful-tesla-2gcr3r`, ou `main` depois de juntada).
 - **Leia só dois arquivos:** `LEIA-ME.md` (estado, decisões, códigos do ElevenLabs, pendências) e `src/Video.tsx` (a montagem).
 - **Não releia o roteiro** (`roteiro-video-fixado.md`) nem refaça a ideia do zero: o vídeo pronto é o padrão. Só use o roteiro se o dono pedir para mudar a história.
-- Vídeos prontos: `video-pronto/video-fixado-v2.mp4` (atual) e `v1`.
+- Vídeos prontos: `video-pronto/video-fixado-v3-instagram-tiktok.mp4` e `video-fixado-v3-telegram-facebook.mp4` (atuais); v1 e v2 são antigas.
 - Materiais: `public/` (clipes `clipB/C/D.mp4`, imagem `k1.png`, vozes `dono-*.mp3` e `masc-*.mp3`, música, ambiente, efeitos, prints em `shots/`).
 
 ## O padrão
@@ -22,6 +22,7 @@ Pasta `projetos/video-fixado-descontos-brutais/` deste repositório (branch `cla
 - Balões amarelos (vermelhos para dúvida): entram com "pop", flutuam, saem estourando.
 - Cartões (pins) com prints reais, borda amarela, leve inclinação; dedo blocado com círculo amarelo a cada toque.
 - Som: voz do dono (a voz clonada dele), voz do mascote (outra voz), música baixa que desce mais quando alguém fala, ambiente de grilos, efeitos pop/plop/puf/clique. Volume final normalizado (loudnorm -15).
+- Duas versões no mesmo projeto: Instagram/TikTok ("link da bio") e Telegram/Facebook ("link aqui embaixo").
 - Fim: tela preta com logo, nome, @, chamada para o link da bio e "Contém links de afiliado".
 
 ## Como gastar o mínimo de crédito (do mais barato ao mais caro)
@@ -44,6 +45,9 @@ Preços medidos em 12/11/2026 (confira de novo, podem mudar): clipe de 10 s com 
 - ElevenLabs voz: usar idioma `pt` (com `pt-BR` a gravação falha e ainda mostra preço).
 - Remotion na nuvem não baixa o navegador: usar `--browser-executable` com o `chrome-headless-shell` de `/opt/pw-browsers`.
 - Baixar arquivos do ElevenLabs e prints exige o ambiente liberar `elevenlabsusercontent.com`, `cdn.beacons.ai` e `http2.mlstatic.com`.
+- Legendas: medir as pausas da gravação (ffmpeg `silencedetect`) e usar esses tempos, em vez de dividir pelo tamanho do texto.
+- A música tem 50 s: se o vídeo for maior, recomeçar a música num ponto de virada (a chegada do mascote) para o fim coincidir.
+- Clipe mais curto que a cena deixa tela preta: ajustar o `playbackRate`.
 - Prints: desfocar seguidores, inscritos, preços, telefone e e-mail.
 - Promessas ("confiável", "sem fraude") só valem enquanto o bot postar de lojas grandes.
 - Não citar saúde na fala; o nicho aparece só na página.

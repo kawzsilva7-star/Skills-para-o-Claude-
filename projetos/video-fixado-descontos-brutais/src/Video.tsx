@@ -9,23 +9,32 @@ import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
 import "@fontsource/baloo-2/800.css";
 
+type Versao = "instagram" | "outras";
 const FPS = 30;
 const f = (s: number) => Math.round(s * FPS);
-export const TOTAL = f(53.5);
 
 const AMARELO = "#f2b300";
 const TINTA = "#111";
 const FONTE = "Poppins, sans-serif";
 const BALAO = '"Baloo 2", Poppins, sans-serif';
 
-// ---------- Tempos (segundos) ----------
+// ---------- Tempos (segundos). s = início da cena; d = fala do dono; m = fala do mascote ----------
 const T = {
-  s1: 0, s2: 7.3, s3: 11.0, s4: 17.2, s5: 26.9, s6: 32.6, s7: 43.9, s8: 49.2, fim: 53.5,
-  d1: 0.5, d2: 7.5, m1: 11.8, m2: 17.7, m3: 27.2, m4: 33.0, d3: 44.1, m5: 46.5, m6: 50.0,
+  s1: 0, d1: 0.3,
+  s2: 6.95, d2: 7.05,
+  s3: 10.45, m1: 11.25,
+  s4: 16.7, m2: 17.2,
+  s5: 28.5, m3: 28.8,
+  s6: 34.8, m4: 35.2,
+  s7: 46.1, d3: 46.3, m5: 48.7,
+  s8: 51.4, m6: 52.2,
+  fim: 55.7,
 };
+export const TOTAL = f(T.fim);
 
 // ---------- Legendas ----------
 type Trecho = { t: string; ini: number; fim: number };
+// divide a fala pelo tamanho do texto (quando a voz não tem pausas claras)
 const fala = (ini: number, dur: number, partes: string[]): Trecho[] => {
   const total = partes.reduce((a, p) => a + p.length, 0);
   let acc = 0;
@@ -35,17 +44,23 @@ const fala = (ini: number, dur: number, partes: string[]): Trecho[] => {
     return { t: p, ini: a, fim: ini + (acc / total) * dur };
   });
 };
+// tempos medidos nas pausas da própria gravação
+const em = (ini: number, partes: [string, number, number][]): Trecho[] =>
+  partes.map(([t, a, b]) => ({ t, ini: ini + a, fim: ini + b }));
+
 // *palavra* = etiqueta amarela
 const LEGENDAS: Trecho[] = [
-  ...fala(T.d1 + 0.5, 5.7, ["Poxa, eu queria comprar uma coisa,", "mas queria achar um lugar", "mais *barato* e *confiável*..."]),
+  ...em(T.d1, [["Poxa, eu queria comprar uma coisa,", 0.35, 3.3], ["mas queria achar um lugar", 3.43, 4.85], ["mais *barato* e *confiável*...", 4.85, 6.3]]),
   ...fala(T.d2, 2.9, ["Mas sempre dá medo", "de cair em *fraude*..."]),
-  ...fala(T.m1, 5.1, ["Ei! Você poderia ficar no nosso", "*grupo* de *ofertas*,", "ou seguir a nossa página de *ofertas*!"]),
-  ...fala(T.m2, 8.7, ["Lá você vai encontrar", "diversos produtos *baratos*,", "com *descontos*,", "em lojas confiáveis e de qualidade.", "*Sem dor de cabeça*", "de cair em fraude!"]),
-  ...fala(T.m3, 4.9, ["É só clicar no *link da bio*.", "Lá estão *todos os produtos*", "que já foram postados."]),
+  ...em(T.m1, [["Ei! Você poderia ficar no nosso", 0, 2.15], ["*grupo* de *ofertas*,", 2.15, 3.1], ["ou seguir a nossa página de *ofertas*!", 3.1, 5.1]]),
+  ...em(T.m2, [
+    ["Lá tem de tudo:", 0, 0.76], ["moda, beleza, academia,", 0.76, 2.78], ["cozinha, pet e muito mais!", 2.78, 4.3],
+    ["Com *descontos*,", 4.42, 6.2], ["em lojas confiáveis,", 6.28, 8.6], ["*sem dor de cabeça*", 8.68, 9.85], ["de cair em fraude!", 9.85, 10.95],
+  ]),
+  ...em(T.m3, [["É só clicar no *link da bio*.", 0, 1.9], ["Lá estão *todos os produtos*", 2.0, 3.6], ["que já foram postados.", 3.6, 4.95]]),
   ...fala(T.m4, 10.4, ["E segue o nosso grupo do Telegram,", "nosso grupo do WhatsApp,", "nosso TikTok e nosso Instagram,", "pra ficar sempre informado", "das novas *promoções*, atualizações,", "*descontos* e *cupons*!"]),
-  ...fala(T.d3, 2.1, ["Sério?", "E quanto custa?"]),
+  ...em(T.d3, [["Sério?", 0, 0.95], ["E quanto custa?", 1.0, 2.2]]),
   ...fala(T.m5, 2.5, ["*Não custa nada*", "e é *rapidinho*!"]),
-  ...fala(T.m6, 2.0, ["Clica no link da bio.", "Bora?"]),
 ];
 
 const Legenda: React.FC<{ y: number }> = ({ y }) => {
@@ -62,8 +77,7 @@ const Legenda: React.FC<{ y: number }> = ({ y }) => {
         style={{
           fontFamily: FONTE, fontWeight: 900, fontSize: 54, lineHeight: 1.28, color: "#fff", textAlign: "center",
           textShadow: "0 0 14px rgba(0,0,0,.95), 0 4px 0 #000, 3px 0 0 #000, -3px 0 0 #000, 0 -3px 0 #000",
-          transform: `scale(${interpolate(pop, [0, 1], [0.86, 1])})`, opacity: Math.min(1, local / 3 + 0.4),
-          maxWidth: 900,
+          transform: `scale(${interpolate(pop, [0, 1], [0.86, 1])})`, opacity: Math.min(1, local / 3 + 0.4), maxWidth: 900,
         }}
       >
         {partes.map((p, i) =>
@@ -87,7 +101,7 @@ const Legenda: React.FC<{ y: number }> = ({ y }) => {
   );
 };
 
-// ---------- Balões ----------
+// ---------- Balões (também usados nas etiquetas dos nichos) ----------
 const Balao: React.FC<{
   texto: string; x: number; y: number; ini: number; fim: number; vermelho?: boolean; treme?: boolean; tam?: number; pensamento?: boolean;
 }> = ({ texto, x, y, ini, fim, vermelho, treme, tam = 50, pensamento }) => {
@@ -103,7 +117,8 @@ const Balao: React.FC<{
   return (
     <div
       style={{
-        position: "absolute", left: x, top: y + flut, transform: `translate(-50%,-50%) translateX(${tremor}px) scale(${escala}) rotate(${Math.sin((frame + y) / 17) * 2.5}deg)`,
+        position: "absolute", left: x, top: y + flut,
+        transform: `translate(-50%,-50%) translateX(${tremor}px) scale(${escala}) rotate(${Math.sin((frame + y) / 17) * 2.5}deg)`,
         opacity: 1 - sai,
       }}
     >
@@ -180,8 +195,8 @@ const MAO = [
   "...XWWWWWX..",
   "...XXXXXXX..",
 ];
-const Mao: React.FC<{ escala?: number }> = ({ escala = 1 }) => {
-  const px = 11 * escala;
+const Mao: React.FC = () => {
+  const px = 11;
   return (
     <div style={{ position: "relative", width: px * 12, height: px * 14, filter: "drop-shadow(0 8px 6px rgba(0,0,0,.5))" }}>
       {MAO.flatMap((lin, r) =>
@@ -252,61 +267,16 @@ const Pin: React.FC<{ ini: number; fim: number; children: React.ReactNode; incli
   );
 };
 
-// Página real (captura de docs/index.html). 860px de largura -> 668
+// Página real (captura de docs/index.html, 860 px de largura) -> 668 no cartão
 const K = 668 / 860;
 const Site: React.FC<{ rolagem: (s: number) => number }> = ({ rolagem }) => {
   const s = useCurrentFrame() / FPS;
-  return (
-    <Img src={staticFile("shots/site-full.png")} style={{ position: "absolute", left: 0, top: -rolagem(s) * 2 * K, width: 668 }} />
-  );
+  return <Img src={staticFile("shots/site-full.png")} style={{ position: "absolute", left: 0, top: -rolagem(s) * 2 * K, width: 668 }} />;
 };
 const rolar = (pontos: [number, number][]) => (s: number) =>
   interpolate(s, pontos.map((p) => p[0]), pontos.map((p) => p[1]), {
     easing: Easing.inOut(Easing.cubic), extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-
-const Barra: React.FC<{ w: number; h?: number }> = ({ w, h = 20 }) => (
-  <div style={{ width: w, height: h, borderRadius: h, background: "#3a3a3a", filter: "blur(3px)" }} />
-);
-
-const PerfilInsta: React.FC = () => (
-  <AbsoluteFill style={{ background: "#000", color: "#fff", fontFamily: FONTE, padding: "34px 36px" }}>
-    <div style={{ fontWeight: 800, fontSize: 36 }}>descontos_brutaiss</div>
-    <div style={{ display: "flex", alignItems: "center", gap: 34, marginTop: 34 }}>
-      <Img src={staticFile("logo.png")} style={{ width: 170, height: 170, borderRadius: 170, border: "4px solid #fff", objectFit: "cover" }} />
-      <div style={{ display: "flex", gap: 34 }}>
-        {["posts", "seguidores", "seguindo"].map((t) => (
-          <div key={t} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12 }}>
-            <Barra w={64} h={26} />
-            <div style={{ fontSize: 22, color: "#bbb", fontWeight: 700 }}>{t}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-    <div style={{ fontWeight: 800, fontSize: 32, marginTop: 30 }}>Descontos Brutais ⚡</div>
-    <div style={{ fontSize: 26, color: "#ddd", marginTop: 8, fontWeight: 700 }}>Achados e ofertas</div>
-    <div
-      style={{
-        marginTop: 22, display: "inline-flex", alignItems: "center", gap: 14, background: "#16233a", color: "#8ec2ff",
-        fontWeight: 800, fontSize: 30, padding: "16px 24px", borderRadius: 18, alignSelf: "flex-start",
-      }}
-    >
-      <span style={{ fontSize: 30 }}>🔗</span> link da bio
-    </div>
-    <div style={{ display: "flex", gap: 14, marginTop: 30 }}>
-      {["Seguir", "Mensagem"].map((t, i) => (
-        <div key={t} style={{ flex: 1, textAlign: "center", padding: "16px 0", borderRadius: 16, background: i ? "#262626" : "#0095f6", fontWeight: 800, fontSize: 26 }}>
-          {t}
-        </div>
-      ))}
-    </div>
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginTop: 30 }}>
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <div key={i} style={{ height: 190, borderRadius: 10, background: i % 2 ? "#1c1c1c" : "#242424" }} />
-      ))}
-    </div>
-  </AbsoluteFill>
-);
 
 const Loja: React.FC = () => (
   <AbsoluteFill style={{ background: "#fff", color: "#111", fontFamily: FONTE }}>
@@ -378,7 +348,7 @@ const DonoSozinho: React.FC = () => {
 };
 
 // ---------- Tela final ----------
-const Final: React.FC = () => {
+const Final: React.FC<{ versao: Versao }> = ({ versao }) => {
   const frame = useCurrentFrame() - f(T.s8);
   if (frame < 0) return null;
   const escuro = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp" });
@@ -386,6 +356,7 @@ const Final: React.FC = () => {
   const txt = spring({ frame: frame - 24, fps: FPS, config: { damping: 14 } });
   const seta = spring({ frame: frame - 40, fps: FPS, config: { damping: 9 } });
   const brilho = 40 + Math.sin(frame / 7) * 22;
+  const insta = versao === "instagram";
   return (
     <AbsoluteFill style={{ background: `rgba(0,0,0,${escuro})`, alignItems: "center", fontFamily: FONTE, color: "#fff" }}>
       <Img
@@ -401,11 +372,11 @@ const Final: React.FC = () => {
       <div style={{ fontWeight: 700, fontSize: 48, color: "#cfcfcf", marginTop: 6, opacity: txt }}>@descontos_brutaiss</div>
       <div
         style={{
-          marginTop: 60, background: AMARELO, color: TINTA, fontWeight: 900, fontSize: 54, padding: "20px 54px", borderRadius: 999,
-          transform: `scale(${seta}) translateY(${Math.sin(frame / 6) * 8}px)`, boxShadow: "0 10px 0 rgba(255,255,255,.15)",
+          marginTop: 60, background: AMARELO, color: TINTA, fontWeight: 900, fontSize: insta ? 54 : 46, padding: "20px 50px", borderRadius: 999,
+          transform: `scale(${seta}) translateY(${Math.sin(frame / 6) * 8}px)`, boxShadow: "0 10px 0 rgba(255,255,255,.15)", whiteSpace: "nowrap",
         }}
       >
-        👉 Clica no link da bio
+        {insta ? "👉 Clica no link da bio" : "👇 Clica no link aqui embaixo"}
       </div>
       <div style={{ position: "absolute", top: 1440, fontWeight: 700, fontSize: 30, color: "#9a9a9a", opacity: txt }}>Contém links de afiliado</div>
     </AbsoluteFill>
@@ -413,35 +384,53 @@ const Final: React.FC = () => {
 };
 
 // ---------- Áudio ----------
-const Som: React.FC<{ arq: string; em: number; vol?: number }> = ({ arq, em, vol = 1 }) => (
-  <Sequence from={f(em)} layout="none">
+const Som: React.FC<{ arq: string; em: number; vol?: number }> = ({ arq, em: t, vol = 1 }) => (
+  <Sequence from={f(t)} layout="none">
     <Audio src={staticFile(arq)} volume={vol} />
   </Sequence>
 );
 
-export const Video: React.FC = () => {
+// Nichos da página (cena 4), no ritmo da fala: segundos depois do início da fala 2
+const NICHOS: { t: number; texto: string; x: number; y: number }[] = [
+  { t: 0.78, texto: "👗 Moda", x: 320, y: 300 },
+  { t: 1.32, texto: "💄 Beleza", x: 750, y: 400 },
+  { t: 1.82, texto: "🏋️ Academia", x: 420, y: 520 },
+  { t: 2.8, texto: "🍳 Cozinha", x: 740, y: 640 },
+  { t: 3.3, texto: "🐾 Pet", x: 330, y: 750 },
+  { t: 3.6, texto: "✨ e muito mais!", x: 640, y: 860 },
+];
+
+export const Video: React.FC<{ versao?: Versao }> = ({ versao = "instagram" }) => {
   const frame = useCurrentFrame();
   const s = frame / FPS;
   const { durationInFrames } = useVideoConfig();
-  const cliques4 = [T.s4 + 3.2, T.s4 + 6.4];
-  // toques da cena 5 e 6
-  const t5 = { link: T.s5 + 1.3, prod: T.s5 + 3.9 };
+
+  // cena 4: etiquetas e depois a página
+  const nichoSai = T.m2 + 4.3;
+  const pin4 = T.m2 + 4.45;
+  // cena 5: Instagram -> Beacons -> página -> loja
+  const c5 = { insta: T.s5, link: T.s5 + 1.3, beacons: T.s5 + 1.7, ver: T.s5 + 2.75, pagina: T.s5 + 3.2, prod: T.s5 + 4.45, loja: T.s5 + 4.85 };
+  // cena 6: toques nos botões das redes
   const t6 = { tg: T.m4 + 1.9, wa: T.m4 + 3.5, tk: T.m4 + 4.7, ig: T.m4 + 5.9 };
   // posição dos botões da página dentro do cartão (rolagem 300)
   const by = (cssY: number) => PIN.y + (cssY - 300) * 2 * K + 51;
   const bx = PIN.x + 340;
-  const musicaVol = (fr: number) => {
-    const t = fr / FPS;
-    const base = t < 0.4 ? 0.2 : 0.085;
-    const fimSobe = interpolate(t, [T.s8 - 0.3, T.s8 + 0.8, T.fim - 1.4, T.fim], [base, 0.3, 0.3, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-    return t > T.s8 - 0.3 ? fimSobe : base;
+
+  // música: começa baixinha; recomeça na chegada do mascote (com o "puf") para terminar junto com o vídeo
+  const MUSICA_CORTE = 4.8;
+  const volIntro = (fr: number) => interpolate(fr / FPS, [0, T.s3 - 0.1, T.s3 + 0.2], [0.07, 0.07, 0], { extrapolateRight: "clamp" });
+  const volMusica = (fr: number) => {
+    const t = T.s3 + fr / FPS;
+    if (t > T.s8 - 0.3) return interpolate(t, [T.s8 - 0.3, T.s8 + 0.8, T.fim - 1.2, T.fim], [0.085, 0.3, 0.3, 0], { extrapolateRight: "clamp" });
+    return interpolate(t, [T.s3, T.s3 + 0.25, T.m1 - 0.1, T.m1 + 0.3], [0, 0.15, 0.15, 0.085], { extrapolateRight: "clamp" });
   };
+
   return (
     <AbsoluteFill style={{ background: "#000" }}>
       {/* ---------- Fundo ---------- */}
       <Sequence from={0} durationInFrames={f(T.s3)}><DonoSozinho /></Sequence>
       <Sequence from={f(T.s3)} durationInFrames={f(T.s4) - f(T.s3)}>
-        <OffthreadVideo src={staticFile("clipB.mp4")} playbackRate={0.975} muted style={{ width: 1080, height: 1920 }} />
+        <OffthreadVideo src={staticFile("clipB.mp4")} playbackRate={0.955} muted style={{ width: 1080, height: 1920 }} />
       </Sequence>
       <Sequence from={f(T.s4)} durationInFrames={f(T.s7) - f(T.s4)}>
         <Loop durationInFrames={f(7.9)}>
@@ -449,15 +438,14 @@ export const Video: React.FC = () => {
         </Loop>
       </Sequence>
       <Sequence from={f(T.s7)} durationInFrames={durationInFrames - f(T.s7)}>
-        <OffthreadVideo src={staticFile("clipD.mp4")} playbackRate={0.94} muted style={{ width: 1080, height: 1920 }} />
+        <OffthreadVideo src={staticFile("clipD.mp4")} playbackRate={0.85} muted style={{ width: 1080, height: 1920 }} />
       </Sequence>
-      {/* leve escurecida embaixo para a legenda ler bem */}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 62%, rgba(0,0,0,.5) 100%)" }} />
 
       {/* ---------- Cena 1: pensamentos ---------- */}
-      <Balao pensamento texto="Quero comprar..." x={540} y={420} ini={0.9} fim={2.7} />
-      <Balao pensamento texto="...mas onde é mais barato?" x={540} y={420} ini={2.9} fim={4.9} tam={46} />
-      <Balao pensamento texto="...e confiável?" x={540} y={420} ini={5.1} fim={7.0} />
+      <Balao pensamento texto="Quero comprar..." x={540} y={420} ini={0.7} fim={2.5} />
+      <Balao pensamento texto="...mas onde é mais barato?" x={540} y={420} ini={2.7} fim={4.7} tam={46} />
+      <Balao pensamento texto="...e confiável?" x={540} y={420} ini={4.9} fim={6.75} />
       {/* ---------- Cena 2: dúvidas ---------- */}
       <Balao vermelho treme texto="Preço alto?" x={270} y={330} ini={T.s2 + 0.5} fim={T.s3 + 0.15} tam={46} />
       <Balao vermelho treme texto="Site falso?" x={800} y={300} ini={T.s2 + 1.2} fim={T.s3 + 0.25} tam={46} />
@@ -466,30 +454,41 @@ export const Video: React.FC = () => {
       <Fumaca x={860} y={575} ini={T.s3} />
       <Balao texto="Calma! Eu te ajudo." x={470} y={330} ini={T.s3 + 0.7} fim={T.s3 + 3.4} tam={50} />
 
-      {/* ---------- Cena 4: página de ofertas ---------- */}
-      <Pin ini={T.s4 + 0.25} fim={T.s5 - 0.35}>
-        <Site rolagem={rolar([[T.s4, 0], [cliques4[0], 0], [cliques4[0] + 1.2, 720], [cliques4[1], 720], [cliques4[1] + 1.3, 1420]])} />
+      {/* ---------- Cena 4: nichos e página de ofertas ---------- */}
+      {NICHOS.map((n, i) => (
+        <Balao key={n.texto} texto={n.texto} x={n.x} y={n.y} ini={T.m2 + n.t} fim={nichoSai + i * 0.07} tam={64} />
+      ))}
+      <Pin ini={pin4} fim={T.s5 - 0.35}>
+        <Site rolagem={rolar([[pin4, 0], [T.m2 + 5.8, 0], [T.m2 + 7.3, 1530], [T.m2 + 8.9, 1530], [T.m2 + 9.8, 1780]])} />
       </Pin>
       <Dedo
-        ini={T.s4 + 2.4} fim={T.s5 - 0.5}
+        ini={T.m2 + 5.1} fim={T.s5 - 0.45}
         passos={[
-          { t: T.s4 + 2.4, x: 760, y: 1000 }, { t: cliques4[0], x: 610, y: 820, toque: true }, { t: cliques4[0] + 1.2, x: 610, y: 420 },
-          { t: cliques4[1] - 0.5, x: 620, y: 830 }, { t: cliques4[1], x: 620, y: 830, toque: true }, { t: cliques4[1] + 1.3, x: 620, y: 400 }, { t: T.s5 - 0.5, x: 700, y: 480 },
+          { t: T.m2 + 5.1, x: 780, y: 1010 }, { t: T.m2 + 5.75, x: 610, y: 820 }, { t: T.m2 + 7.3, x: 610, y: 380 },
+          { t: T.m2 + 8.5, x: 640, y: 760 }, { t: T.m2 + 8.9, x: 640, y: 760 }, { t: T.m2 + 9.8, x: 640, y: 520 }, { t: T.s5 - 0.45, x: 760, y: 980 },
         ]}
       />
-      {/* ---------- Cena 5: link da bio ---------- */}
-      <Pin ini={T.s5} fim={t5.link + 0.25} inclina={2} lado={-1}><Img src={staticFile("shots/insta.png")} style={{ width: 668 }} /></Pin>
-      <Pin ini={t5.link + 0.3} fim={t5.prod + 0.25} inclina={-2}>
-        <Site rolagem={rolar([[t5.link + 0.5, 0], [t5.link + 1.5, 780]])} />
+
+      {/* ---------- Cena 5: link da bio -> Beacons -> página -> loja ---------- */}
+      <Pin ini={c5.insta} fim={c5.link + 0.3} inclina={2} lado={-1}>
+        <Img src={staticFile("shots/insta.png")} style={{ width: 668 }} />
       </Pin>
-      <Pin ini={t5.prod + 0.3} fim={T.s6 - 0.3} inclina={2} lado={-1}><Loja /></Pin>
+      <Pin ini={c5.beacons} fim={c5.ver + 0.35} inclina={-2}>
+        <Img src={staticFile("shots/beacons.png")} style={{ width: 668 }} />
+      </Pin>
+      <Pin ini={c5.pagina} fim={c5.prod + 0.3} inclina={2} lado={-1}>
+        <Site rolagem={rolar([[c5.pagina + 0.2, 0], [c5.pagina + 0.8, 780]])} />
+      </Pin>
+      <Pin ini={c5.loja} fim={T.s6 - 0.3} inclina={-2}><Loja /></Pin>
       <Dedo
-        ini={T.s5 + 0.4} fim={T.s6 - 0.6}
+        ini={T.s5 + 0.5} fim={T.s6 - 0.6}
         passos={[
-          { t: T.s5 + 0.4, x: 760, y: 980 }, { t: t5.link, x: 395, y: 536, toque: true }, { t: t5.link + 1.2, x: 700, y: 900 },
-          { t: t5.prod, x: 520, y: PIN.y + (1158 - 780) * 2 * K, toque: true }, { t: T.s6 - 0.6, x: 720, y: 940 },
+          { t: T.s5 + 0.5, x: 760, y: 980 }, { t: c5.link, x: 395, y: 536, toque: true }, { t: c5.link + 0.6, x: 600, y: 900 },
+          { t: c5.ver, x: 540, y: 757, toque: true }, { t: c5.pagina + 0.15, x: 640, y: 900 }, { t: c5.pagina + 0.8, x: 640, y: 480 },
+          { t: c5.prod, x: 520, y: 802, toque: true }, { t: T.s6 - 0.6, x: 720, y: 940 },
         ]}
       />
+
       {/* ---------- Cena 6: redes ---------- */}
       <Pin ini={T.s6} fim={T.s7 - 0.5}>
         <Site rolagem={rolar([[T.s6, 300]])} />
@@ -507,29 +506,38 @@ export const Video: React.FC = () => {
       <Rede icone={siInstagram} cor="#E1306C" ini={t6.ig + 0.05} de={[bx, by(566)]} para={[975, 1140]} fim={T.s7 - 0.3} />
 
       {/* ---------- Tela final e legendas ---------- */}
-      <Final />
+      <Final versao={versao} />
       {s < T.s8 + 0.3 ? <Legenda y={1385} /> : null}
 
       {/* ---------- Áudio ---------- */}
-      <Audio src={staticFile("musica.mp3")} volume={musicaVol} />
+      <Sequence from={0} durationInFrames={f(T.s3 + 0.3)} layout="none">
+        <Audio src={staticFile("musica.mp3")} volume={volIntro} />
+      </Sequence>
+      <Sequence from={f(T.s3)} layout="none">
+        <Audio src={staticFile("musica.mp3")} trimBefore={f(MUSICA_CORTE)} volume={volMusica} />
+      </Sequence>
       <Audio src={staticFile("ambiente.mp3")} volume={(fr) => (fr / FPS < T.s8 ? 0.8 : 0)} loop />
       <Som arq="dono-1b.mp3" em={T.d1} vol={1.9} />
       <Som arq="dono-2b.mp3" em={T.d2} vol={1.7} />
       <Som arq="masc-1a.mp3" em={T.m1} />
-      <Som arq="masc-2a.mp3" em={T.m2} />
+      <Som arq="masc-2n.mp3" em={T.m2} />
       <Som arq="masc-3a.mp3" em={T.m3} />
       <Som arq="masc-4a.mp3" em={T.m4} />
       <Som arq="dono-3b.mp3" em={T.d3} vol={1.5} />
       <Som arq="masc-5a.mp3" em={T.m5} />
-      <Som arq="masc-6a.mp3" em={T.m6} />
-      {[0.9, 2.9, 5.1, T.s2 + 0.5, T.s2 + 1.2, T.s2 + 1.9, T.s3 + 0.7, T.s4 + 0.25, T.s5, t5.link + 0.3, t5.prod + 0.3, T.s6, t6.tg + 0.05, t6.wa + 0.05, t6.tk + 0.05, t6.ig + 0.05].map((t, i) => (
+      <Som arq={versao === "instagram" ? "masc-6a.mp3" : "masc-6o.mp3"} em={T.m6} />
+      {[
+        0.7, 2.7, 4.9, T.s2 + 0.5, T.s2 + 1.2, T.s2 + 1.9, T.s3 + 0.7,
+        ...NICHOS.map((n) => T.m2 + n.t), pin4, c5.insta, c5.beacons, c5.pagina, c5.loja, T.s6,
+        t6.tg + 0.05, t6.wa + 0.05, t6.tk + 0.05, t6.ig + 0.05,
+      ].map((t, i) => (
         <Som key={`pop${i}`} arq="pop-2.mp3" em={t} vol={0.45} />
       ))}
-      {[2.7, 4.9, 7.0, T.s3 + 0.15, T.s3 + 0.25, T.s3 + 0.35, T.s3 + 3.4].map((t, i) => (
+      {[2.5, 4.7, 6.75, T.s3 + 0.15, T.s3 + 0.25, T.s3 + 0.35, T.s3 + 3.4, ...NICHOS.map((_, i) => nichoSai + i * 0.07)].map((t, i) => (
         <Som key={`plop${i}`} arq="plop-2.mp3" em={t} vol={1.6} />
       ))}
       <Som arq="puf-1.mp3" em={T.s3} vol={0.8} />
-      {[cliques4[0], cliques4[1], t5.link, t5.prod, t6.tg, t6.wa, t6.tk, t6.ig].map((t, i) => (
+      {[c5.link, c5.ver, c5.prod, t6.tg, t6.wa, t6.tk, t6.ig].map((t, i) => (
         <Som key={`cl${i}`} arq="clique-2.mp3" em={t} vol={0.5} />
       ))}
     </AbsoluteFill>
