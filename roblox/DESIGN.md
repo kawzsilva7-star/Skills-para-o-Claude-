@@ -1,48 +1,53 @@
-# Treino Anime — Design (rascunho 1)
+# Presidentes do Brasil 3D — Design (rascunho 2)
 
-> Rascunho. Será ajustado com a ideia do dono (áudio/texto).
+> Rascunho. Será ajustado com a ideia completa do dono.
 
 ## Ideia em 1 frase
-O jogador treina para ganhar **Poder**, luta contra bonecos de treino para ganhar **Moedas** e compra itens (cabelo prata, bandana, roupas) na loja.
+Aventura 3D em pixel art onde o jogador viaja pela história do Brasil, uma era por vez, e encontra cada presidente (NPC) que dá um desafio curto; vencer dá Moedas e libera a próxima era.
 
-## Estilo visual: PIXEL ART
-- Mundo feito de blocos simples, cores chapadas, poucas cores por área (paleta de 16 a 32 cores).
+## Estilo visual: PIXEL ART 3D
+- Mundo 3D de blocos (estilo voxel), cores chapadas, paleta de 16 a 32 cores por era.
 - Texturas pequenas (16x16 ou 32x32), sem suavização.
-- Interface (botões, barras, loja) em pixel art, fonte pixelada.
-- Personagem: mantém o cabelo prata e a bandana já feitos. Visual pixel vem de textura pequena e cores chapadas (decisão pendente: ver "Perguntas").
+- Cada presidente: boneco pixel art com traços simples e roupa da época (caricatura leve, respeitosa).
+- Interface (botões, cartas, loja) em pixel art, fonte pixelada.
 
 ### Como fazer no Roblox (técnico)
-- Imagens de interface: `ImageLabel.ResampleMode = Enum.ResamplerMode.Pixelated` (mantém os pixels nítidos).
-- Texturas de Parts/MeshParts: arquivos PNG pequenos (16x16 / 32x32) com cores chapadas.
-- Iluminação: `Lighting.GlobalShadows = false`, `Technology = Compatibility`, céu de cor sólida, sem brilho forte.
-- Fonte: usar uma fonte pixelada do Roblox (ex.: `Enum.Font.Arcade`) ou imagem de texto.
-- Arte 2D de ícones (itens, armas, moedas): desenhar em Aseprite, Piskel (grátis, no navegador) ou LibreSprite e exportar PNG.
+- Imagens de interface: `ImageLabel.ResampleMode = Enum.ResamplerMode.Pixelated`.
+- Texturas: PNG pequenos, cores chapadas.
+- Iluminação: `Lighting.GlobalShadows = false`, céu de cor sólida.
+- Fonte: `Enum.Font.Arcade` ou imagem de texto.
+- Modelos: montar com Parts em blocos no Studio (ou voxel no MagicaVoxel/Blockbench e exportar FBX).
+- Ícones 2D: Piskel (piskelapp.com), grátis.
 
 ## Ciclo do jogo
-1. Entra no jogo → vê **Poder** e **Moedas** (Parte 1, pronta).
-2. Treina (clicar/segurar) → ganha Poder.
-3. Luta com boneco de treino → ganha Moedas; mais Poder = dano maior.
-4. Loja → compra cabelo, bandana, roupas.
-5. Dados salvos ao sair.
+1. Entra → vê **Moedas** e **Era atual** (Parte 1, pronta, Poder pode virar "Pontos").
+2. Anda pela era (Império/República Velha, Vargas, JK, ditadura, redemocratização...).
+3. Fala com o presidente (NPC) → recebe um desafio curto (quiz de história, coletar itens, corrida).
+4. Vence → ganha Moedas e abre o portal da próxima era.
+5. Loja: cabelo, bandana, roupas da época.
+6. Dados salvos ao sair.
 
 ## Ganhar / perder
-- Ganha: boneco derrotado dá Moedas.
-- Perde: se a vida do jogador chega a 0, volta ao ponto inicial (sem perder Poder).
+- Ganha: completa o desafio da era.
+- Perde: erra o desafio ou cai do mapa → volta ao início da era (sem perder Moedas).
 
 ## Partes de código (uma por vez)
 1. [pronta] Dados do jogador: `Parte1_Dados.lua`
-2. Treino: botão que dá Poder
-3. Bonecos de treino: vida, dano, recompensa
-4. Loja: comprar itens com Moedas
-5. Teste do cabelo em R6/R15/Rthro: `Vitrine_Roblox.lua`
-6. Interface em pixel art
+2. Eras: portais e lista de eras liberadas
+3. NPC presidente: conversa e desafio (quiz)
+4. Recompensas e progresso salvo
+5. Loja
+6. Teste do cabelo em R6/R15/Rthro: `Vitrine_Roblox.lua`
+7. Interface em pixel art
+
+## ATENÇÃO: regras do Roblox e cuidados
+- Conferir nas Regras da Comunidade do Roblox se pode representar políticos reais. Presidentes que já morreram, em tom educativo e respeitoso, são bem mais seguros. Presidentes vivos e política atual são risco de moderação: evitar.
+- Nada de propaganda, campanha, ofensa ou "fake news" sobre pessoas reais.
+- Usar fatos de fontes confiáveis (livros didáticos, Planalto, Arquivo Nacional) nos quizzes.
+- Nada de nome/emblema de personagem de anime. Não trocar letras de nomes para escapar da moderação.
 
 ## Perguntas em aberto
-- Pixel art só no cenário e na interface, ou o personagem também vira "pixelado"?
-- Câmera: 3ª pessoa normal ou vista de cima/lateral?
-- Nome final do jogo.
-- Preço dos itens (decidir depois de ver as regras do Creator Hub).
-
-## Regras combinadas
-- Nada de nome/emblema de personagem de anime. Design original.
-- Não trocar letras de nomes para escapar da moderação.
+- Quais presidentes entram (todos ou só alguns marcantes)? Só falecidos?
+- O objetivo é educativo (quiz) ou aventura/luta com chefes?
+- Pixel art no personagem do jogador também?
+- Nome do jogo.
