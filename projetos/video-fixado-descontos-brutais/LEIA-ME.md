@@ -50,12 +50,13 @@ Na nuvem, o Remotion não consegue baixar o navegador dele; por isso o `--browse
    "Lá tem de tudo: moda, beleza, academia, cozinha, pet e muito mais! Tudo com desconto, em lojas confiáveis, sem dor de cabeça de cair em fraude!"
    e fazer cada nicho aparecer como etiqueta amarela (cerca de 300 créditos).
 3. Versão para Telegram e Facebook: fala final "Clica no link aqui embaixo." (cerca de 80 créditos).
-4. Sem custo: trocar o cartão simplificado da loja (componente `Loja`) pelo print real do Mercado Livre, se o dono enviar.
+4. ~~Trocar o cartão da loja pelo print real do Mercado Livre~~: o dono decidiu (12/11) manter o cartão simplificado (fatiador de legumes, um produto que está na página). Não pedir esse print.
+5. Print novo do perfil do Instagram com o link da bio atual (o do vídeo ainda mostra o link antigo do Beacons). O dono já trocou o link da bio e o botão do WhatsApp aparece na página.
 
 ## Diferenças em relação ao roteiro
 - 53,6 s em vez de 47 s (só as falas somam 46,5 s).
 - O mascote aparece dentro da fumaça amarela, em vez de entrar voando.
-- Cartão da loja é simplificado, com preço borrado; não usa a marca visual do Mercado Livre.
+- Cartão da loja é simplificado, com preço borrado; não usa a marca visual do Mercado Livre. Decisão do dono: manter assim.
 
 ## Skill do padrão
 Para ajustar este vídeo ou fazer outro igual, use a skill `video-pixel-art` (pasta `04-video-e-imagem/video-pixel-art/`). Ela manda reaproveitar este projeto e gastar o mínimo de crédito do ElevenLabs.
