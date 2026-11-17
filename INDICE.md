@@ -178,7 +178,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `pptx` | Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This include |
 | `xlsx` | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user  |
 
-## 11-economia-de-tokens: Economia de tokens (5)
+## 11-economia-de-tokens: Economia de tokens (7)
 
 | Skill | Para que serve |
 |---|---|
@@ -186,6 +186,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `caveman-commit` | > Write a Conventional Commits message compressed to intent only. Use for "write a commit", "commit message",  |
 | `caveman-explore` | Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct sear |
 | `caveman-learn` | Act on a Caveman learn report - review the ranked token sinks, apply cost-lowering fixes with per-edit consent |
+| `contexto-enxuto` | Regra + script (gerar_contexto.bat) que junta só as skills escolhidas num arquivo `<regras_ativas>`. |
 | `caveman-review` | > Compressed code review - one line per finding with location, problem and fix. Use for /caveman-review, "revi |
 
 ## 12-engenharia-avancada: Engenharia avançada (infra, agentes, segurança, dados) (93)

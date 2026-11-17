@@ -10,8 +10,9 @@ O dono pediu: **não carregar skill à toa**. Cada skill gasta tokens.
 2. **Use só a skill da função certa** (tabela abaixo). Nunca carregue o grupo inteiro nem as de Remotion "por garantia".
 3. **Remotion: comece pela necessária.** Só abra `remotion-best-practices` (que indica qual das outras ler) quando for fazer vídeo. Leia só o `SKILL.md` e **só os arquivos de apoio que a tarefa pedir**, não a pasta toda.
 4. Se a tarefa não está na tabela, **não force uma skill**: faça direto.
-5. Ao usar uma skill, diga ao dono qual e por quê, em uma linha.
-6. Skill nova vai para a pasta da sua função aqui e para o repositório privado `Skills-para-o-Claude-` (script `scripts/sincronizar_skills.ps1`), depois de procurar chaves nos arquivos. Nunca para repositório público.
+5. **Contexto enxuto:** para usar várias skills juntas, gere `contexto_enxuto.txt` com `11-economia-de-tokens/contexto-enxuto/gerar_contexto.bat`. Ao receber um bloco `<regras_ativas>`, execute APENAS as skills listadas, ignore o resto e combine-as se houver mais de uma.
+6. Ao usar uma skill, diga ao dono qual e por quê, em uma linha.
+7. Skill nova vai para a pasta da sua função aqui e para o repositório privado `Skills-para-o-Claude-` (script `scripts/sincronizar_skills.ps1`), depois de procurar chaves nos arquivos. Nunca para repositório público.
 
 ## Índice completo
 Há mais de 520 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380-skills` e do PDF pago do Clube das Skills). Estão separadas em **pastas por função** (`skills/01-marketing-e-anuncios/` ... `skills/24-motion-e-animacao/`; `22` = versões alternativas, `23` = notas e guias). A lista com o nome e para que serve cada uma está em `skills/INDICE.md` (só no PC). **Leia o índice só quando a tabela abaixo não resolver**, e depois abra apenas a skill escolhida.
