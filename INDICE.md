@@ -37,7 +37,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `seo-audit` | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "S |
 | `web-perf` | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse perf |
 
-## 04-video-e-imagem: Vídeo, voz e imagem (36)
+## 04-video-e-imagem: Vídeo, voz e imagem (45)
 
 | Skill | Para que serve |
 |---|---|
@@ -77,6 +77,15 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `video-de-produto` | Cria um vídeo curto para Instagram/Reels mostrando o produto do usuário de forma profissional, usando Remotion |
 | `video-use` | Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — fo |
 | `voice-isolator` | Remove background noise and isolate vocals/speech from audio using ElevenLabs Voice Isolator (audio isolation) |
+| `sistema-de-cortes` | Corta a live em cortes verticais com legenda, título e zoom + vídeo longo do YouTube (coordena as cortes-*; script cortes.py). |
+| `cortes-preparar-ambiente` | Instala/acha ffmpeg e Python, cria o .venv com faster-whisper (Windows ou Mac). |
+| `cortes-transcrever-live` | Transcreve a live com o tempo de cada palavra, detecta o idioma e mede o volume por segundo. |
+| `cortes-achar-momentos` | Acha GRITO + REAÇÃO, escolhe começo/fim em pausas e mostra a lista para aprovar. |
+| `cortes-montar-vertical` | Vertical 1080x1920: câmera em cima/jogo embaixo ou fundo desfocado, com zoom de impacto. |
+| `cortes-legendas-ass` | Menu de legendas (DESTAQUE, CAIXA, KARAOKÊ, BEASTY, MINIMAL) e títulos em .ass. |
+| `cortes-volume-14-lufs` | Volume em -14 LUFS e pico real -1 dB (loudnorm em 2 passadas + correção). |
+| `cortes-video-longo-youtube` | Junta os momentos num vídeo 16:9 com fade para o YouTube e diz como monetizar. |
+| `cortes-conferir-arquivos` | Confere tamanho, som, volume e tira um quadro de cada corte para olhar. |
 
 ## 05-design-e-sites: Design e sites (13)
 
@@ -348,7 +357,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `threat-detection` | Use when hunting threats, sweeping IOCs or looking for anomalies in logs and telemetry. Ranks ATT&CK-mapped si |
 | `vercel-react-native-skills` | React Native and Expo best practices for building performant mobile apps. Use when building React Native compo |
 
-## 14-marketing-completo: Marketing completo (conteúdo, SEO, redes, e-mail) (51)
+## 14-marketing-completo: Marketing completo (conteúdo, SEO, redes, e-mail) (52)
 
 | Skill | Para que serve |
 |---|---|
@@ -403,6 +412,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `webinar-marketing` | Use when planning, promoting or fixing a webinar or virtual event (registrations, show-up, follow-up, conversi |
 | `x-twitter-growth` | Use for growing on X/Twitter: tweets, threads, profile audit, competitors or posting plan. Audits the profile  |
 | `youtube-full` | Use for any YouTube URL, video ID or @handle, or a request for transcripts, video search, channel, playlist or |
+| `cortes-postar-e-crescer` | Requisitos de monetização de TikTok/Shorts/Reels, regras do post e checklist do lançamento. |
 
 ## 15-conselheiros-executivos: Conselheiros executivos (CEO, CTO, CFO...) (62)
 
@@ -471,7 +481,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `vpe-advisor` | Use when delivery is slowing, eng hiring is broken, team structure is unclear or you need to decide when to ad |
 | `vpe-review` | Challenge a plan on delivery speed, eng hiring, team structure or on-call. Use when asked or /c-level-agents:v |
 
-## 16-regulacao-e-compliance: Regulação e compliance (qualidade, LGPD, ISO) (28)
+## 16-regulacao-e-compliance: Regulação e compliance (qualidade, LGPD, ISO) (29)
 
 | Skill | Para que serve |
 |---|---|
@@ -503,6 +513,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `risk-management-specialist` | Use for ISO 14971 medical device risk management: hazard analysis, FMEA, fault trees, risk controls, benefit-r |
 | `soc2-audit-prep` | Use for /compliance-os:soc2-audit-prep, or before or during a SOC 2 Type II observation period. |
 | `soc2-compliance` | Use when the user asks to prepare for SOC 2 audits, map Trust Service Criteria, build control matrices, collec |
+| `cortes-direitos-e-permissao` | O que derruba a conta (Rockstar, streamer, redes) e a mensagem pronta para pedir permissão. |
 
 ## 17-produto: Produto (PRD, roadmap, pesquisa com usuário) (18)
 
@@ -625,7 +636,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `stage-launch` | Use when a managed-agent build sheet is ready to launch ('launch it', 'deploy the agent'). Generates and valid |
 | `wrap-up` | Use when closing out a launched managed agent ('wrap up', 'what do I own now'). Inventories primitives with pr |
 
-## 22-versoes-alternativas: Versões alternativas (12)
+## 22-versoes-alternativas: Versões alternativas (13)
 
 | Skill | Para que serve |
 |---|---|
@@ -641,6 +652,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `remotion-captions__clube-das-skills` | Transcribing, displaying and animating captions |
 | `remotion-render__clube-das-skills` | Export a Remotion video |
 | `seo-audit__380-skills` | Find why a site is not ranking: technical SEO, on-page issues, meta tags, site health. Use whenever the user a |
+| `sistema-de-cortes-original` | Prompt original do Clube das Skills (sem script), base do sistema-de-cortes. |
 
 ## 24-motion-e-animacao: Motion e animação (GSAP, Three.js, efeitos) (9)
 

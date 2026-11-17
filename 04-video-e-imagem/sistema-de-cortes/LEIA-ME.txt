@@ -1,0 +1,28 @@
+SISTEMA DE CORTES (versão aprimorada do Clube das Skills)
+
+COMO INSTALAR (uma vez só)
+1. Copie para a pasta de skills do Claude:
+   - esta pasta "sistema-de-cortes" (com a subpasta scripts);
+   - as pastas "cortes-*" de 04-video-e-imagem;
+   - "cortes-direitos-e-permissao" (16-regulacao-e-compliance);
+   - "cortes-postar-e-crescer" (14-marketing-completo).
+   A pasta de skills fica em:
+   - Windows: C:\Users\SEU-NOME\.claude\skills\
+   - Mac: ~/.claude/skills/
+   Se a pasta "skills" não existir, crie.
+2. Feche e abra o Claude Code.
+
+COMO USAR
+1. Crie uma pasta e coloque nela a gravação da live (mp4, mkv ou mov).
+   Só de streamer que libera corte (programa de cortes ou permissão por escrito).
+2. Abra o Claude Code nessa pasta e escreva: use o sistema de cortes nesta live
+3. Diga quantos cortes quer, aprove a lista de momentos e receba os cortes na pasta "cortes".
+
+RODAR O SCRIPT NA MÃO (na pasta da live, com o .venv ativo)
+  python cortes.py analisar "live.mp4"
+  python cortes.py momentos "live.mp4" --n 5
+  (escreva titulo/descricao e marque "aprovado": true em cortes/<live>/momentos.json)
+  python cortes.py quadros  "live.mp4"
+  python cortes.py cortar   "live.mp4" --legenda destaque --titulo contorno [--camera X,Y,L,A]
+  python cortes.py longo    "live.mp4"
+  python cortes.py checar   "live.mp4"

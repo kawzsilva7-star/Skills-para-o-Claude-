@@ -15,7 +15,7 @@ O dono pediu: **não carregar skill à toa**. Cada skill gasta tokens.
 7. Skill nova vai para a pasta da sua função aqui e para o repositório privado `Skills-para-o-Claude-` (script `scripts/sincronizar_skills.ps1`), depois de procurar chaves nos arquivos. Nunca para repositório público.
 
 ## Índice completo
-Há mais de 520 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380-skills` e do PDF pago do Clube das Skills). Estão separadas em **pastas por função** (`skills/01-marketing-e-anuncios/` ... `skills/24-motion-e-animacao/`; `22` = versões alternativas, `23` = notas e guias). A lista com o nome e para que serve cada uma está em `skills/INDICE.md` (só no PC). **Leia o índice só quando a tabela abaixo não resolver**, e depois abra apenas a skill escolhida.
+Há mais de 740 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380-skills` e do PDF pago do Clube das Skills). Estão separadas em **pastas por função** (`skills/01-marketing-e-anuncios/` ... `skills/24-motion-e-animacao/`; `22` = versões alternativas, `23` = notas e guias). A lista com o nome e para que serve cada uma está em `skills/INDICE.md` (só no PC). **Leia o índice só quando a tabela abaixo não resolver**, e depois abra apenas a skill escolhida.
 
 ## Qual skill para qual função (as mais usadas neste bot; o caminho é `skills/<pasta da função>/<skill>/`)
 | Função | Skill | Quando usar |
@@ -30,6 +30,7 @@ Há mais de 520 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380
 | Dúvida de como o Remotion funciona | `remotion-docs` | Só para pesquisar na documentação |
 | Não sei qual do Remotion usar | `remotion-best-practices` | Porta de entrada (indica a certa) |
 | Mapas, áudio/vídeo (mediabunny), app, interatividade, atualizar versão | `remotion-maps`, `remotion-multimedia`, `remotion-saas`, `remotion-interactivity`, `remotion-upgrade` | Raramente; só se o vídeo realmente precisar |
+| Cortar uma live em cortes verticais (Reels/TikTok/Shorts) | `sistema-de-cortes` (abre só a `cortes-*` da etapa) | Quando o dono pedir cortes; antes, confirmar a permissão do streamer |
 | Testar uma ideia de negócio com "investidores" | `rodada-de-tubaroes` | Só se o dono pedir |
 | Revisar currículo | `banca-de-avaliadores` | Só se o dono pedir (não tem a ver com o bot) |
 

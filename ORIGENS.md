@@ -28,6 +28,18 @@ Antes de vender qualquer skill, confira a origem e a licença. Atualizado em 11/
 | `site-em-paralelo` | 05-design-e-sites | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `tarefas-em-paralelo` | 21-agentes-e-automacao | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `pagina-de-vendas-com-revisor` | 02-textos-e-vendas | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
+| `sistema-de-cortes-original` | 22-versoes-alternativas | Zip pago "Sistema de Cortes" do Clube das Skills (uso pessoal) | Não |
+| `sistema-de-cortes` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-preparar-ambiente` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-transcrever-live` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-achar-momentos` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-montar-vertical` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-legendas-ass` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-volume-14-lufs` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-video-longo-youtube` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-conferir-arquivos` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-direitos-e-permissao` | 16-regulacao-e-compliance | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
+| `cortes-postar-e-crescer` | 14-marketing-completo | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
 | `revisor-inimigo-de-ia` | 02-textos-e-vendas | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `cardapio-de-skills` | 21-agentes-e-automacao | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `auditoria-de-seguranca` | 07-codigo-e-qualidade | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
