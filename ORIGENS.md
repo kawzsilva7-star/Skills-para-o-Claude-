@@ -28,6 +28,7 @@ Antes de vender qualquer skill, confira a origem e a licença. Atualizado em 11/
 | `site-em-paralelo` | 05-design-e-sites | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `tarefas-em-paralelo` | 21-agentes-e-automacao | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `pagina-de-vendas-com-revisor` | 02-textos-e-vendas | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
+| `aperfeicoar-skills` | 21-agentes-e-automacao | Texto próprio, com lições do vídeo público "Testei 5 Automações GRÁTIS..." (Dark Sem Filtro) | Provavelmente sim (texto próprio; confirmar) |
 | `sistema-de-cortes-original` | 22-versoes-alternativas | Zip pago "Sistema de Cortes" do Clube das Skills (uso pessoal) | Não |
 | `sistema-de-cortes` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |
 | `cortes-preparar-ambiente` | 04-video-e-imagem | Feita a partir do Sistema de Cortes / ClipDrop (Clube das Skills, pago), dividida e aprimorada (script `cortes.py` próprio) | Não confirmado |

@@ -617,7 +617,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `stock-analysis` | Analyze, research or value a listed stock or company (US, global, NSE or BSE) with verified data, ratios, scor |
 | `vendor-management` | Use when scoring or auditing vendors: scorecards, SLA compliance and service credits, third-party risk tier or |
 
-## 21-agentes-e-automacao: Agentes e automação (14)
+## 21-agentes-e-automacao: Agentes e automação (15)
 
 | Skill | Para que serve |
 |---|---|
@@ -635,6 +635,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `run-without-you` | Use when a graded managed agent should run on a schedule, on an event trigger or on demand ('run it every morn |
 | `stage-launch` | Use when a managed-agent build sheet is ready to launch ('launch it', 'deploy the agent'). Generates and valid |
 | `wrap-up` | Use when closing out a launched managed agent ('wrap up', 'what do I own now'). Inventories primitives with pr |
+| `aperfeicoar-skills` | Regras do dono para criar e melhorar skills: direção de som/imagem, estilo x roteiro, scripts determinísticos, verificação, A/B. |
 
 ## 22-versoes-alternativas: Versões alternativas (13)
 
