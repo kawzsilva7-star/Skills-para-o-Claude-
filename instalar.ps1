@@ -25,6 +25,7 @@ param(
     [string]$PastaCortes = (Join-Path $HOME "Cortes da live"),
     [switch]$SemProgramas,
     [switch]$SemPreparar,
+    [switch]$SemAtalho,   # não cria o comando 'cortes' do Windows+R
     [switch]$Global   # só se QUISER as skills no seu .claude principal (por padrão NADA é escrito lá)
 )
 
@@ -146,8 +147,18 @@ if (Test-Path $modelo) {
 }
 Write-Host "  $PastaCortes"
 
+# Comando curto: Windows+R e digitar  cortes  abre a janela de colar o link.
+# Vai em %LOCALAPPDATA%\Microsoft\WindowsApps, que o Windows já tem no PATH (não mexe no PATH nem no seu .claude).
+$colar = Join-Path $PastaCortes "COLAR LIVE OU USUARIO.ps1"
+if (-not $SemAtalho -and (Test-Path $colar)) {
+    $lancador = Join-Path $env:LOCALAPPDATA "Microsoft\WindowsApps"
+    New-Item -ItemType Directory -Force -Path $lancador | Out-Null
+    $linhas = "@echo off`r`nchcp 65001 >nul`r`nstart `"`" powershell -NoProfile -ExecutionPolicy Bypass -File `"$colar`"`r`n"
+    [IO.File]::WriteAllText((Join-Path $lancador "cortes.cmd"), $linhas, (New-Object Text.UTF8Encoding $false))
+    Write-Host "  atalho criado: aperte Windows+R, digite  cortes  e dê Enter"
+}
 Write-Host ""
 Write-Host "PRONTO." -ForegroundColor Green
 Write-Host "1. Feche e abra o Claude Code (para ele achar as skills novas)."
-Write-Host "2. Abra $PastaCortes\COMO-USAR.txt e siga o passo a passo."
+Write-Host "2. Para cortar: aperte Windows+R, digite  cortes  e dê Enter. O passo a passo está em $PastaCortes\COMO-USAR.txt"
 Start-Process notepad.exe ("`"" + (Join-Path $PastaCortes "COMO-USAR.txt") + "`"") -ErrorAction SilentlyContinue  # aspas: o nome tem espaços

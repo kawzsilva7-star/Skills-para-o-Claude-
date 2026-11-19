@@ -3,7 +3,8 @@
 
 JEITO MAIS FÁCIL: "COLAR LIVE OU USUARIO" (sem abrir o Claude)
 ---------------------------------------------------------------
-Clique duas vezes em "COLAR LIVE OU USUARIO" e cole UMA destas coisas:
+Aperte Windows + R, digite  cortes  e dê Enter (ou clique duas vezes em "COLAR LIVE OU USUARIO")
+e cole UMA destas coisas:
 
   - LINK DE UMA LIVE (ao vivo agora ou que já acabou): corta essa live, uma vez.
     Ao vivo: grava daqui pra frente até a live acabar. Quando acabar, rode de novo com o
