@@ -70,8 +70,8 @@ def carregar_streamers(arquivo: Path) -> List[Streamer]:
 # ------------------------------------------------------------------- gravador
 def comando_streamlink(link: str) -> List[str]:
     """Grava sem reencodar (qualidade original). O ffmpeg depois divide em blocos de 20 min."""
-    return ["streamlink", "--twitch-disable-ads", "--retry-streams", "30", "--retry-open", "5",
-            "-O", link, "best"]
+    return ["streamlink", "--twitch-disable-ads", "--retry-streams", "30", "--retry-max", "3",
+            "--retry-open", "5", "-O", link, "best"]
 
 
 def comando_blocos(pasta: Path, nome: str) -> List[str]:
@@ -88,22 +88,42 @@ def esta_ao_vivo(link: str) -> bool:
     return r.returncode == 0 and '"streams"' in (r.stdout or "")
 
 
-def gravar(streamer: Streamer, pasta: Path, lancamento: bool = False, avisar: Callable[[str], None] = print) -> None:
-    """Loop do gravador de UM streamer. Reconecta sozinho se a live cair."""
+def gravar_sessao(streamer: Streamer, pasta: Path, avisar: Callable[[str], None] = print) -> None:
+    """Grava enquanto a live durar (streamlink -> ffmpeg em blocos). Volta quando o stream termina."""
     import subprocess
 
     pasta.mkdir(parents=True, exist_ok=True)
+    avisar(f"{streamer.nome} está ao vivo: gravando em blocos de 20 min em {pasta}.")
+    sl = subprocess.Popen(comando_streamlink(streamer.link), stdout=subprocess.PIPE)
+    ff = subprocess.Popen(comando_blocos(pasta, streamer.nome), stdin=sl.stdout)
+    sl.stdout.close()  # type: ignore[union-attr]
+    ff.wait()
+    sl.wait()
+
+
+def gravar_ate_acabar(streamer: Streamer, pasta: Path, avisar: Callable[[str], None] = print,
+                      tentativas_reconectar: int = 3, espera_s: int = 60) -> None:
+    """Modo link: grava a live e, se cair, tenta reconectar algumas vezes. Termina quando ela acaba de vez."""
+    while True:
+        gravar_sessao(streamer, pasta, avisar)
+        for _ in range(tentativas_reconectar):
+            time.sleep(espera_s)
+            if esta_ao_vivo(streamer.link):
+                avisar(f"{streamer.nome}: a live voltou, reconectando.")
+                break
+        else:
+            avisar(f"{streamer.nome}: a live acabou.")
+            return
+
+
+def gravar(streamer: Streamer, pasta: Path, lancamento: bool = False, avisar: Callable[[str], None] = print) -> None:
+    """Loop do gravador de UM streamer (fica de olho para sempre). Reconecta sozinho se a live cair."""
     espera = CHECAR_OFFLINE_LANCAMENTO_S if lancamento else CHECAR_OFFLINE_S
     while True:
         if not esta_ao_vivo(streamer.link):
             time.sleep(espera)
             continue
-        avisar(f"{streamer.nome} está ao vivo: gravando em blocos de 20 min.")
-        sl = subprocess.Popen(comando_streamlink(streamer.link), stdout=subprocess.PIPE)
-        ff = subprocess.Popen(comando_blocos(pasta, streamer.nome), stdin=sl.stdout)
-        sl.stdout.close()  # type: ignore[union-attr]
-        ff.wait()
-        sl.wait()
+        gravar_sessao(streamer, pasta, avisar)
         avisar(f"{streamer.nome}: gravação parou (live caiu ou acabou). Conferindo de novo.")
         time.sleep(10)
 
@@ -183,7 +203,10 @@ def analisar_bloco(
     trabalho = bloco.with_suffix("")
     wav = extrair_wav(bloco, trabalho / "audio.wav")
     info = sondar(bloco)
-    from .transcricao import transcrever_live
+    from .transcricao import detectar_lingua, transcrever_live
+
+    if not streamer.idioma:  # "auto": descobre no 1º bloco e mantém
+        streamer.idioma = detectar_lingua(wav, info.duracao, transcritor)[0]
 
     palavras = transcrever_live(wav, trabalho / "transcricao.json", transcritor, streamer.idioma, info.duracao,
                                 avisar=lambda *_: None)
@@ -231,22 +254,37 @@ def blocos_prontos(pasta: Path, ja_vistos: Iterable[str], parado_ha_s: float = 6
     )
 
 
+def analisar_novos(
+    streamers: List[Streamer], pasta_raiz: Path, transcritor: Transcritor, vistos: Dict[str, set],
+    avisar: Callable[[str], None] = print, parado_ha_s: float = 60,
+) -> int:
+    """Uma passada: analisa os blocos fechados que ainda não viu. Devolve quantos candidatos achou."""
+    pendentes = pasta_raiz / "pendentes"
+    total = 0
+    for s in streamers:
+        pasta = pasta_raiz / "blocos" / s.nome
+        if not pasta.exists():
+            continue
+        for bloco in blocos_prontos(pasta, vistos.setdefault(s.nome, set()), parado_ha_s):
+            chat = pasta_raiz / "chat" / f"{s.canal_twitch}.csv" if s.canal_twitch else None
+            cands = analisar_bloco(bloco, s, transcritor, pendentes, chat)
+            vistos[s.nome].add(bloco.name)
+            total += len(cands)
+            avisar(f"{s.nome} · {bloco.name}: {len(cands)} candidato(s).")
+        limpar(pasta, pendentes)
+    return total
+
+
 def loop_analisador(
     streamers: List[Streamer], pasta_raiz: Path, transcritor: Transcritor,
     a_cada_s: int = 30, avisar: Callable[[str], None] = print,
-) -> None:
-    """Um analisador para todos: a cada 30 s procura blocos novos."""
-    vistos: Dict[str, set] = {s.nome: set() for s in streamers}
-    pendentes = pasta_raiz / "pendentes"
-    while True:
-        for s in streamers:
-            pasta = pasta_raiz / "blocos" / s.nome
-            if not pasta.exists():
-                continue
-            for bloco in blocos_prontos(pasta, vistos[s.nome]):
-                chat = pasta_raiz / "chat" / f"{s.canal_twitch}.csv" if s.canal_twitch else None
-                cands = analisar_bloco(bloco, s, transcritor, pendentes, chat)
-                vistos[s.nome].add(bloco.name)
-                avisar(f"{s.nome} · {bloco.name}: {len(cands)} candidato(s).")
-            limpar(pasta, pendentes)
+    continuar: Callable[[], bool] = lambda: True,
+) -> int:
+    """Um analisador para todos: a cada 30 s procura blocos novos. Quando `continuar()` vira False,
+    analisa o que sobrou (inclusive o último bloco) e termina."""
+    vistos: Dict[str, set] = {}
+    total = 0
+    while continuar():
+        total += analisar_novos(streamers, pasta_raiz, transcritor, vistos, avisar)
         time.sleep(a_cada_s)
+    return total + analisar_novos(streamers, pasta_raiz, transcritor, vistos, avisar, parado_ha_s=0)

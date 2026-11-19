@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 import time
 from dataclasses import asdict
@@ -94,8 +95,9 @@ def cmd_preparar(a) -> int:
     if not py:
         _p("Python 3.9+ não encontrado. Rode `diagnostico` para ver o comando de instalação.")
         return 1
-    _p(f"Usando {' '.join(py)}. Criando .venv e instalando faster-whisper e numpy...")
-    _p(f"Pronto: {preparar_venv(Path(a.pasta), py)}")
+    pasta_skill = Path(__file__).resolve().parents[1]  # um .venv só, dentro da skill (serve para todas as lives)
+    _p(f"Usando {' '.join(py)}. Criando .venv e instalando faster-whisper e numpy (uma vez só)...")
+    _p(f"Pronto: {preparar_venv(pasta_skill, py)}")
     return 0
 
 
@@ -359,6 +361,43 @@ def cmd_verificar(a) -> int:
     return 1 if ruins else 0
 
 
+# ------------------------------------------------------------------ link
+def cmd_link(a) -> int:
+    """Link da Twitch/Kick/YouTube: ao vivo grava e analisa; VOD baixa o trecho e analisa."""
+    from . import link as lk
+
+    pasta = Path(a.pasta)
+    registrar_permissao({}, a.permissao)  # valida antes de baixar qualquer coisa
+    lk.plataforma(a.url)
+    info = None
+    if shutil.which("yt-dlp"):
+        try:
+            info = lk.informacoes(a.url)
+        except lk.ErroLink:
+            info = None  # canal offline ou link de canal: o streamlink decide abaixo
+    ao_vivo = lk.esta_ao_vivo(a.url, info) if info is not None else lk.esta_ao_vivo(a.url)
+    if ao_vivo:
+        _p(f"{a.url} está AO VIVO. Vou gravar e analisar até a live acabar.")
+        n = lk.acompanhar_live(a.url, pasta, a.arroba or "", a.permissao, a.lingua,
+                               _transcritor(a.gpu, a.modelo), a.camera, avisar=_p)
+        _p(f"A live acabou. {n} candidato(s) em {pasta / 'pendentes'}.")
+        _p("PARE: dê a nota de cada um com `avaliar --pendente ...` e corte os de nota 7+ com `ao-vivo cortar`.")
+        return 0
+    if info is None:
+        if not shutil.which("yt-dlp"):
+            raise RegraViolada("Para baixar live gravada falta o yt-dlp. Windows: winget install --id yt-dlp.yt-dlp -e")
+        raise RegraViolada("Esse canal não está ao vivo e o link não é de um vídeo. Mande o link do VOD.")
+    arquivo = lk.baixar_vod(a.url, pasta, lk.ler_duracao(a.inicio), lk.ler_duracao(a.duracao), a.tudo, info, avisar=_p)
+    pr = prj.abrir(pasta, arquivo.name)
+    estado = registrar_permissao(pr.carregar(), a.permissao)
+    estado["link"] = a.url
+    if a.arroba:
+        estado["credito"] = a.arroba
+    pr.salvar(estado)
+    return cmd_analisar(argparse.Namespace(pasta=a.pasta, video=arquivo.name, quantos=a.quantos,
+                                           lingua=a.lingua, modelo=a.modelo, gpu=a.gpu))
+
+
 # ------------------------------------------------------------------ nota de qualidade
 def cmd_avaliar(a) -> int:
     from .avaliacao import ITENS, decidir
@@ -464,6 +503,20 @@ def criar_parser() -> argparse.ArgumentParser:
     sub.add_parser("longo").set_defaults(f=cmd_longo)
     sub.add_parser("verificar").set_defaults(f=cmd_verificar)
 
+    s = sub.add_parser("link", help="link da Twitch/Kick/YouTube (ao vivo ou VOD)")
+    s.add_argument("url")
+    s.add_argument("--permissao", required=True, help="onde a permissão do streamer está escrita")
+    s.add_argument("--arroba", help="@ do streamer para o crédito")
+    s.add_argument("--quantos", type=int, default=5)
+    s.add_argument("--lingua", default="auto")
+    s.add_argument("--modelo", default="small")
+    s.add_argument("--gpu", action="store_true")
+    s.add_argument("--inicio", default="30m", help="quanto pular do começo do VOD (padrão 30m)")
+    s.add_argument("--duracao", default="3h", help="quanto baixar do VOD (padrão 3h)")
+    s.add_argument("--tudo", action="store_true", help="baixa o VOD inteiro")
+    s.add_argument("--camera", metavar="x,y,w,h", help="posição da câmera na live (modo ao vivo)")
+    s.set_defaults(f=cmd_link)
+
     s = sub.add_parser("avaliar", help="nota 0-2 em 5 itens (quem dá a nota é a pessoa)")
     for item in ("gancho", "virada", "entende_sozinho", "relevancia", "vontade_de_rever"):
         s.add_argument(f"--{item.replace('_', '-')}", dest=item, type=int, required=True, choices=[0, 1, 2])
@@ -493,6 +546,6 @@ def main(argv: Optional[List[str]] = None) -> int:
     a = criar_parser().parse_args(argv)
     try:
         return a.f(a)
-    except (RegraViolada, ValueError, FileNotFoundError) as e:
+    except (RegraViolada, ValueError, FileNotFoundError, RuntimeError) as e:
         _p(f"PARE: {e}")
         return 2

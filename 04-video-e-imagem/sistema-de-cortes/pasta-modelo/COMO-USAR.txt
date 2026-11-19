@@ -1,0 +1,65 @@
+﻿PASTA DE CORTES - COMO USAR
+===========================
+
+Cada live ganha uma pasta própria aqui dentro.
+Clique duas vezes em "nova-live.cmd": ele cria a pasta com a data e a hora e abre o
+Claude Code nela. (Se você usa o app do Claude, abra essa pasta nele.)
+
+Depois cole UMA destas mensagens no Claude Code:
+
+
+1) TENHO O LINK (live ao vivo agora OU live que já acabou)
+----------------------------------------------------------
+use o sistema de cortes neste link: COLE-O-LINK-AQUI
+permissão: ONDE-ESTÁ-ESCRITA (ex.: programa de cortes do canal, print da conversa no Discord)
+crédito: @DO-STREAMER
+quero 5 cortes, legenda destaque, título contorno
+
+- Ao vivo agora: o PC grava e analisa a cada 20 min até a live acabar. DEIXE O PC LIGADO.
+- Já acabou (VOD): baixa 3 horas, pulando a meia hora inicial, e analisa.
+  Quer a live inteira? Escreva também: "baixe a live inteira".
+
+
+2) TENHO O ARQUIVO (mp4, mkv ou mov)
+-------------------------------------
+Coloque o arquivo na pasta da live e escreva:
+use o sistema de cortes nesta live
+(ele pergunta permissão, quantidade de cortes e estilo)
+
+
+3) FICAR DE OLHO EM ATÉ 3 STREAMERS (todo dia)
+-----------------------------------------------
+Na pasta "ao-vivo": preencha o streamers.exemplo.json, salve como streamers.json e
+escreva no Claude Code aberto nessa pasta:
+ligue o modo ao vivo do sistema de cortes
+
+
+O QUE ACONTECE DEPOIS
+---------------------
+- Ele PARA e mostra a lista de momentos antes de cortar. Tire spoiler, cutscene e trecho
+  com rádio do jogo tocando, e dê o OK.
+- Os cortes ficam em cortes\<nome-da-live>\ : verticais 1080x1920, titulos.txt e
+  melhores-momentos-youtube.mp4.
+- No modo ao vivo, os momentos vão para "pendentes". Você dá uma nota de 0 a 10 e só os
+  de 7 ou mais viram corte.
+
+
+REGRAS (resumo)
+---------------
+- Só streamer que libera corte. Guarde o print da permissão.
+- Crédito sempre: o @ na tela e na descrição.
+- Sem spoiler, sem cutscene, sem rádio do jogo.
+- Corte colado sem nada seu não é monetizado: ponha título, comentário ou narração sua.
+- Regras completas: %USERPROFILE%\.claude\skills\sistema-de-cortes\references\regras-de-postagem.md
+
+
+DEIXAR O PC LIGADO
+------------------
+Configurações > Sistema > Energia > Suspender: "Nunca" (enquanto estiver gravando ou baixando).
+Um computador ligado no carregador/tomada, com internet estável.
+
+
+DEU PROBLEMA?
+-------------
+- "não encontrado": rode o instalar.ps1 de novo, ou peça ao Claude "use o caminho completo do programa".
+- Conferir o que está instalado: %USERPROFILE%\.claude\skills\sistema-de-cortes\cortes.cmd diagnostico

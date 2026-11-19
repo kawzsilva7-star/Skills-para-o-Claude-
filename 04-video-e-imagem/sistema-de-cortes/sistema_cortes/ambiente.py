@@ -68,21 +68,31 @@ def comandos_de_instalacao(sistema: Optional[str] = None) -> Dict[str, str]:
         return {
             "ffmpeg": "winget install --id Gyan.FFmpeg -e",
             "python": "winget install --id Python.Python.3.12 -e",
+            "yt-dlp": "winget install --id yt-dlp.yt-dlp -e",
+            "streamlink": "winget install --id Streamlink.Streamlink -e",
         }
     if sistema == "Darwin":
-        return {"ffmpeg": "brew install ffmpeg", "python": "brew install python@3.12"}
-    return {"ffmpeg": "sudo apt-get install -y ffmpeg", "python": "sudo apt-get install -y python3 python3-venv"}
+        return {"ffmpeg": "brew install ffmpeg", "python": "brew install python@3.12",
+                "yt-dlp": "brew install yt-dlp", "streamlink": "brew install streamlink"}
+    return {"ffmpeg": "sudo apt-get install -y ffmpeg", "python": "sudo apt-get install -y python3 python3-venv",
+            "yt-dlp": "pipx install yt-dlp", "streamlink": "pipx install streamlink"}
 
 
 def diagnostico() -> Dict[str, object]:
     py = achar_python()
     ff = achar_ffmpeg()
     falta = comandos_de_instalacao()
+    opcionais = {k: shutil.which(k) for k in ("yt-dlp", "streamlink")}
     return {
         "sistema": platform.system(),
         "python": " ".join(py) if py else None,
         "ffmpeg": ff,
+        "venv_pronto": python_do_venv(Path(__file__).resolve().parents[1]).exists(),
         "instalar": {k: v for k, v in falta.items() if (k == "python" and not py) or (k == "ffmpeg" and not ff)},
+        "opcionais": {
+            k: (caminho or f"falta (para {'link de live gravada' if k == 'yt-dlp' else 'live ao vivo'}): {falta[k]}")
+            for k, caminho in opcionais.items()
+        },
     }
 
 
