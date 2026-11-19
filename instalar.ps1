@@ -15,7 +15,8 @@
 
   Por que não instala todas por padrão: o Claude Code lê o nome e a descrição de TODA skill instalada
   em toda conversa. Com 500+ skills isso gasta muito token à toa (regra do LEIA-ME.md: só use skill
-  quando precisar). As outras continuam no repositório; o índice fica em %USERPROFILE%\.claude\repertorio-de-skills\INDICE.md
+  quando precisar). As outras continuam no repositório; o índice fica em <pasta de cortes>\repertorio-de-skills\INDICE.md
+  O seu .claude principal NÃO é alterado (use -Global só se quiser instalar nele).
   Rodar de novo é seguro: atualiza as skills e não apaga nada seu.
 #>
 param(
@@ -23,12 +24,15 @@ param(
     [string[]]$Skills = @(),
     [string]$PastaCortes = (Join-Path $HOME "cortes"),
     [switch]$SemProgramas,
-    [switch]$SemPreparar
+    [switch]$SemPreparar,
+    [switch]$Global   # só se QUISER as skills no seu .claude principal (por padrão NADA é escrito lá)
 )
 
 $ErrorActionPreference = "Stop"
 $Repo = $PSScriptRoot
-$DestinoSkills = Join-Path $HOME ".claude\skills"
+# Por padrão as skills ficam SÓ na pasta de cortes (cortes\.claude\skills): o Claude Code só as carrega
+# quando você abre a pasta de cortes (ou uma live dentro dela). O seu .claude principal não é tocado.
+$DestinoSkills = if ($Global) { Join-Path $HOME ".claude\skills" } else { Join-Path $PastaCortes ".claude\skills" }
 $Essenciais = @("sistema-de-cortes", "editar-video-ffmpeg", "ffmpeg")
 # Pastas que NÃO viram skill: versões repetidas, notas e cópias que já vêm dentro dos plugins.
 $Ignorar = @(".git", "22-versoes-alternativas", "23-notas-e-guias-dos-repositorios", "25-plugins-prontos")
@@ -106,7 +110,7 @@ foreach ($nome in $escolhidas) {
 }
 Write-Host "  $instaladas skill(s) em $DestinoSkills"
 
-$repertorio = Join-Path $HOME ".claude\repertorio-de-skills"
+$repertorio = if ($Global) { Join-Path $HOME ".claude\repertorio-de-skills" } else { Join-Path $PastaCortes "repertorio-de-skills" }
 New-Item -ItemType Directory -Force -Path $repertorio | Out-Null
 foreach ($arq in @("INDICE.md", "LEIA-ME.md", "ORIGENS.md")) {
     $origem = Join-Path $Repo $arq

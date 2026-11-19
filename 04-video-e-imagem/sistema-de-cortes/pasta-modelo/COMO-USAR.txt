@@ -71,7 +71,7 @@ REGRAS (resumo)
 - Crédito sempre: o @ na tela e na descrição.
 - Sem spoiler, sem cutscene, sem rádio do jogo.
 - Corte colado sem nada seu não é monetizado: ponha título, comentário ou narração sua.
-- Regras completas: %USERPROFILE%\.claude\skills\sistema-de-cortes\references\regras-de-postagem.md
+- Regras completas: <esta pasta>\.claude\skills\sistema-de-cortes\references\regras-de-postagem.md
 
 
 DEIXAR O PC LIGADO
@@ -83,4 +83,4 @@ Um computador ligado no carregador/tomada, com internet estável.
 DEU PROBLEMA?
 -------------
 - "não encontrado": rode o instalar.ps1 de novo, ou peça ao Claude "use o caminho completo do programa".
-- Conferir o que está instalado: %USERPROFILE%\.claude\skills\sistema-de-cortes\cortes.cmd diagnostico
+- Conferir o que está instalado: <esta pasta>\.claude\skills\sistema-de-cortes\cortes.cmd diagnostico

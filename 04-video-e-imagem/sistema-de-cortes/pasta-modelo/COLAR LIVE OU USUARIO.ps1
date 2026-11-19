@@ -3,13 +3,22 @@
 #  - link de PERFIL ou só o NOME do usuário: acompanha esse streamer SEMPRE (grava toda live dele).
 # O trabalho pesado roda aqui, sem o Claude. O Claude só entra no fim (títulos, aprovar e cortar).
 $ErrorActionPreference = "Stop"
-$Skill = Join-Path $HOME ".claude\skills\sistema-de-cortes"
+$Skill = Join-Path $PSScriptRoot ".claude\skills\sistema-de-cortes"   # skill só na pasta de cortes
+if (-not (Test-Path $Skill)) { $Skill = Join-Path $HOME ".claude\skills\sistema-de-cortes" }  # instalação -Global
 $Python = Join-Path $Skill ".venv\Scripts\python.exe"
 $Perfis = Join-Path $PSScriptRoot "PERFIS"
 $Memoria = Join-Path $PSScriptRoot "ultimas-respostas.json"
 $env:PYTHONPATH = $Skill
 $env:PYTHONIOENCODING = "utf-8"
 function Sistema { & $Python -m sistema_cortes @args }  # Python direto: o "&" dos links do YouTube não quebra
+# Deixa a skill visível dentro da pasta da live (atalho de pasta, sem copiar nada)
+function LigarSkill($pasta) {
+    $local = Join-Path $PSScriptRoot ".claude"
+    $alvo = Join-Path $pasta ".claude"
+    if ((Test-Path $local) -and -not (Test-Path $alvo)) {
+        New-Item -ItemType Junction -Path $alvo -Target $local | Out-Null
+    }
+}
 function Fechar($codigo) { Read-Host "Enter para fechar"; exit $codigo }
 
 Write-Host ""
@@ -57,6 +66,7 @@ $arroba = Perguntar "@ do streamer para o crédito" $padraoArroba
 if ($info.tipo -eq "perfil") {
     @{ permissao = $permissao; arroba = $arroba; quantos = $ultimo.quantos } | ConvertTo-Json | Set-Content $Memoria -Encoding UTF8
     New-Item -ItemType Directory -Force -Path $Perfis | Out-Null
+    LigarSkill $Perfis
     Sistema --pasta $Perfis perfil adicionar $url --permissao $permissao --arroba $arroba
     if ($LASTEXITCODE -ne 0) { Fechar 1 }
     $batimento = Join-Path $Perfis ".acompanhando"
@@ -97,6 +107,7 @@ if (-not $pasta) {
     $pasta = Join-Path $PSScriptRoot ("live-" + $info.canal + "-" + (Get-Date -Format "yyyy-MM-dd_HH-mm"))
     New-Item -ItemType Directory -Force -Path $pasta | Out-Null
 }
+LigarSkill $pasta
 Write-Host ""
 Write-Host "Pasta: $pasta"
 Write-Host "Pode minimizar esta janela, mas NÃO feche e deixe o PC ligado." -ForegroundColor Yellow

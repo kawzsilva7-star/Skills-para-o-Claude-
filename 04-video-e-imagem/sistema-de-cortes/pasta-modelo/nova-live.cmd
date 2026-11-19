@@ -4,6 +4,8 @@ chcp 65001 >nul
 for /f %%d in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd_HH-mm"') do set "DATA=%%d"
 set "PASTA=%~dp0live-%DATA%"
 mkdir "%PASTA%" 2>nul
+rem deixa a skill (que mora em cortes\.claude) visivel dentro da pasta da live
+if exist "%~dp0.claude" if not exist "%PASTA%\.claude" mklink /J "%PASTA%\.claude" "%~dp0.claude" >nul
 echo Pasta criada: %PASTA%
 start "" explorer "%PASTA%"
 where claude >nul 2>nul
