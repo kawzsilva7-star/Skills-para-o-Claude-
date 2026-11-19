@@ -5,13 +5,13 @@
     1. Instala o que falta: ffmpeg, Python 3.12, yt-dlp e streamlink (pelo winget).
     2. Copia as skills deste repositório para %USERPROFILE%\.claude\skills\ (o Claude Code acha sozinho).
     3. Prepara o sistema de cortes (.venv com faster-whisper e numpy, uma vez só).
-    4. Cria a pasta de cortes com o COMO-USAR.txt, o nova-live.cmd e o modelo de streamers.
+    4. Cria a pasta "Cortes da live" (em %USERPROFILE%) com o COMO-USAR.txt, o nova-live.cmd e o modelo de streamers.
 
   Como rodar (PowerShell aberto na pasta do repositório):
     powershell -ExecutionPolicy Bypass -File .\instalar.ps1                    -> skills essenciais (recomendado)
     powershell -ExecutionPolicy Bypass -File .\instalar.ps1 -Todas             -> TODAS as skills (gasta mais token)
     powershell -ExecutionPolicy Bypass -File .\instalar.ps1 -Skills ffmpeg,tdd  -> essenciais + as que você escolher
-    Opções: -PastaCortes D:\cortes   -SemProgramas   -SemPreparar
+    Opções: -PastaCortes "D:\Cortes da live"   -SemProgramas   -SemPreparar
 
   Por que não instala todas por padrão: o Claude Code lê o nome e a descrição de TODA skill instalada
   em toda conversa. Com 500+ skills isso gasta muito token à toa (regra do LEIA-ME.md: só use skill
@@ -22,7 +22,7 @@
 param(
     [switch]$Todas,
     [string[]]$Skills = @(),
-    [string]$PastaCortes = (Join-Path $HOME "cortes"),
+    [string]$PastaCortes = (Join-Path $HOME "Cortes da live"),
     [switch]$SemProgramas,
     [switch]$SemPreparar,
     [switch]$Global   # só se QUISER as skills no seu .claude principal (por padrão NADA é escrito lá)
@@ -30,7 +30,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $Repo = $PSScriptRoot
-# Por padrão as skills ficam SÓ na pasta de cortes (cortes\.claude\skills): o Claude Code só as carrega
+# Por padrão as skills ficam SÓ na pasta de cortes (Cortes da live\.claude\skills): o Claude Code só as carrega
 # quando você abre a pasta de cortes (ou uma live dentro dela). O seu .claude principal não é tocado.
 $DestinoSkills = if ($Global) { Join-Path $HOME ".claude\skills" } else { Join-Path $PastaCortes ".claude\skills" }
 $Essenciais = @("sistema-de-cortes", "editar-video-ffmpeg", "ffmpeg")
@@ -150,4 +150,4 @@ Write-Host ""
 Write-Host "PRONTO." -ForegroundColor Green
 Write-Host "1. Feche e abra o Claude Code (para ele achar as skills novas)."
 Write-Host "2. Abra $PastaCortes\COMO-USAR.txt e siga o passo a passo."
-Start-Process notepad.exe (Join-Path $PastaCortes "COMO-USAR.txt") -ErrorAction SilentlyContinue
+Start-Process notepad.exe ("`"" + (Join-Path $PastaCortes "COMO-USAR.txt") + "`"") -ErrorAction SilentlyContinue  # aspas: o nome tem espaços

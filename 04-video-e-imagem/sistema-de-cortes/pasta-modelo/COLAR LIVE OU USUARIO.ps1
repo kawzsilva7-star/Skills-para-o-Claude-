@@ -125,5 +125,5 @@ if ($codigo -eq 0) {
 } else {
     Write-Host "Parou com aviso ou erro (veja acima). Abra o Claude Code nesta pasta e mande um print." -ForegroundColor Red
 }
-Start-Process explorer.exe $pasta
+Start-Process explorer.exe ("`"" + $pasta + "`"")
 Fechar $codigo
