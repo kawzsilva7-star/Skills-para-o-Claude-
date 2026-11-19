@@ -249,3 +249,20 @@ def test_permissao_e_aprovacao_obrigatorias():
 def test_skill_sem_segredos_nem_dados_pessoais():
     achados = varrer_segredos(PASTA_SKILL, permitidos={"cadastro@clubedasskills.com.br"})
     assert achados == []
+
+
+def test_diagnostico_e_preparar_rodam_sem_numpy():
+    """Regressão: no PC novo o numpy ainda não existe quando o instalador roda `preparar`."""
+    import subprocess
+    import sys
+
+    codigo = (
+        "import sys; sys.modules['numpy'] = None; sys.modules['faster_whisper'] = None; "
+        f"sys.path.insert(0, {str(PASTA_SKILL)!r}); "
+        "from sistema_cortes import cli; "
+        "a = cli.criar_parser().parse_args(['diagnostico']); "
+        "import sistema_cortes.ambiente, sistema_cortes.regras, sistema_cortes.layout; "
+        "print('ok', cli.cmd_diagnostico.__name__)"
+    )
+    r = subprocess.run([sys.executable, "-I", "-c", codigo], capture_output=True, text=True)
+    assert r.returncode == 0 and "ok" in r.stdout, r.stderr

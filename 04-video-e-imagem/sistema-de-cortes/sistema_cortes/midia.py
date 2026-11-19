@@ -7,9 +7,12 @@ import subprocess
 import wave
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterator, List, Optional, Sequence, Tuple
+from typing import TYPE_CHECKING, Iterator, List, Optional, Sequence, Tuple
 
-import numpy as np
+if TYPE_CHECKING:  # só para as dicas de tipo
+    import numpy as np
+
+# numpy NÃO é importado aqui em cima: `diagnostico` e `preparar` rodam antes de o numpy existir.
 
 
 class ErroFFmpeg(RuntimeError):
@@ -88,7 +91,9 @@ def extrair_wav(video: Path, wav: Path) -> Path:
     return wav
 
 
-def _para_float(bruto: bytes) -> np.ndarray:
+def _para_float(bruto: bytes) -> "np.ndarray":
+    import numpy as np
+
     return np.frombuffer(bruto, dtype="<i2").astype(np.float32) / 32768.0
 
 
