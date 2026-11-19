@@ -40,12 +40,20 @@ def candidatos_python() -> List[List[str]]:
     return cands
 
 
+def _executavel_real(cmd: List[str]) -> List[str]:
+    """Caminho do python.exe de verdade. O atalho `py` (novo gerenciador do Windows) às vezes acha o Python
+    para `-c` mas falha em `-m venv`; com o caminho completo isso não acontece."""
+    r = rodar([*cmd, "-c", "import sys;print(sys.executable)"])
+    caminho = (r.stdout or "").strip()
+    return [caminho] if r.returncode == 0 and caminho and Path(caminho).exists() else cmd
+
+
 def achar_python() -> Optional[List[str]]:
     for cmd in candidatos_python():
         if shutil.which(cmd[0]) or Path(cmd[0]).exists():
             v = _versao_python(cmd)
             if v and v >= (3, 9):
-                return cmd
+                return _executavel_real(cmd)
     return None
 
 

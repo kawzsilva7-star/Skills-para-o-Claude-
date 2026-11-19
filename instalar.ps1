@@ -40,10 +40,18 @@ $Ignorar = @(".git", "22-versoes-alternativas", "23-notas-e-guias-dos-repositori
 
 function Passo($texto) { Write-Host ""; Write-Host "==> $texto" -ForegroundColor Cyan }
 function Tem($cmd) { [bool](Get-Command $cmd -ErrorAction SilentlyContinue) }
+function PythonFunciona($exe, $args_) {
+    # Só vale se RODA e é 3.9+. O comando "py" pode existir sem nenhum Python por trás.
+    try {
+        & $exe @args_ -c "import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)" 2>$null | Out-Null
+        return ($LASTEXITCODE -eq 0)
+    } catch { return $false }
+}
 function TemPython {
-    if (Tem "py") { return $true }
+    if ((Tem "py") -and (PythonFunciona "py" @("-3"))) { return $true }
     $p = Get-Command python -ErrorAction SilentlyContinue
-    return [bool]($p -and $p.Source -notlike "*WindowsApps*")  # o "python" da Microsoft Store é só um atalho
+    # o "python" da Microsoft Store (WindowsApps) é só um atalho
+    return [bool]($p -and $p.Source -notlike "*WindowsApps*" -and (PythonFunciona $p.Source @()))
 }
 function RecarregarPath {
     $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [Environment]::GetEnvironmentVariable("Path", "User")
