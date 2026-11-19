@@ -379,15 +379,26 @@ def cmd_link(a) -> int:
     if ao_vivo:
         _p(f"{a.url} está AO VIVO. Vou gravar e analisar até a live acabar.")
         n = lk.acompanhar_live(a.url, pasta, a.arroba or "", a.permissao, a.lingua,
-                               _transcritor(a.gpu, a.modelo), a.camera, avisar=_p)
+                               _transcritor(a.gpu, a.modelo), a.camera, avisar=_p, info=info)
         _p(f"A live acabou. {n} candidato(s) em {pasta / 'pendentes'}.")
         _p("PARE: dê a nota de cada um com `avaliar --pendente ...` e corte os de nota 7+ com `ao-vivo cortar`.")
+        _p("Para completar o começo que a gravação não pegou: mande o link do VOD NESTA MESMA PASTA.")
         return 0
     if info is None:
         if not shutil.which("yt-dlp"):
             raise RegraViolada("Para baixar live gravada falta o yt-dlp. Windows: winget install --id yt-dlp.yt-dlp -e")
         raise RegraViolada("Esse canal não está ao vivo e o link não é de um vídeo. Mande o link do VOD.")
-    arquivo = lk.baixar_vod(a.url, pasta, lk.ler_duracao(a.inicio), lk.ler_duracao(a.duracao), a.tudo, info, avisar=_p)
+    inicio, duracao, tudo = lk.ler_duracao(a.inicio), lk.ler_duracao(a.duracao), a.tudo
+    live = lk.ler_live(pasta)
+    if live and not a.tudo:
+        fim = lk.fim_do_comeco(live, info)
+        if fim is None:
+            _p("A gravação ao vivo pegou a live desde o começo: não falta nada para completar.")
+            return 0
+        _p(f"Esta pasta já acompanhou a live ao vivo. Vou baixar só o começo que faltou "
+           f"(00:00:00 até {formatar_tempo(fim)}) e achar os momentos dele.")
+        inicio, duracao, tudo = 0.0, fim, False
+    arquivo = lk.baixar_vod(a.url, pasta, inicio, duracao, tudo, info, avisar=_p)
     pr = prj.abrir(pasta, arquivo.name)
     estado = registrar_permissao(pr.carregar(), a.permissao)
     estado["link"] = a.url

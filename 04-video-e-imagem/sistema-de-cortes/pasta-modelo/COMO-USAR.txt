@@ -15,7 +15,9 @@ permissão: ONDE-ESTÁ-ESCRITA (ex.: programa de cortes do canal, print da conve
 crédito: @DO-STREAMER
 quero 5 cortes, legenda destaque, título contorno
 
-- Ao vivo agora: o PC grava e analisa a cada 20 min até a live acabar. DEIXE O PC LIGADO.
+- Ao vivo agora: o PC grava DAQUI PRA FRENTE e analisa a cada 20 min até a live acabar.
+  DEIXE O PC LIGADO. Quando a live acabar, cole o link do VOD NA MESMA PASTA:
+  ele baixa só o começo que ficou de fora e acha os momentos dele.
 - Já acabou (VOD): baixa 3 horas, pulando a meia hora inicial, e analisa.
   Quer a live inteira? Escreva também: "baixe a live inteira".
 

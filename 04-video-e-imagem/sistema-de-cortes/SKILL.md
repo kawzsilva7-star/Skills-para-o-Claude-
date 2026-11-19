@@ -16,6 +16,7 @@ Como rodar (de dentro da pasta da live), sendo `SKILL` a pasta desta skill:
 Pegue da mensagem: link, onde está a permissão, @ do streamer, quantos cortes e estilo (faltou permissão? pergunte; o resto tem padrão).
 `link "URL" --permissao "onde está escrita" --arroba "@streamer" --quantos 5` (+ `--tudo` se pedirem a live inteira; `--inicio 0 --duracao 2h` para outro trecho).
 - **Ao vivo agora:** ele grava e analisa até a live acabar (pode levar horas: rode em segundo plano e avise o dono para deixar o PC ligado). No fim, siga o passo 3 do modo ao vivo abaixo. Para usar o layout com câmera, depois do 1º bloco tire um quadro de `blocos/<canal>/` com o ffmpeg, ache a câmera e ponha `"camera": "x,y,w,h"` no `streamers.json` da pasta.
+- **Completar o começo:** se a pasta tem `live.json` (já acompanhou essa live ao vivo), o link do VOD baixa só do 00:00 até onde a gravação começou (+1 min) e analisa esse pedaço. Use a MESMA pasta da live.
 - **Já acabou (VOD):** ele baixa o trecho (padrão: 3 h pulando a meia hora inicial), registra a permissão e roda o `analisar` sozinho. Continue do passo 5 abaixo.
 
 ## Live já gravada (fluxo dos PDFs)

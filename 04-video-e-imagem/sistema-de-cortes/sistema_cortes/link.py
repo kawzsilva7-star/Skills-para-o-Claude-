@@ -13,6 +13,7 @@ import json
 import re
 import shutil
 import threading
+import time
 from pathlib import Path
 from typing import Callable, Dict, List, Optional
 from urllib.parse import parse_qs, urlparse
@@ -173,10 +174,53 @@ def _baixar(cmd: List[str]) -> None:
         raise ErroLink("O download falhou (link privado, apagado ou só para inscritos?).")
 
 
+# ------------------------------------------------------------------- completar o começo
+# Ao vivo, a gravação começa quando o link chega, não no começo da live. Guardamos a hora em
+# `live.json`; quando a live acaba e o dono manda o link do VOD NA MESMA PASTA, baixamos só o começo.
+FOLGA_COMECO_S = 60  # sobreposição para não ficar buraco entre o começo baixado e a gravação
+
+
+def ler_live(pasta: Path) -> Optional[dict]:
+    arq = pasta / "live.json"
+    return json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else None
+
+
+def _salvar_live(pasta: Path, dados: dict) -> None:
+    pasta.mkdir(parents=True, exist_ok=True)
+    (pasta / "live.json").write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def inicio_da_live(info: Optional[dict]) -> Optional[float]:
+    """Hora (unix) em que a transmissão começou, segundo o yt-dlp (YouTube: release_timestamp; Twitch: timestamp)."""
+    if not info:
+        return None
+    ts = info.get("release_timestamp") or info.get("timestamp")
+    return float(ts) if ts else None
+
+
+def fim_do_comeco(live: dict, vod_info: dict, folga_s: float = FOLGA_COMECO_S) -> Optional[float]:
+    """Até que segundo do VOD baixar para cobrir o que a gravação ao vivo não pegou. None = não falta nada."""
+    gravou_desde = live.get("gravacao_inicio")
+    comecou = inicio_da_live(vod_info) or live.get("live_inicio")
+    total = vod_info.get("duration")
+    faltou: Optional[float] = None
+    if gravou_desde and comecou:
+        faltou = float(gravou_desde) - float(comecou)
+    elif gravou_desde and live.get("gravacao_fim") and total:
+        # sem a hora de início: o que faltou = live inteira - tempo que gravamos
+        faltou = float(total) - (float(live["gravacao_fim"]) - float(gravou_desde))
+    if faltou is None:
+        raise ErroLink("Não consegui saber onde a gravação ao vivo começou. Use --inicio 0 --duracao <tempo>.")
+    if faltou <= 30:
+        return None
+    fim = faltou + folga_s
+    return min(fim, float(total)) if total else fim
+
+
 # ------------------------------------------------------------------- AO VIVO
 def acompanhar_live(
     url: str, pasta: Path, arroba: str, permissao: str, idioma: str, transcritor,
-    camera: Optional[str] = None, avisar: Callable[[str], None] = print,
+    camera: Optional[str] = None, avisar: Callable[[str], None] = print, info: Optional[dict] = None,
 ) -> int:
     """Grava e analisa a live até ela acabar. Devolve quantos candidatos foram para `pendentes/`."""
     from dataclasses import asdict
@@ -189,6 +233,8 @@ def acompanhar_live(
                  idioma="" if idioma == "auto" else idioma, camera=camera, permissao=permissao)
     _salvar_streamer(pasta / "streamers.json", s, asdict)
 
+    _salvar_live(pasta, {"url": url, "canal": s.nome, "gravacao_inicio": time.time(),
+                         "live_inicio": inicio_da_live(info)})
     gravando = threading.Thread(target=gravar_ate_acabar, args=(s, pasta / "blocos" / s.nome, avisar), daemon=True)
     gravando.start()
     if s.canal_twitch:
@@ -199,7 +245,11 @@ def acompanhar_live(
                 avisar(f"Chat da Twitch indisponível ({e}); sigo só com voz e volume.")
         threading.Thread(target=chat, daemon=True).start()
     avisar("Analisando cada bloco de 20 min assim que fecha. Deixe o PC ligado até a live acabar.")
-    return loop_analisador([s], pasta, transcritor, avisar=avisar, continuar=gravando.is_alive)
+    n = loop_analisador([s], pasta, transcritor, avisar=avisar, continuar=gravando.is_alive)
+    dados = ler_live(pasta) or {}
+    dados["gravacao_fim"] = time.time()
+    _salvar_live(pasta, dados)
+    return n
 
 
 def _salvar_streamer(arquivo: Path, s, asdict) -> None:
