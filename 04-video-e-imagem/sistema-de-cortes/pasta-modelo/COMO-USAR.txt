@@ -1,6 +1,25 @@
 ﻿PASTA DE CORTES - COMO USAR
 ===========================
 
+JEITO MAIS FÁCIL: "COLAR LIVE OU USUARIO" (sem abrir o Claude)
+---------------------------------------------------------------
+Clique duas vezes em "COLAR LIVE OU USUARIO" e cole UMA destas coisas:
+
+  - LINK DE UMA LIVE (ao vivo agora ou que já acabou): corta essa live, uma vez.
+    Ao vivo: grava daqui pra frente até a live acabar. Quando acabar, rode de novo com o
+    link do VOD e escolha o número da live na lista: ele completa só o começo.
+
+  - LINK DO PERFIL (twitch.tv/fulano) ou SÓ O NOME (fulano): acompanha SEMPRE.
+    Toda vez que ele entrar ao vivo, grava e acha os momentos. Máximo 3 perfis.
+    Tudo fica na pasta PERFIS. A janela tem que ficar aberta (pode minimizar).
+
+Depois responda: permissão, @ do streamer e quantos cortes (Enter repete a última resposta).
+Quando quiser revisar, abra o Claude Code na pasta da live (ou na PERFIS) e escreva:
+   continue o sistema de cortes nesta pasta
+
+
+PELO CLAUDE CODE (se preferir)
+------------------------------
 Cada live ganha uma pasta própria aqui dentro.
 Clique duas vezes em "nova-live.cmd": ele cria a pasta com a data e a hora e abre o
 Claude Code nela. (Se você usa o app do Claude, abra essa pasta nele.)

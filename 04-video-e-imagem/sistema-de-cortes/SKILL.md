@@ -12,6 +12,9 @@ Como rodar (de dentro da pasta da live), sendo `SKILL` a pasta desta skill:
 - Mais de um vídeo na pasta: pergunte qual e passe `--video nome.mp4` antes do comando.
 - `diagnostico` diz o que falta; se `venv_pronto` for false, rode `preparar` (uma vez só, vale para todas as lives).
 
+## "Continue o sistema de cortes nesta pasta"
+O dono já rodou o `COLAR LIVE OU USUARIO` (download/gravação e análise feitos sem você; perfis acompanhados ficam na pasta `PERFIS`). Veja o que existe na pasta: `cortes/<live>/estado.json` → rode `lista` e siga do passo 5 da live gravada (títulos, PARE, aprovar...); `pendentes/*.json` → siga o passo 3 do modo ao vivo (nota e `ao-vivo cortar`). Os dois podem existir na mesma pasta.
+
 ## Mandaram um LINK (Twitch, Kick ou YouTube)
 Pegue da mensagem: link, onde está a permissão, @ do streamer, quantos cortes e estilo (faltou permissão? pergunte; o resto tem padrão).
 `link "URL" --permissao "onde está escrita" --arroba "@streamer" --quantos 5` (+ `--tudo` se pedirem a live inteira; `--inicio 0 --duracao 2h` para outro trecho).

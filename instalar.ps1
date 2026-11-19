@@ -133,6 +133,10 @@ New-Item -ItemType Directory -Force -Path $PastaCortes, (Join-Path $PastaCortes 
 if (Test-Path $modelo) {
     Copy-Item (Join-Path $modelo "COMO-USAR.txt") $PastaCortes -Force
     Copy-Item (Join-Path $modelo "nova-live.cmd") $PastaCortes -Force
+    Copy-Item (Join-Path $modelo "COLAR LIVE OU USUARIO.cmd") $PastaCortes -Force
+    Copy-Item (Join-Path $modelo "COLAR LIVE OU USUARIO.ps1") $PastaCortes -Force
+    New-Item -ItemType Directory -Force -Path (Join-Path $PastaCortes "PERFIS") | Out-Null
+    foreach ($velho in @("colar-link.cmd", "colar-link.ps1")) { Remove-Item (Join-Path $PastaCortes $velho) -ErrorAction SilentlyContinue }
     $exemplo = Join-Path $skillCortes "streamers.exemplo.json"
     if (Test-Path $exemplo) { Copy-Item $exemplo (Join-Path $PastaCortes "ao-vivo") -Force }
 }

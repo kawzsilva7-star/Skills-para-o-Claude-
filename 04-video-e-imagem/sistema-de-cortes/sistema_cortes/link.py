@@ -54,6 +54,30 @@ def nome_do_canal(url: str) -> str:
     return partes[0].lower()
 
 
+def eh_perfil(url: str) -> bool:
+    """Link de PERFIL/canal (acompanhar sempre) ou de um VÍDEO/live específico (uma vez só)?"""
+    u = urlparse(url if "://" in url else "https://" + url)
+    partes = [p for p in u.path.split("/") if p]
+    plat = plataforma(url)
+    if plat == "youtube":
+        if "v" in parse_qs(u.query) or u.netloc.endswith("youtu.be"):
+            return False
+        return bool(partes) and partes[0].startswith("@") and (len(partes) == 1 or partes[1:] in (["live"], ["streams"]))
+    return len(partes) == 1 and partes[0] != "videos"
+
+
+def link_do_usuario(nome: str, plataforma_escolhida: str) -> str:
+    """'gaules' + 'twitch' -> 'https://www.twitch.tv/gaules'."""
+    nome = nome.strip().lstrip("@")
+    if not re.fullmatch(r"[\w.\-]{2,40}", nome):
+        raise ErroLink(f"Nome de usuário estranho: {nome!r}")
+    return {
+        "twitch": f"https://www.twitch.tv/{nome}",
+        "kick": f"https://kick.com/{nome}",
+        "youtube": f"https://www.youtube.com/@{nome}",
+    }[plataforma_escolhida]
+
+
 def ler_duracao(texto: str) -> float:
     """'30m', '3h', '1h30m', '90s', '1:30:00' ou '5400' -> segundos."""
     t = texto.strip().lower()

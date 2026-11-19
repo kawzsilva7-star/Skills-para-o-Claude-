@@ -409,6 +409,61 @@ def cmd_link(a) -> int:
                                            lingua=a.lingua, modelo=a.modelo, gpu=a.gpu))
 
 
+# ------------------------------------------------------------------ perfis (acompanhar sempre)
+def cmd_entender(a) -> int:
+    """Para o atalho COLAR LIVE OU USUARIO: transforma o que foi colado em link e diz se é perfil ou vídeo."""
+    from . import link as lk
+
+    entrada = a.entrada.strip()
+    if "/" not in entrada and "." not in entrada:
+        if not a.plataforma:
+            print(json.dumps({"precisa_plataforma": True}))
+            return 0
+        entrada = lk.link_do_usuario(entrada, a.plataforma)
+    url = entrada if "://" in entrada else "https://" + entrada
+    lk.plataforma(url)
+    print(json.dumps({"url": url, "tipo": "perfil" if lk.eh_perfil(url) else "video", "canal": lk.nome_do_canal(url)}))
+    return 0
+
+
+def cmd_perfil(a) -> int:
+    from dataclasses import asdict as _asdict
+
+    from . import ao_vivo as av
+    from . import link as lk
+
+    raiz = Path(a.pasta)
+    arq = raiz / "streamers.json"
+    lista = json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else []
+    if a.acao == "lista":
+        for s in lista:
+            _p(f"- {s['nome']} · {s['link']} · {s['arroba']}")
+        _p(f"{len(lista)} de {av.MAX_GRAVANDO} perfis." if lista else "Nenhum perfil ainda.")
+        return 0
+    if a.acao == "remover":
+        nova = [s for s in lista if s["nome"] != a.alvo.lower()]
+        arq.write_text(json.dumps(nova, ensure_ascii=False, indent=2), encoding="utf-8")
+        _p(f"Removido {a.alvo}. Feche e abra a janela de acompanhamento para parar de gravar ele.")
+        return 0
+    url = a.alvo
+    if not lk.eh_perfil(url):
+        raise RegraViolada("Isso é link de um vídeo, não de um perfil. Use `link` para vídeo.")
+    registrar_permissao({}, a.permissao)
+    nome = lk.nome_do_canal(url)
+    outros = [s for s in lista if s["nome"] != nome]
+    if len(outros) >= av.MAX_GRAVANDO:
+        raise RegraViolada(f"Já tem {av.MAX_GRAVANDO} perfis (máximo, senão pesa no PC e ninguém revisa). "
+                           f"Remova um: {', '.join(s['nome'] for s in outros)}")
+    s = av.Streamer(nome=nome, link=url, arroba=a.arroba or "@" + nome, idioma="" if a.lingua == "auto" else a.lingua,
+                    camera=a.camera, permissao=a.permissao)
+    raiz.mkdir(parents=True, exist_ok=True)
+    arq.write_text(json.dumps(outros + [_asdict(s)], ensure_ascii=False, indent=2), encoding="utf-8")
+    _p(f"Perfil {nome} adicionado ({len(outros) + 1}/{av.MAX_GRAVANDO}).")
+    if av.esta_acompanhando(raiz):
+        _p("A janela de acompanhamento já está aberta: ele entra em até 30 s.")
+    return 0
+
+
 # ------------------------------------------------------------------ nota de qualidade
 def cmd_avaliar(a) -> int:
     from .avaliacao import ITENS, decidir
@@ -429,10 +484,18 @@ def cmd_ao_vivo(a) -> int:
     from . import ao_vivo as av
 
     raiz = Path(a.pasta)
+    if a.acao == "tudo":
+        if av.esta_acompanhando(raiz):
+            _p("Já existe uma janela acompanhando estes perfis. Não abri outra.")
+            return 0
+        _p("Acompanhando os perfis (grava toda live deles e analisa). Deixe esta janela aberta e o PC ligado.")
+        av.acompanhar_perfis(raiz, _transcritor(a.gpu, a.modelo), a.lancamento, avisar=_p)
+        return 0
     if a.acao == "chat":
         av.ler_chat_twitch(a.canal.lower(), raiz / "chat" / f"{a.canal.lower()}.csv")
         return 0
-    streamers = av.carregar_streamers(Path(a.streamers))
+    arq_streamers = Path(a.streamers) if Path(a.streamers).is_absolute() else raiz / a.streamers
+    streamers = av.carregar_streamers(arq_streamers)
     if a.acao == "gravar":
         s = next((x for x in streamers if x.nome == a.nome), None)
         if not s:
@@ -528,6 +591,20 @@ def criar_parser() -> argparse.ArgumentParser:
     s.add_argument("--camera", metavar="x,y,w,h", help="posição da câmera na live (modo ao vivo)")
     s.set_defaults(f=cmd_link)
 
+    s = sub.add_parser("entender", help="o que foi colado é perfil ou vídeo?")
+    s.add_argument("entrada")
+    s.add_argument("--plataforma", choices=["twitch", "kick", "youtube"])
+    s.set_defaults(f=cmd_entender)
+
+    s = sub.add_parser("perfil", help="perfis acompanhados sempre (máx. 3)")
+    s.add_argument("acao", choices=["adicionar", "remover", "lista"])
+    s.add_argument("alvo", nargs="?", default="", help="link do perfil (adicionar) ou nome (remover)")
+    s.add_argument("--permissao", default="")
+    s.add_argument("--arroba")
+    s.add_argument("--lingua", default="auto")
+    s.add_argument("--camera", metavar="x,y,w,h")
+    s.set_defaults(f=cmd_perfil)
+
     s = sub.add_parser("avaliar", help="nota 0-2 em 5 itens (quem dá a nota é a pessoa)")
     for item in ("gancho", "virada", "entende_sozinho", "relevancia", "vontade_de_rever"):
         s.add_argument(f"--{item.replace('_', '-')}", dest=item, type=int, required=True, choices=[0, 1, 2])
@@ -536,7 +613,7 @@ def criar_parser() -> argparse.ArgumentParser:
     s.set_defaults(f=cmd_avaliar)
 
     s = sub.add_parser("ao-vivo")
-    s.add_argument("acao", choices=["gravar", "chat", "analisar", "cortar"])
+    s.add_argument("acao", choices=["gravar", "chat", "analisar", "cortar", "tudo"])
     s.add_argument("--streamers", default="streamers.json")
     s.add_argument("--nome")
     s.add_argument("--canal")

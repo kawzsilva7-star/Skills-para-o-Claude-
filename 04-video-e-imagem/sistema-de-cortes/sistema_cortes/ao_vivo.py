@@ -288,3 +288,66 @@ def loop_analisador(
         total += analisar_novos(streamers, pasta_raiz, transcritor, vistos, avisar)
         time.sleep(a_cada_s)
     return total + analisar_novos(streamers, pasta_raiz, transcritor, vistos, avisar, parado_ha_s=0)
+
+
+# ------------------------------------------------------------------- acompanhar PERFIS (sempre)
+BATIMENTO = ".acompanhando"
+
+
+def _gravar_sem_parar(s: Streamer, pasta: Path, lancamento: bool, avisar: Callable[[str], None]) -> None:
+    while True:  # um erro (internet caiu, programa travou) não pode matar o gravador
+        try:
+            gravar(s, pasta, lancamento, avisar)
+        except Exception as e:  # noqa: BLE001
+            avisar(f"{s.nome}: gravador reiniciando depois de erro ({e}).")
+            time.sleep(60)
+
+
+def _chat_sem_parar(canal: str, csv: Path, avisar: Callable[[str], None]) -> None:
+    while True:
+        try:
+            ler_chat_twitch(canal, csv)
+        except OSError as e:
+            avisar(f"chat de {canal}: reconectando ({e}).")
+        time.sleep(30)
+
+
+def esta_acompanhando(raiz: Path, idade_max_s: float = 120) -> bool:
+    """Já existe uma janela acompanhando os perfis desta pasta? (batimento renovado a cada 30 s)"""
+    arq = raiz / BATIMENTO
+    try:
+        return time.time() - float(arq.read_text()) < idade_max_s
+    except (OSError, ValueError):
+        return False
+
+
+def acompanhar_perfis(
+    raiz: Path, transcritor: Transcritor, lancamento: bool = False,
+    avisar: Callable[[str], None] = print, a_cada_s: int = 30, voltas: Optional[int] = None,
+) -> None:
+    """Uma janela só: fica de olho em todos os perfis do streamers.json, grava toda live deles e analisa.
+
+    Relê o streamers.json a cada volta: perfil novo entra sozinho, sem fechar nada.
+    """
+    import threading
+
+    arq = raiz / "streamers.json"
+    rodando: Dict[str, threading.Thread] = {}
+    vistos: Dict[str, set] = {}
+    volta = 0
+    while voltas is None or volta < voltas:
+        streamers = carregar_streamers(arq)
+        for s in streamers:
+            if s.nome in rodando and rodando[s.nome].is_alive():
+                continue
+            avisar(f"De olho em {s.nome} ({s.link}).")
+            t = threading.Thread(target=_gravar_sem_parar, args=(s, raiz / "blocos" / s.nome, lancamento, avisar), daemon=True)
+            t.start()
+            rodando[s.nome] = t
+            if s.canal_twitch:
+                threading.Thread(target=_chat_sem_parar, args=(s.canal_twitch, raiz / "chat" / f"{s.canal_twitch}.csv", avisar),
+                                 daemon=True).start()
+        analisar_novos(streamers, raiz, transcritor, vistos, avisar)
+        (raiz / BATIMENTO).write_text(str(time.time()))
+        volta += 1
+        time.sleep(a_cada_s)

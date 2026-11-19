@@ -102,3 +102,55 @@ def test_vod_na_mesma_pasta_baixa_so_o_comeco(tmp_path, monkeypatch):
     assert cli.main(["--pasta", str(tmp_path), "link", "https://www.twitch.tv/videos/9", "--permissao", "programa de cortes"]) == 0
     secao = chamadas[0][chamadas[0].index("--download-sections") + 1]
     assert secao == "*00:00:00-00:41:00"
+
+
+@pytest.mark.parametrize("url,perfil", [
+    ("https://www.twitch.tv/gaules", True),
+    ("https://www.twitch.tv/gaules/videos/123", False),
+    ("https://www.twitch.tv/videos/123", False),
+    ("https://kick.com/fulano", True),
+    ("https://www.youtube.com/@beltrano", True),
+    ("https://www.youtube.com/@beltrano/live", True),
+    ("https://www.youtube.com/watch?v=abc&t=10", False),
+    ("https://youtu.be/abc", False),
+])
+def test_perfil_ou_video(url, perfil):
+    assert lk.eh_perfil(url) is perfil
+
+
+def test_so_o_nome_do_usuario(capsys):
+    assert lk.link_do_usuario("@Gaules", "twitch") == "https://www.twitch.tv/Gaules"
+    assert cli.main(["entender", "gaules"]) == 0
+    assert '"precisa_plataforma": true' in capsys.readouterr().out
+    assert cli.main(["entender", "gaules", "--plataforma", "kick"]) == 0
+    saida = capsys.readouterr().out
+    assert '"tipo": "perfil"' in saida and "kick.com/gaules" in saida
+
+
+def test_adicionar_perfis_maximo_3(tmp_path):
+    rodar = lambda *x: cli.main(["--pasta", str(tmp_path), "perfil", *x])
+    assert rodar("adicionar", "https://www.twitch.tv/um", "--permissao", " ") == 2  # sem permissão
+    for nome in ("um", "dois", "tres"):
+        assert rodar("adicionar", f"https://www.twitch.tv/{nome}", "--permissao", "programa de cortes") == 0
+    assert rodar("adicionar", "https://www.twitch.tv/um", "--permissao", "programa de cortes") == 0  # atualiza
+    assert rodar("adicionar", "https://kick.com/quatro", "--permissao", "programa de cortes") == 2  # 4º não
+    assert rodar("adicionar", "https://www.twitch.tv/videos/1", "--permissao", "programa de cortes") == 2  # vídeo não
+    assert rodar("remover", "dois") == 0
+    import json
+    assert [s["nome"] for s in json.loads((tmp_path / "streamers.json").read_text())] == ["tres", "um"]
+
+
+def test_acompanhar_perfis_pega_perfil_novo(tmp_path, monkeypatch):
+    from sistema_cortes import ao_vivo as av
+
+    iniciados = []
+    monkeypatch.setattr(av, "_gravar_sem_parar", lambda s, *a: iniciados.append(s.nome))
+    monkeypatch.setattr(av, "_chat_sem_parar", lambda *a: None)
+    monkeypatch.setattr(av.time, "sleep", lambda s: None)
+    rodar = lambda *x: cli.main(["--pasta", str(tmp_path), "perfil", *x])
+    rodar("adicionar", "https://kick.com/um", "--permissao", "programa de cortes")
+    av.acompanhar_perfis(tmp_path, transcritor=None, voltas=1)
+    assert av.esta_acompanhando(tmp_path)
+    rodar("adicionar", "https://kick.com/dois", "--permissao", "programa de cortes")
+    av.acompanhar_perfis(tmp_path, transcritor=None, voltas=1)
+    assert sorted(set(iniciados)) == ["dois", "um"]
