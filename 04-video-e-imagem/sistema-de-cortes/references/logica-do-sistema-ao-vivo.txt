@@ -1,0 +1,174 @@
+SISTEMA DE CORTES DE LIVES PARA YOUTUBE SHORTS — COMO FUNCIONA
+=============================================================
+
+Resumo: um PC com placa de vídeo NVIDIA fica gravando as lives dos streamers. O
+sistema acha sozinho os melhores momentos e entrega uma fila de candidatos. Uma
+pessoa (com ajuda de IA) aprova os melhores, e o vídeo sai pronto em formato Shorts
+(1080x1920) para postar.
+
+Tudo é feito com programas gratuitos:
+  - Python 3
+  - streamlink: grava a live
+  - yt-dlp: baixa a live gravada (VOD)
+  - ffmpeg: corta e edita os vídeos
+  - faster-whisper: transcreve a fala, rodando na GPU
+  - edge-tts: voz de narração
+  - Navegador Chrome: postagem manual no YouTube Studio
+
+
+1. QUAIS STREAMERS E COMO ESCOLHER
+---------------------------------
+- Uma lista (streamers.json) guarda, para cada streamer:
+    - nome;
+    - link da live (Twitch, YouTube ou Kick);
+    - @ oficial (para o crédito);
+    - idioma (en ou pt);
+    - posição da câmera na tela.
+- No máximo 3 streamers gravando ao mesmo tempo. Mais que isso pesa no PC e
+  ninguém consegue revisar tudo.
+- Critério: streamer grande, com reações fortes (grito, surto, risada) e jogando o
+  assunto do momento.
+- Fique de fora quem já reclamou de canal de cortes.
+
+
+2. ASSISTIR / GRAVAR AS LIVES (AUTOMÁTICO)
+------------------------------------------
+Um script (ligar.ps1) abre uma janela para cada coisa:
+  a) GRAVADOR, um por streamer.
+     - Confere se está ao vivo.
+     - Offline: confere de novo a cada 30 min, em silêncio. No dia de um
+       lançamento grande, a cada 2 min.
+     - Ao vivo: grava direto, sem perder qualidade, em blocos de 20 minutos.
+       Cada bloco é um arquivo, nomeado com data e hora.
+     - Se a live cai, reconecta sozinho.
+  b) LEITOR DE CHAT, só na Twitch.
+     - Lê o chat anonimamente e registra quantas mensagens chegam por segundo.
+     - Chat explodindo = algo aconteceu.
+  c) ANALISADOR, um só para todos os streamers.
+     - A cada 30 s procura blocos novos e analisa cada um.
+
+Streamer que já terminou a live: em vez de gravar, baixa o VOD (baixar_vod.py).
+- Pega um trecho (padrão: 3 horas, pulando a meia hora inicial) e divide nos
+  mesmos blocos de 20 min.
+- No YouTube baixa o vídeo inteiro em 8 partes paralelas e corta aqui. É bem mais
+  rápido: o YouTube limita a velocidade de quem baixa só um trecho.
+- Guarda um registro para não baixar o mesmo trecho duas vezes.
+
+
+3. COMO O ANALISADOR ACHA OS MOMENTOS
+-------------------------------------
+Para cada bloco de 20 min:
+  1. Transcreve toda a fala com o Whisper (na GPU, ~20 s por bloco), com o tempo
+     de cada palavra.
+  2. Dá uma nota para cada segundo, somando:
+     - GRITO: o volume da voz sobe muito acima da média dos 2 minutos em volta.
+     - REAÇÃO: palavras fortes.
+         inglês: "no way", "oh my god", "let's go"...
+         português: "meu deus", "socorro", "não acredito", "kkkk"...
+       Também conta palavra repetida ("no no no") e exclamação.
+     - CHAT: pico de mensagens. Ele reage uns 10 s depois do momento, então o
+       sistema compensa esse atraso.
+  3. Pega até 4 picos por bloco, com pelo menos 45 s entre eles.
+  4. Monta a janela de cada corte:
+     - começa numa frase completa, 3 a 20 s antes do pico;
+     - termina quando a frase do pico acaba;
+     - mínimo de 12 s e máximo de 60 s.
+  5. Transcreve de novo só esse trecho, em modo mais preciso, para a legenda sair
+     certa.
+  6. Salva o candidato numa pasta "pendentes" (arquivo .json com tempos, nota e
+     texto).
+
+Limpeza automática do disco:
+- Bloco sem nenhum candidato é apagado logo depois de analisado.
+- Bloco com candidato fica no máximo 6 horas, ou até o corte ser renderizado.
+- Vídeo já postado é apagado depois de 7 dias. O registro fica guardado.
+
+
+4. QUEM DECIDE O QUE VIRA CORTE (HUMANO + IA)
+---------------------------------------------
+- A cada ~15-30 min alguém revisa os candidatos novos.
+- A IA ajuda: lê a transcrição, traduz para português e gera uma prévia pequena
+  com legenda em PT, para quem não fala inglês aprovar.
+- Nota de qualidade, de 0 a 2 em cada item:
+    1. Gancho: prende nos primeiros 2 segundos?
+    2. Virada: tem um momento de surpresa ou explosão?
+    3. Entende sozinho: quem não viu a live entende?
+    4. Relevância: é assunto do momento?
+    5. Vontade de rever: dá vontade de ver de novo ou mandar para alguém?
+- Nota 9-10: posta agora.
+- Nota 7-8: entra na fila.
+- Nota 5-6: reserva.
+- Abaixo de 5: descarta.
+- Regra de ouro: poucos cortes bons valem mais que muitos ruins. Postar lixo
+  derruba o canal inteiro.
+- Só fala, sem nada acontecendo na tela, vai para a reserva.
+
+
+5. COMO O CORTE É EDITADO (AUTOMÁTICO)
+--------------------------------------
+Dois formatos.
+
+A) CORTE PADRÃO (render.py)
+   - Câmera do streamer em cima (1080x840) e jogo embaixo (1080x1080). O
+     recorte do jogo segue onde está a ação.
+   - Sem câmera (live IRL): a imagem inteira no meio, com fundo desfocado.
+   - Legenda palavra por palavra, fonte grossa, palavra-chave em amarelo e
+     palavrão censurado.
+   - Zoom e tremida no momento do pico, flash e "boom" no estouro.
+   - Música de fundo baixa, que abaixa sozinha quando alguém fala.
+   - Volume padronizado em -14 LUFS (o padrão do YouTube).
+   - Final emenda no começo (loop).
+
+B) FORMATO HISTÓRIA (historia.py) — o que estamos testando agora
+   - Motivo: em 01/10/2026 o YouTube passou a mostrar menos no feed os vídeos
+     que só repostam corte de outro criador sem transformação real. Cortar,
+     legendar e pôr música não conta.
+   - Então o corte vira uma mini-história:
+       gancho (a fala mais forte)
+       -> narração com contexto que NÃO está no clipe
+       -> a fala principal
+       -> a virada
+       -> pergunta no fim para puxar comentário.
+   - A narração é voz gerada (inglês ou português).
+   - Etiqueta mostrando quem fala e cartões de contexto na tela.
+   - Roteiro escrito num arquivo simples, com os trechos (tempo de início e fim)
+     e os textos da narração.
+
+Os dois geram também o título e a descrição, sempre com o crédito ao streamer
+(@ e link).
+
+
+6. POSTAGEM
+-----------
+- Manual, pelo YouTube Studio no navegador. Sem API e sem robô de postagem.
+- Antes de postar, uma pessoa assiste e aprova.
+- Espaçar: no máximo 1 corte do mesmo streamer seguido, de 2 a 3 por dia no
+  começo.
+- Horário: para público americano, fim de tarde ou noite nos EUA.
+- Marcar "não é conteúdo para crianças".
+- Esperar a verificação de direitos autorais do próprio YouTube.
+- Canal sem verificação por telefone não aceita link externo (Twitch/Kick) na
+  descrição. Usar "Créditos: @nome (na Twitch)".
+
+
+7. CUIDADOS
+-----------
+- Crédito sempre visível (@ no vídeo e na descrição).
+- Se o streamer pedir para tirar, sai na hora.
+- Não comprar views ou inscritos. Não usar várias contas para assistir os
+  próprios vídeos (o YouTube detecta e pune).
+- Canal novo demora para o YouTube começar a mostrar no feed. Medir pelo
+  "Exibições no feed de Shorts" no Studio, não só pelas views.
+- Cortes de terceiros têm risco de reclamação de direitos autorais. Quem posta
+  assume esse risco.
+
+
+8. ROTINA DO DIA
+----------------
+Começar o dia:
+  1. Ligar o ligar.ps1.
+  2. Ver quem está ao vivo.
+  3. Para quem já encerrou, baixar o VOD.
+Durante o dia: revisar a fila a cada 15-30 min, aprovar, renderizar e postar
+espaçado.
+Encerrar o dia: fechar gravadores e analisador, e conferir o espaço em disco.

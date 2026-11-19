@@ -1,0 +1,17 @@
+SISTEMA DE CORTES · Clube das Skills
+
+COMO INSTALAR (uma vez só)
+1. Copie esta pasta "sistema-de-cortes" inteira para:
+   - Windows: C:\Users\SEU-NOME\.claude\skills\
+   - Mac: ~/.claude/skills/
+   Se a pasta "skills" não existir, crie.
+2. Feche e abra o Claude Code.
+
+COMO USAR
+1. Crie uma pasta e coloque nela a gravação da live (mp4, mkv ou mov).
+   Só de streamer que libera corte (programa de cortes ou permissão por escrito).
+2. Abra o Claude Code nessa pasta e escreva: use o sistema de cortes nesta live
+3. Diga quantos cortes quer, aprove a lista de momentos e receba os cortes na pasta "cortes".
+
+O passo a passo completo, com as regras para postar sem perder a conta, está no PDF que veio junto.
+Dúvidas: cadastro@clubedasskills.com.br

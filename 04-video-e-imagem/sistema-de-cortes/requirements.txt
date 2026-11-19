@@ -1,0 +1,6 @@
+numpy
+faster-whisper
+# só para o modo ao vivo:
+# streamlink
+# para os testes:
+# pytest

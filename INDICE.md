@@ -37,7 +37,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `seo-audit` | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "S |
 | `web-perf` | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse perf |
 
-## 04-video-e-imagem: Vídeo, voz e imagem (36)
+## 04-video-e-imagem: Vídeo, voz e imagem (37)
 
 | Skill | Para que serve |
 |---|---|
@@ -70,6 +70,7 @@ Caminho: `skills/<grupo>/<skill>/SKILL.md`.
 | `remotion-saas` | Build an app with Remotion |
 | `remotion-studio` | Preview a Remotion video |
 | `remotion-upgrade` | Upgrade Remotion, and related packages |
+| `sistema-de-cortes` | Corta live de streamer (gravada ou ao vivo) em cortes verticais com legenda, título, zoom e crédito; código Python com as regras |
 | `sound-effects` | Generate sound effects from text descriptions using ElevenLabs. Use when creating sound effects, generating au |
 | `speech-to-text` | Transcribe audio to text using ElevenLabs Scribe v2. Use when converting audio/video to text, generating subti |
 | `text-to-speech` | Convert text to speech using ElevenLabs voice AI. Use when generating audio from text, creating voiceovers, bu |

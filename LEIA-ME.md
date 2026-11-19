@@ -29,6 +29,7 @@ Há mais de 520 skills no PC (vindas de `Pensamento-critico`, `72-skills-`, `380
 | Dúvida de como o Remotion funciona | `remotion-docs` | Só para pesquisar na documentação |
 | Não sei qual do Remotion usar | `remotion-best-practices` | Porta de entrada (indica a certa) |
 | Mapas, áudio/vídeo (mediabunny), app, interatividade, atualizar versão | `remotion-maps`, `remotion-multimedia`, `remotion-saas`, `remotion-interactivity`, `remotion-upgrade` | Raramente; só se o vídeo realmente precisar |
+| Cortar live (gravada ou ao vivo) em Shorts/Reels/TikTok | `sistema-de-cortes` (pasta 04) | Quando o dono pedir cortes; rode os comandos, não reescreva o código |
 | Testar uma ideia de negócio com "investidores" | `rodada-de-tubaroes` | Só se o dono pedir |
 | Revisar currículo | `banca-de-avaliadores` | Só se o dono pedir (não tem a ver com o bot) |
 

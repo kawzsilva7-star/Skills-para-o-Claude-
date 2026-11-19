@@ -48,6 +48,7 @@ Antes de vender qualquer skill, confira a origem e a licença. Atualizado em 11/
 | `banca-roteiro-video-curto` | 14-marketing-completo | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `professor` | 18-produtividade-e-pesquisa | Prompt colado pelo dono (parece do Clube das Skills) | Não confirmado |
 | `agentes de marketing (7)` | 26-agentes-de-marketing | Texto colado pelo dono (parece do Clube das Skills) | Não confirmado |
+| `sistema-de-cortes` | 04-video-e-imagem | Pacote pago do Clube das Skills (Sistema de Cortes BR + ClipDrop EN, licença de uso individual) + LOGICA-DO-SISTEMA do dono; virou código Python em 19/11/2026 | Não (licença proíbe repassar); só o código e as ideias 100% do dono, depois de separar do texto deles |
 
 Para cada skill nova: anotar aqui a origem no mesmo dia.
 

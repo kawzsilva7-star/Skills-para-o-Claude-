@@ -1,0 +1,18 @@
+[
+  {
+    "nome": "streamer1",
+    "link": "https://www.twitch.tv/streamer1",
+    "arroba": "@streamer1",
+    "idioma": "pt",
+    "camera": "1500,700,400,360",
+    "permissao": "programa de cortes oficial (regras no Discord, print salvo em permissoes/streamer1.png)"
+  },
+  {
+    "nome": "streamer2",
+    "link": "https://www.youtube.com/@streamer2/live",
+    "arroba": "@streamer2",
+    "idioma": "en",
+    "camera": null,
+    "permissao": "respondeu a mensagem de permissão em 10/11 (print salvo)"
+  }
+]
